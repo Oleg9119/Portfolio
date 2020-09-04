@@ -1,0 +1,67 @@
+.socials-sign {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 2px solid #147fda; 
+    width: 210px;
+    padding: 10px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    color: @txt-main;
+    
+    .socials-sign__text {
+        margin: 0;
+        align-self: flex-end;
+        font-size: 12px;
+        font-style: italic;
+        text-decoration: underline;                                            
+    }
+
+    .socials-sign__list {
+        display: flex;
+        width: 49%;
+        height: 33px;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .socials-sign__item {
+            svg {
+                path {
+                    fill: #1781d9;
+                }
+            }
+        }
+
+        .socials-sign__item { 
+            
+            .socials-sign__link {
+                svg {
+                    path {
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+            .socials-sign__link:hover {
+                svg {
+                    path {
+                        fill: @orange;
+                    }
+                }
+            }                            
+        }
+
+        .socials-sign__item:nth-child(2),
+        .socials-sign__item:nth-child(3) {
+            margin-right: 5px;
+        }
+
+        .socials-sign__item:nth-child(2) {
+            svg {
+                padding-top: 10px;
+            }
+        }
+    }
+}

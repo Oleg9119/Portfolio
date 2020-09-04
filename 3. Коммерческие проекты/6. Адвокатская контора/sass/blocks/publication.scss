@@ -1,0 +1,138 @@
+@media (min-width: $desktop-width) {
+    .publication__title {
+        @include visually-hidden;
+    }
+}
+
+.publication__wrap {
+    max-width: 600px;
+    padding: 5px;
+    padding-bottom: 3%;
+    padding-top: 3%;
+
+    .publication__item {
+        display: flex;
+
+        .publication__photo {
+            width: 224px;
+            height: auto;
+            max-height: 270px;
+            margin-right: 22px;
+            background-color: $primary;
+            flex-shrink: 0;
+        }
+
+        .publication__info {
+            flex-grow: 1;
+
+            p,
+            h2 {
+                margin: 0;
+            }
+
+            .publication__name {
+                margin-bottom: 5px;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 700;
+                color: $primary;
+            }
+
+            .publication__date {
+                font-size: 10px;
+                line-height: 13px;
+                color: $primary;
+            }
+
+            .publication__teg {
+                margin-bottom: 5px;
+            }
+
+            .publication__teg span {
+                font-size: 9px;
+                line-height: 13px;
+                color: #4D555B;
+            }
+
+            .publications__description {
+                margin-bottom: 15px;
+                font-size: 12px;
+                line-height: 13px;
+            }
+
+            .publications__description:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .publication {
+        margin-top: 75px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+
+    .publication__title {
+        display: block;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-size: 72px;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $primary;
+        font-family: 'Bebas Neue';
+
+        @media (max-width: 345px) {
+            font-size: 66px;
+        }
+    }
+
+    .publication__wrap {
+        max-width: 100%;
+        padding: 0;
+
+        .publication__item {
+
+            .publication__info {
+
+                .publication__date {
+                    margin-bottom: 10px;
+                }
+
+                .publication__teg {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .publication__wrap {
+
+        .publication__item {
+            display: flex;
+            flex-direction: column;
+
+            .publication__photo {
+                width: 162px;
+                height: 197px;
+                max-height: 270px;
+                margin-right: 0;
+                background-color: $primary;
+                flex-shrink: 0;
+                margin-bottom: 20px;
+            }
+
+            .publication__info {
+                flex-grow: 1;
+            }
+        }
+    }
+}

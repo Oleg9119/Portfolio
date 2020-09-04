@@ -1,0 +1,105 @@
+.testimonials {
+    width: 600px;
+    min-height: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.testimonials__header {
+    margin: 67px 0 42px 0;
+    font-size: 30px;
+    color: #464646;
+    text-align: center;
+}
+
+.testimonials__text {
+    margin: 0 0 65px 0;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+.testimonials__container {
+    position: relative;
+}
+
+.testimonials__image-container {
+    position: absolute;
+    width: 81px;
+    height: 81px;
+    background-image: url(../img/orion-neil.png);
+    background-repeat: no-repeat;
+}
+
+.testimonials__cite-wrapper {
+    position: absolute;
+    top: -19px;
+    left: 20px;
+}
+
+.testimonials__cite-container {
+    position: relative;
+    left: 20%;
+    top: 5px;
+    width: 387px;
+    height: 148px;
+    padding: 23px 44px 0 31px;
+    border: 2px #e0e0e0 solid;
+    border-radius: 10px;
+}
+
+.testimonials__cite-container::before {
+    content: "";
+	position: absolute;
+	z-index: 1;
+	left: -25px;
+    top: 30%;
+    width: 10px;
+	height: 20px;
+	border-right: 15px solid #e0e0e0;
+    background: #e0e0e0;
+	border-bottom-left-radius: 90px 50px;
+}
+
+.testimonials__cite-container::after {
+    content: "";
+	position: absolute;
+	z-index: 1;
+	top: 51px;
+	left: -26px;
+	width: 24px;
+	height: 6px;
+	background: #ffffff;
+}
+
+.testimonials__cite-header {
+    position: relative;
+}
+
+.testimonials__cite-header::before {
+    content: "";
+	position: absolute;
+	z-index: 2;
+	left: -53px;
+    top: 36px;
+    width: 7px;
+	height: 10px;
+	border-right: 15px solid #ffffff;
+    background: #ffffff;
+	border-bottom-left-radius: 105px 50px; 
+}
+
+.testimonials__cite-header {
+    margin: 0 0 22px 0;
+    font-size: 12px;
+    color: #111111;
+}
+
+.testimonials__cite-header span {
+    font-size: 18px;
+}
+
+.testimonials__cite {
+    font-style: normal;
+    line-height: 30px;
+}

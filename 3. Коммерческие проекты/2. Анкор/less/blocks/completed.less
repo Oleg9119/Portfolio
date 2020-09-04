@@ -1,0 +1,147 @@
+.completed__title {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;  
+}
+
+.completed__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.completed__item-img {
+    min-height: 100px;
+    background-color: #919191;
+}
+
+.completed__item-text {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.completed__item-title {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+}
+
+.completed__item-title::before {
+    position: absolute;
+    top: 3px;
+    left: -15px;
+    content: "";
+    width: 3px;
+    height: 20px;
+    background-color: #D71921;
+}
+
+.completed__item-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: #D71921;
+    color: @txt-white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+
+    .completed__title {
+        font-size: 20px;
+    }
+
+    .completed__list {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+
+    .completed__item {
+        width: 32%;
+    }
+
+    .completed__item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .completed__item-img {
+        min-height: 150px;
+    }
+
+    .completed__item-text {
+        font-size: 13px;
+    }
+
+    .completed__inner-wrapper {
+        padding-left: 15px;
+    }
+
+    .completed__item-more {
+        height: 45px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .completed__title {
+        padding: 0;
+        padding-left: 60px;
+
+        font-size: 36px;
+        line-height: 49px;
+    }
+
+    .completed__item {
+        width: 31%;
+    }
+
+    .completed__item-img {
+        min-height: 270px;
+    }
+
+    .completed__inner-wrapper {
+        padding-left: 30px;
+    }
+
+    .completed__item-title {
+        width: 50%;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .completed__item-title::before {
+        position: absolute;
+        top: 3px;
+        left: -30px;
+        content: "";
+        width: 5px;
+        height: 60px;
+        background-color: #D71921;
+    }
+
+    .completed__item-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .completed__item-more {
+        min-height: 64px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .completed__item-more:hover,
+    .completed__item-more:focus {
+        background-color: @bg-white;
+        color: @txt-red;
+        border: 1px solid @bg-red;
+        transition: all 0.3s ease-in-out;
+    } 
+}

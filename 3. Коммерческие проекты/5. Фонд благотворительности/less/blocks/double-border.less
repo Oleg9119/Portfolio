@@ -1,0 +1,19 @@
+.double-border {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: @border-main;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        width: 100%;
+        max-width: 1160px;
+        margin: 0 auto;
+        height: 1px;
+        background-color: @border-main;
+    }
+}

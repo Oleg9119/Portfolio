@@ -1,0 +1,84 @@
+.activities {
+    min-height: 300px;
+    padding: 0 200px 0 200px;
+    background-color: #e8ebf1;
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.activities__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 0 0;
+    padding: 0;
+}
+
+.activities__item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.activities__item-header {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.activities__item-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -35%;
+    width: 40px;
+    height: 40px;
+}
+
+.activities__item:first-child .activities__item-header::before {
+    background-image: url(../img/clean-theme-image.png);
+}
+
+.activities__item:nth-child(2) .activities__item-header::before {
+    background-image: url(../img/fullscreen-image.png);
+}
+
+.activities__item:nth-child(3) .activities__item-header::before {
+    background-image: url(../img/view-list.png);
+}
+
+.activities__item:last-child .activities__item-header::before {
+    background-image: url(../img/telegram.png);
+}
+
+.activities__item-text {
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.activities__link {
+    position: relative;
+    padding-left: 15px;
+    font-size: 13px;
+    color: #2aacc8;
+    text-transform: capitalize;
+}
+
+.activities__link:focus,
+.activities__link:hover {
+    color: #208aa1;
+}
+
+.activities__link:active {
+    color: #156475;
+}
+
+.activities__link::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 7px;
+    left: 0;
+    top: 30%;
+    background-image: url(../img/right-arrow.png);
+}

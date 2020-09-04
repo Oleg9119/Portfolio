@@ -1,0 +1,404 @@
+.addinfo-contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/addinfo-contacts.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+
+    .addinfo {
+
+        .addinfo__title {
+            position: relative;
+            margin-bottom: 40px;
+
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: -7px;
+                left: 0;
+                width: 114px;
+                height: 7px;
+                background-color: @bg-pseudo-lines;
+            }
+        }
+
+        .addinfo__list {
+
+            .addinfo__item {
+                position: relative;
+                padding-left: 35px;
+
+                &--necessary {
+
+                    span {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+
+                &--time {
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                &--necessary::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    width: 23px;
+                    height: 32px;
+                    background-image: url(../img/attention-mobile.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                &--people::before {
+                    position: absolute;
+                    content: "";
+                    left: -4px;
+                    top: -2px;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(../img/participant-mobile.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                &--time::before {
+                    position: absolute;
+                    content: "";
+                    left: -4px;
+                    top: -2px;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(../img/gametime-mobile.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .addinfo__text {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        padding-bottom: 25px;
+
+        .contacts__title {
+            position: relative;
+            margin-bottom: 40px;
+
+            &:after {
+                position: absolute;
+                content: "";
+                bottom: -7px;
+                left: 0;
+                width: 114px;
+                height: 7px;
+                background-color: @bg-pseudo-lines;
+            }
+        }
+
+        .contacts__list {
+
+            .contacts__item {
+                position: relative;
+                padding-left: 35px;
+
+                &--address {
+                    margin-bottom: 30px;
+
+                    .contacts__link {
+                        color: @txt-main;
+                        font-weight: 700;
+                    }
+                }
+
+                &--address::before {
+                    position: absolute;
+                    content: "";
+                    left: -3px;
+                    top: -1px;
+                    width: 30px;
+                    height: 27px;
+                    background-image: url(../img/location-top-mobile.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                &--phone {
+
+                    .contacts__link {
+                        color: @txt-main;
+                        font-weight: 700;
+                    }
+                }
+
+                &--phone::before {
+                    position: absolute;
+                    content: "";
+                    left: -3px;
+                    top: -1px;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(../img/phone-top-mobile.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @tablet-width) {
+
+    .addinfo-contacts__wrapper {
+        display: flex;
+        flex-direction: row;
+        background-image: url(../img/addinfo-contacts-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .addinfo {
+
+            .addinfo__title {
+                min-height: 60px;
+            }
+
+            .addinfo__list {
+
+                .addinfo__item {
+                    padding-left: 45px;
+
+                    &--necessary::before {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 0;
+                        width: 27px;
+                        height: 37px;
+                        background-image: url(../img/attention-mobile.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    &--people::before {
+                        position: absolute;
+                        content: "";
+                        left: -4px;
+                        top: -2px;
+                        width: 35px;
+                        height: 35px;
+                        background-image: url(../img/participant-mobile.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    &--time::before {
+                        position: absolute;
+                        content: "";
+                        left: -4px;
+                        top: -2px;
+                        width: 35px;
+                        height: 35px;
+                        background-image: url(../img/gametime-mobile.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+
+        .contacts {
+
+            .contacts__title {
+                min-height: 60px;
+            }
+
+            .contacts__list {
+
+                .contacts__item {
+                    padding-left: 45px;
+
+                    &--address {
+                        margin-bottom: 24px;
+                    }
+
+                    &--address::before {
+                        position: absolute;
+                        content: "";
+                        left: -3px;
+                        top: -1px;
+                        width: 35px;
+                        height: 32px;
+                        background-image: url(../img/location-top-mobile.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    &--phone {
+
+                        .contacts__link {
+                            color: @txt-main;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &--phone::before {
+                        position: absolute;
+                        content: "";
+                        left: -3px;
+                        top: -1px;
+                        width: 35px;
+                        height: 35px;
+                        background-image: url(../img/phone-top-mobile.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .addinfo-contacts__wrapper {
+        margin-bottom: 0;
+        min-height: 900px;
+        padding-top: 190px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 42.71%, #000000 100%), url(../img/addinfo-contacts-tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        .addinfo {
+            padding-left: 150px;
+
+            .addinfo__title {
+                position: relative;
+                margin-bottom: 50px;
+
+                &::after {
+                    bottom: -18px;
+                    width: 246px;
+                    height: 15px;
+                }
+            }
+
+            .addinfo__list {
+
+                .addinfo__item {
+                    position: relative;
+                    padding-left: 60px;
+                    margin-bottom: 60px;
+
+                    .addinfo__text {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+
+                    &--necessary::before {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        top: 0;
+                        width: 32px;
+                        height: 46px;
+                        background-image: url(../img/attention.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    &--people::before {
+                        position: absolute;
+                        content: "";
+                        left: -4px;
+                        top: -2px;
+                        width: 48px;
+                        height: 48px;
+                        background-image: url(../img/participant.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    &--time::before {
+                        position: absolute;
+                        content: "";
+                        left: -4px;
+                        top: -2px;
+                        width: 44px;
+                        height: 44px;
+                        background-image: url(../img/gametime.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    .addinfo__text {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+
+        .contacts {
+            padding-bottom: 30px;
+            padding-left: 50px;
+
+            .contacts__title {
+                margin-bottom: 50px;
+
+                &::after {
+                    bottom: -18px;
+                    width: 246px;
+                    height: 15px;
+                }
+            }
+
+            .contacts__list {
+
+                .contacts__item {
+                    padding-left: 60px;
+                    margin-bottom: 60px;
+                    font-size: 24px;
+                    line-height: 29px;
+
+                    &--address::before {
+                        position: absolute;
+                        content: "";
+                        left: -3px;
+                        top: -1px;
+                        width: 48px;
+                        height: 43px;
+                        background-image: url(../img/location-top.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    &--phone::before {
+                        position: absolute;
+                        content: "";
+                        left: -3px;
+                        top: -1px;
+                        width: 48px;
+                        height: 48px;
+                        background-image: url(../img/phone-top.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}

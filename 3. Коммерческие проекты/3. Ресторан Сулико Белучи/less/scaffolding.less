@@ -1,0 +1,245 @@
+:root {
+	box-sizing: border-box;
+}
+
+*, ::before, ::after {
+	box-sizing: inherit;
+}
+    
+body {
+	position: relative;
+  	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Philosopher Regular', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	font-style: normal;
+
+	color: @txt-white;	
+	background-color: @bg-white;
+}
+
+@font-face {
+	font-family: 'Philosopher Regular';
+	src: url('../fonts/Philosopher.eot');
+	src: url('../fonts/Philosopher.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Philosopher.woff') format('woff'),
+	url('../fonts/Philosopher.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Philosopher Bold';
+	src: url('../fonts/Philosopher-Bold.eot');
+	src: url('../fonts/Philosopher-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Philosopher-Bold.woff') format('woff'),
+	url('../fonts/Philosopher-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: @mobile-padding;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+      padding: @desktop-padding;
+  }
+}
+
+input {
+  font: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+.social-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.title {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 24px;
+	line-height: 27px;
+	font-weight: bold;
+}
+
+.subtitle {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.text {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.button {
+	min-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: @txt-white;
+	border-radius: 30px;
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.down-arrows {
+	width: 10px;
+	height: 16px;
+	margin: 0 auto;
+	display: none;
+}
+
+.down-arrows--white {
+	background-image: url(../img/down-arrows-white.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.down-arrows--black {
+	background-image: url(../img/down-arrows-black.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.call-order {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	min-height: 30px;
+	width: 250px;
+	background-color: @bg-red;
+	border: none;
+	text-transform: uppercase;
+	color: @txt-white;
+	cursor: pointer;
+}
+
+.call-order:hover {
+	background-color: @bg-light-red;
+}
+
+@media (min-width: @tablet-width) {
+
+	body {
+		font-size: 15px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.subtitle {
+		font-size: 20px;
+	}
+
+	.call-order {
+		width: 350px;
+		min-height: 40px;
+		font-size: 16px;
+	}
+
+	.text {
+		font-size: 13px;
+		line-height: 18px;
+	}
+}
+
+@media (min-width: @tablet-width) {
+
+	body {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+}
+
+@media (min-width: @desktop-width) {
+
+	.title {
+		font-size: 28px;
+		line-height: 1.2;
+	}
+
+	.text {
+		font-size: 18px;
+		line-height: 27px;
+	}
+
+	.button {
+		transition: all ease-in-out 0.2s;
+	}
+
+	.about__reserve-button:hover {
+		background-color: lighten(@bg-yellow,10%);
+	}
+
+	.menu__map-button:hover {
+		background-color: lighten(@bg-orange-opacity,10%);
+	}
+
+	.menu__menu-button:hover {
+		background-color: lighten(@bg-yellow-opacity,10%);
+	}
+
+	.parking__reserve-button:hover {
+		background-color: lighten(@bg-yellow-opacity,10%);
+	}
+
+	.main-nav__link:hover {
+		color: @bg-yellow;
+	}
+
+	.contacts__item-link .contacts__text:hover {
+		color: @bg-yellow;
+	}
+
+	.owl-carousel button.owl-dot:hover {
+		opacity: 0.8;
+	}	
+}

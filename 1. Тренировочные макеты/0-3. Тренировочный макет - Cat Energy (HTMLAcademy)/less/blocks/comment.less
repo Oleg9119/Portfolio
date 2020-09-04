@@ -1,0 +1,139 @@
+.comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    width: 320px;
+    margin: 0 auto;
+}
+
+.comment__wrapper {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.comment__title {
+    position: relative;
+
+    margin: 0;
+    margin-top: 30px;
+
+    font-size: 24px;
+    color: @text-dark-grey;
+    font-weight: normal;
+}
+
+.comment__title::after {
+    position: absolute;
+    content: "";
+    right: -20px;
+    top: 12px;
+    width: 158px;
+    height: 3px;
+    background-color: @green;
+}
+
+.comment__input {
+    margin-top: 30px;
+    min-height: 128px;
+    width: 278px;
+    border: 1px solid @border-light-grey;
+    padding-top: 15px;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    resize: none;
+}
+
+.comment__input:hover {
+    border: 1px solid @border-dark-grey;
+}
+
+.comment__input:focus {
+    border: 2px solid @black;
+    outline: none;
+}
+
+@media (min-width: @tablet-width) {
+    .comment {
+        width: auto;
+    }
+
+    .comment__wrapper {
+        width: 708px;        
+    }
+
+    .comment__title {
+        padding-left: 40px;
+        margin-top: 70px;
+
+        font-size: 36px;
+    }
+
+    .comment__title::before {
+        position: absolute;
+        content: "";
+        left: -30px;
+        top: 12px;
+        width: 30px;
+        height: 3px;
+        background-color: @green;
+    }
+
+    .comment__title::after {
+        position: absolute;
+        content: "";
+        right: -30px;
+        top: 12px;
+        width: 480px;
+        height: 3px;
+        background-color: @green;
+    }
+
+    .comment__container {
+        padding-left: 40px;
+        padding-right: 35px;
+        margin-top: 70px;
+    }
+
+    .comment__input {
+        width: 100%;
+        min-height: 172px;
+        padding-left: 19px;
+
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .comment__wrapper {
+        width: 1220px;
+    }
+
+    .comment__title {
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .comment__title::before {
+        left: -110px;
+        width: 70px;
+    }
+
+    .comment__title::after {
+        right: -110px;
+        top: 12px;
+        width: 1110px;
+    }
+
+    .comment__container {
+        margin-top: 40px;
+    }
+}

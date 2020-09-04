@@ -1,0 +1,248 @@
+.programs {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.programs__wrapper {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.programs__layout {
+    background-color: @bg-white;
+}
+
+.programs__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.programs__item {
+    margin-top: 22px;
+
+    background-color: @bg-grey;
+}
+
+.programs__title--loss {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    padding-left: 91px;
+
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: @text-dark-grey;
+
+    background: url("../img/icon-cat-slim.svg") no-repeat, url("../img/ellipse.png") no-repeat;
+    background-size: 35px auto, 50px auto;
+    background-position: 30px 25px, 25px 30px;
+}
+
+.programs__title--gain {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    padding-left: 91px;
+
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: @text-dark-grey;
+
+    background: url("../img/icon-cat-pro.svg") no-repeat, url("../img/ellipse.png") no-repeat;
+    background-size: 67px auto, 50px auto;
+    background-position: 10px 37px, 20px 25px;
+}
+
+.programs__description {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 23px;
+
+    border-bottom: 1px solid @footer-grey;
+
+    font-family: Arial;
+}
+
+.programs__link-block {
+    position: relative;
+
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;   
+}
+
+.programs__link {
+    color: @text-dark-grey;
+    text-transform: uppercase;
+    text-decoration: none;    
+
+    &:hover::after {
+        background: url(../img/icon-right-arrow-verylong.svg) no-repeat;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.programs__link::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 36%;
+
+    width: 24px;
+    height: 11px;
+
+    background: url(../img/icon-right-arrow-verylong.svg) no-repeat;
+    background-position: -9px 0px;
+}
+
+@media (min-width: @tablet-width) {
+    .programs {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .programs__wrapper {
+        width: 708px;
+    }
+
+    .programs__item {
+        margin-top: 30px;
+    }
+
+    .programs__item--loss {
+        background-image: url("../img/icon-cat-slim.svg"), url("../img/ellipse-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 140px auto, 200px auto;
+        background-position: 500px 70px, 470px 75px;
+    }
+
+    .programs__item--gain {
+        background-image: url("../img/icon-cat-pro.svg"), url("../img/ellipse-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 270px auto, 200px auto;
+        background-position: 400px 120px, 470px 75px;
+    }
+
+    .programs__title--loss {
+        padding-top: 80px;
+        padding-bottom: 25px;
+        padding-left: 55px;
+    
+        font-size: 36px;
+    
+        background: none;
+    }
+    
+    .programs__title--gain {
+        padding-top: 80px;
+        padding-bottom: 25px;
+        padding-left: 55px;
+    
+        font-size: 36px;
+    
+        background: none;
+    }
+
+    .programs__description {
+        margin-left: 55px;
+        margin-right: 0;
+        padding-bottom: 62px;
+        padding-right: 325px;
+    
+        border-bottom: none;
+
+        font-size: 16px;
+    }
+
+    .programs__link-block {    
+        padding-top: 0;
+        padding-left: 55px;
+        padding-bottom: 63px;
+        padding-right: 50px;   
+    }
+
+    .programs__link {
+        font-size: 20px;
+    }
+
+    .programs__link::after {
+        top: 6%;
+        left: 25%;
+    
+        width: 34px;
+        height: 11px;
+    
+        background: url(../img/icon-right-arrow-verylong.svg) no-repeat;
+        background-position: -9px 0px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .programs__wrapper {
+        width: 1220px;
+    }
+
+    .programs__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    .programs__item {
+        margin: 0;
+
+        width: 570px;
+    }
+
+    .programs__item--loss {
+        background-image: none;
+    }
+
+    .programs__item--gain {
+        background-image: none;
+    }
+
+    .programs__title--loss {
+        padding-top: 80px;
+        padding-bottom: 85px;
+        padding-left: 215px;
+    
+        background: url("../img/icon-cat-slim.svg") no-repeat, url("../img/ellipse-desktop.png") no-repeat;
+        background-size: 70px auto, 100px auto;
+        background-position: 66px 45px, 50px 50px;
+    }
+    
+    .programs__title--gain {
+        padding-top: 80px;
+        padding-bottom: 85px;
+        padding-left: 215px;
+    
+        background: url("../img/icon-cat-pro.svg") no-repeat, url("../img/ellipse-desktop.png") no-repeat;
+        background-size: 134px auto, 100px auto;
+        background-position: 34px 70px, 50px 50px;
+    }
+
+    .programs__description {
+        margin-left: 52px;
+        margin-right: 0;
+        padding-bottom: 40px;
+        padding-right: 70px;
+    }
+
+    .programs__link::after {
+        left: 30%;    
+    }
+}

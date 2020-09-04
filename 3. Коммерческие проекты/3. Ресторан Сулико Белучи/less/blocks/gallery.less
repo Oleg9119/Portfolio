@@ -1,0 +1,223 @@
+.gallery {
+    color: @txt-black;
+}
+
+.owl-carousel,
+.owl-carousel.owl-loaded {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+.owl-carousel {
+    position: relative;
+    padding-top: 60px;
+}
+
+.owl-carousel .owl-dots {
+    order: 2;
+    flex-grow: 1;
+    bottom: 7px;
+    left: 80px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, 15px);
+    align-content: center;
+    justify-content: end;
+    padding: 0 30px;
+
+    .owl-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: @bg-orange-opacity !important;
+    }
+
+    *+* {
+        margin-right: 1.5em;
+    }
+
+    .owl-dot.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .owl-dot.active::before {
+        content: "";
+        z-index: 10;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: @txt-white;
+        opacity: 0.8;
+    }
+}
+
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.owl-carousel .owl-stage-outer {
+    order: 1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav {
+    order: 3;
+    min-height: 60px;
+    width: 90px;
+    background: 0 0;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 30px 30px;
+    align-content: center;
+    justify-content: start;
+    color: @txt-white;
+    box-sizing: content-box;
+
+    button {
+        color: @txt-white;
+        position: relative;
+        right: 0;
+        outline: none;
+
+        span {
+            display: none;
+        }
+
+        &.owl-prev {
+            margin-right: 15px;
+        }
+
+        &::before {
+            content: "";
+            display: flex;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+        }
+
+        &.owl-prev::before {
+            background-image: url(../img/left.png);
+        }
+
+        &.owl-next::before {
+            background-image: url(../img/right.png);
+        }
+    }
+}
+
+.gallery__photo {
+    width: 100%;
+    display: flex;
+}
+
+.gallery__slider-container {
+    position: relative;
+    min-height: 326px;
+    display: flex;
+    align-items: center;
+}
+
+.gallery__bg-left {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @bg-brown-slider;
+    border-right: 105px solid #fff;
+}
+
+.gallery__description {
+    background-image: url(../img/slider-logo-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.gallery__title {
+    text-align: left;
+}
+
+.gallery__photo {
+    object-fit: cover;
+}
+
+.owl-carousel .owl-stage-outer {
+    width: 100%;
+
+}
+
+@media (min-width: @tablet-width) {
+
+    .gallery {
+        display: flex;
+    }
+
+    .gallery__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .gallery__slider-container {
+        width: 50%;
+    }
+
+    .owl-carousel {
+        width: 100%;
+
+        .owl-item img {
+            min-height: 450px;
+            max-height: 450px;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .gallery {
+        position: relative;
+        min-height: 640px;
+        margin-bottom: 124px;
+    }
+
+    .gallery__description {
+        background-image: url(../img/slider-logo.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+
+    .gallery__down-arrows {
+        display: block;
+        position: absolute;
+        content: "";
+        bottom: -80px;
+        left: 50%;
+        width: 15px;
+        height: 25px;
+        margin-left: -8px;
+        background-image: url(../img/down-arrows-black.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .owl-carousel .owl-item img {
+        min-height: 600px;
+        max-height: 600px;
+    }
+}

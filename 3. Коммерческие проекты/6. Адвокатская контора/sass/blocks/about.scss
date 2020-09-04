@@ -1,0 +1,131 @@
+.about__wrap {
+    padding: 5px;
+
+    .about__main {
+        display: flex;
+        min-height: 720px;
+
+        .about__bg {
+            width: 50%;
+            height: auto;
+            background: url('../img/about-1.jpg') no-repeat 50% 0;
+            background-size: 70%;
+        }
+
+        .about__description {
+            box-sizing: border-box;
+            width: 50%;
+            padding-right: 20%;
+
+            .about__title {
+                font-size: 72px;
+                line-height: 1;
+                text-transform: uppercase;
+                font-family: 'Bebas Neue';
+                font-weight: 700;
+                color: $primary;
+                margin-top: 30%;
+                margin-bottom: 30px;
+            }
+
+            .about__text {
+                font-size: 12px;
+                line-height: 13px;
+                margin-top: 0;
+            }
+
+            .about__text--second {
+                margin-bottom: 30px;
+            }
+        }
+
+        .about__gallery {
+            width: 83%;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .about__gallery-item {
+            display: block;
+            margin-right: 10px;
+            width: 68px;
+            height: 100px;
+            background-color: #c4c4c4;
+        }
+
+        .about__gallery .owl-nav {
+            position: absolute;
+        }
+    }
+
+    .about__crew {
+        min-height: 720px;
+    }
+}
+
+.about__wrap.off {
+    display: block;
+}
+
+@media (max-width: $desktop-width) {
+    .about {
+        margin-top: 75px;
+    }
+
+    .about__wrap {
+        padding-top: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+
+        .about__main {
+            display: flex;
+            min-height: auto;
+
+            .about__bg {
+                display: none;
+            }
+
+            .about__description {
+                width: 100%;
+                padding-top: 15px;
+                padding-right: 0;
+
+                .about__title {
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+
+                .about__text--second {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .about__gallery {
+                width: 302px;
+                margin: 0 auto;
+                margin-bottom: 40px;
+
+                @media (max-width: 390px) {
+                    width: 248px;
+                }
+            }
+
+            .about__gallery-item {
+
+                @media (max-width: 390px) {
+                    display: block;
+                    margin-right: 12px;
+                    width: 53px;
+                    height: 100px;
+                    background-color: #c4c4c4;
+                }
+            }
+        }
+
+        .about__crew {
+            min-height: auto;
+        }
+    }
+}

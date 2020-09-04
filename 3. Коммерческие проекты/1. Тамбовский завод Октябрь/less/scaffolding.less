@@ -1,0 +1,175 @@
+/* futura*/
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-Light.eot');
+    src: local('Futura LT Light'), local('FuturaLT-Light'),
+        url('../fonts/FuturaLT-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLT-Light.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Light.woff') format('woff'),
+        url('../fonts/FuturaLT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-Book.eot');
+    src: local('Futura LT Book'), local('FuturaLT-Book'),
+        url('../fonts/FuturaLT-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Book.woff') format('woff'),
+        url('../fonts/FuturaLT-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT.eot');
+    src: local('Futura LT Medium'), local('FuturaLT'),
+        url('../fonts/FuturaLT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLT.woff2') format('woff2'),
+        url('../fonts/FuturaLT.woff') format('woff'),
+        url('../fonts/FuturaLT.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-Bold.eot');
+    src: local('Futura LT Bold'), local('FuturaLT-Bold'),
+        url('../fonts/FuturaLT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Bold.woff') format('woff'),
+        url('../fonts/FuturaLT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-ExtraBold.eot');
+    src: local('Futura LT Extra Bold'), local('FuturaLT-ExtraBold'),
+        url('../fonts/FuturaLT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaLT-ExtraBold.woff2') format('woff2'),
+        url('../fonts/FuturaLT-ExtraBold.woff') format('woff'),
+        url('../fonts/FuturaLT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* dinpro */
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/DINPro-Light.eot');
+    src: local('DIN Pro Light'), local('DINPro-Light'),
+        url('../fonts/DINPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Light.woff') format('woff'),
+        url('../fonts/DINPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/DINPro.eot');
+    src: local('DIN Pro'), local('DINPro'),
+        url('../fonts/DINPro.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro.woff') format('woff'),
+        url('../fonts/DINPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'DIN Pro';
+	src: url('../fonts/DINPro-Medium.eot');
+	src: local('DIN Pro Medium'), local('DINPro-Medium'),
+		url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINPro-Medium.woff') format('woff'),
+		url('../fonts/DINPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('../fonts/DINPro-Bold.eot');
+    src: local('DIN Pro Bold'), local('DINPro-Bold'),
+        url('../fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Bold.woff') format('woff'),
+        url('../fonts/DINPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'DIN Pro';
+	src: url('../fonts/DINPro-Black.eot');
+	src: local('DIN Pro Black'), local('DINPro-Black'),
+		url('../fonts/DINPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINPro-Black.woff') format('woff'),
+		url('../fonts/DINPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+    
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'DIN Pro', sans-serif;
+    font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	font-style: normal;
+
+	color: @txt-black;	
+	background-color: @bg-white;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: @desktop-padding;
+    box-sizing: border-box;
+}
+
+@media (max-width: @desktop-width) {
+    .container {
+        max-width: 100%;
+        padding: @mobile-padding;
+        box-sizing: border-box;
+    }
+  }
+
+  @media (max-width: @tablet-width) {
+    .container {
+        max-width: 100%;
+        padding: @mobile-padding;
+        box-sizing: border-box;
+    }
+  }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+.social-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

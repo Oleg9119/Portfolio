@@ -1,0 +1,24 @@
+.more-link {
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px @border-main solid;
+    text-transform: uppercase;
+    color: @txt-main;
+    font-weight: 500;
+    font-size: 15px;
+
+    &--right {
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+}
+
+.main-nav .more-link {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: @orange 2px solid;
+    }
+}

@@ -1,0 +1,48 @@
+section.regions {
+    margin-bottom: 60px;
+
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        align-items: start;
+        grid-gap: 60px;
+    }
+
+    .intro__text {
+        line-height: 1.4;
+    }
+
+    .regions-list {
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-gap: 15px;
+        list-style-position: outside;
+        padding-left: 20px;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 355px) {
+        .regions-list li {
+            width: 270px;
+        }
+    }
+
+    form {
+        background-color: #eaf5fb;
+
+        .form__text {
+            color: #363636;
+        }
+
+        .form__field {
+            width: 100%;
+        }
+
+        .form__button {
+            width: 100%;
+            background-color: #37a3db;
+            color: #fff;
+        }
+    }
+}

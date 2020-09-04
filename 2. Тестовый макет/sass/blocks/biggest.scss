@@ -1,0 +1,53 @@
+.biggest {
+    display: flex;
+    flex-direction: column;
+
+    .biggest__title {
+        text-align: center;
+    }
+
+    .biggest__table {
+        min-height: 360px;
+        padding: 0;
+        border-collapse: collapse;
+
+        thead {
+            min-height: 30px;
+            background-color: #222d43;
+
+            th {
+                height: 35px;
+                text-align: center;
+                color: $violet;
+                font-weight: 500;
+            }
+        }
+
+        tbody {
+
+            tr {
+
+                td {
+                    color: $white;
+                    text-align: center;
+
+                    a {
+                        color: $white;
+                    }
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+            
+            tr:nth-child(2n+1) {
+                background-color: #172236;
+            }
+
+            tr:nth-child(2n) {
+                background-color: #222d43;
+            }
+        }
+    }
+}

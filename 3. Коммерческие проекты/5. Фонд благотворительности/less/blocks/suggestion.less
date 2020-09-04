@@ -1,0 +1,40 @@
+.suggestion {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    list-style: none;
+
+    .suggestion__item {
+
+        a {
+            border-bottom: 1px dashed @txt-main;
+            font-size: 14px;
+            font-weight: 300;
+            color: @txt-main;
+
+            &:hover {
+                color: @gold;
+                border-bottom: 1px dashed @gold;
+            }
+        }
+    }
+
+    &--white {
+
+        .suggestion__item {
+
+            a {
+                border-bottom: 1px dashed @txt-white;
+                color: @txt-white;
+
+                &:hover {
+                    color: transparent;
+                    text-shadow: 0px 0px @blue, 3px 3px rgba(0, 0, 0, 0.2);
+                    border-bottom: 1px dashed @blue;
+                }
+            }
+        }
+    }
+}

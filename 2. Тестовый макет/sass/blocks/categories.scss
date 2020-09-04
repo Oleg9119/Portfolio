@@ -1,0 +1,171 @@
+.categories {
+    background-color: $secondaryBg;
+
+    .categories__wrap {
+        display: flex;
+        flex-direction: column;
+
+        .categories__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 50px;
+
+            .categories__item {
+                min-height: 25px;
+
+                .categories__link {
+                    padding-left: 35px;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    color: $white;
+                    font-weight: 500;
+                    font-size: 14px;
+                    min-height: 25px;
+                    line-height: 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &--new {
+                    .categories__link {
+                        background: url('../img/cat1.png') no-repeat;
+                    }
+                }
+
+                &--popular {
+                    .categories__link {
+                        background: url('../img/cat2.png') no-repeat;
+                    }
+                }
+
+                &--slots {
+                    .categories__link {
+                        background: url('../img/cat3.png') no-repeat;
+                    }
+                }
+
+                &--casino {
+                    .categories__link {
+                        background: url('../img/cat4.png') no-repeat;
+                    }
+                }
+
+                &--table {
+                    .categories__link {
+                        background: url('../img/cat5.png') no-repeat;
+                    }
+                }
+
+                &--favourites {
+                    .categories__link {
+                        background: url('../img/cat6.png') no-repeat;
+                    }
+                }
+
+                &--last {
+                    .categories__link {
+                        background: url('../img/cat7.png') no-repeat;
+                    }
+                }
+
+                select { 
+                    padding-right: 25px;
+                    border: none;
+                    background: transparent;
+                    color: $white; 
+                    font-weight: 500;
+                    font-size: 14px;
+                    min-height: 25px;
+                    line-height: 16px;
+                    outline: none;
+                    appearance: none;
+                    cursor: pointer;
+                    background: url('../img/cat8.png') no-repeat 90% 50%;                
+                    background-color: transparent;
+
+                    option {
+                        color: $black;
+                    }
+                }
+
+                &--search {
+                    position: relative;
+                    min-width: 390px;
+                    min-height: 30px;
+
+                    input {
+                        width: 100%;
+                        height: 30px;
+                        border: 1px solid #898989;
+                        border-radius: 25px;
+                        background-color: transparent;
+                        padding-left: 8px;
+                        color: $white;
+                        font-weight: 500;
+                        font-size: 14px;
+                        min-height: 25px;
+                        line-height: 16px;
+                    }
+
+                    ::placeholder {
+                        color: $white;
+                        font-weight: 500;
+                        font-size: 14px;
+                        min-height: 25px;
+                        line-height: 16px;
+                    }
+
+                    .search-button {
+                        position: absolute;
+                        right: 15px;
+                        top: 4px;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../img/search.svg') no-repeat;
+                        border: 0;
+                        cursor: pointer;
+                        appearance: none;
+                    }
+                }
+            }
+        }
+
+        .providers__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+
+            .providers__item {
+
+                .providers__button {
+                    padding: 7px 17px 5px 16px;
+                    background: transparent;
+                    border: 1px solid #282F4B;
+                    border-radius: 50px;
+                    color: $violet;
+                    cursor: pointer;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 13px;
+                }
+            }
+
+            .providers__item--active {
+
+                .providers__button {
+                    border: 1px solid #D73649;
+                }
+            } 
+        }
+    }
+}

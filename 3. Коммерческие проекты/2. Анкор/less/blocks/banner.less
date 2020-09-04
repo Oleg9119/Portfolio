@@ -1,0 +1,94 @@
+.banner {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    margin-top: 85px;
+    min-height: 150px;
+    width: 100%;
+}
+
+.banner__content {
+    padding-left: 50px;
+}
+
+.banner__title {
+    position: relative;
+
+    color: @txt-white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.2;  
+}
+
+.banner__title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: @bg-red;
+    top: 25px;
+    left: 0;
+} 
+
+.banner--about {
+    background: url(../img/banner-company.jpg) no-repeat;
+    background-size: cover;
+}
+
+.banner--services {
+    background: url(../img/banner-fireproof.jpg) no-repeat;
+    background-size: cover;
+}
+
+.banner--objects {
+    background: url(../img/banner-object.jpg) no-repeat;
+    background-size: cover;
+}
+
+.banner--contacts {
+    background: url(../img/banner-contacts.jpg) no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+
+    .banner {
+        min-height: 185px;
+        margin-top: 111px;
+    }
+
+    .banner__title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .banner__title::before {
+        top: 40px;
+        height: 4px;
+    } 
+}
+
+@media (min-width: @desktop-width) {
+
+    .banner {
+        min-height: 270px;
+    }
+
+    .banner__content {
+        padding-left: 30px;
+    }
+
+    .banner__title {
+        font-size: 48px;
+        line-height: 65px;
+        font-weight: 800;
+    }
+
+    .banner__title::before {
+        top: 70px;
+        width: 47px;
+        height: 7px;
+    } 
+}

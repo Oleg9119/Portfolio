@@ -1,0 +1,301 @@
+.services__title {
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: @txt-red;
+    font-family: 'DIN Pro';
+    font-weight: 500;
+}
+
+.services__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.services__item {
+    position: relative;
+    width: 33.3%;
+    min-height: 385px;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.services__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.services__item--probivka {
+    background-image: url(../img/probivka-metalla.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.services__item--platy {
+    background-image: url(../img/pechatnye-plati.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services__item--rezka {
+    background-image: url(../img/lazernaya-rezka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dark-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.services__item-header {
+    position: absolute;
+    margin: 0;
+    margin-top: 70px;
+    left: 0;
+    z-index: 5;
+
+    text-align: center;
+    font-size: 30px;
+    font-family: 'DIN Pro';
+    color: @txt-white;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.services__item--rezka .services__item-header {
+    position: absolute;
+    left: 17%;
+}
+
+.services__item-button {
+    position: absolute;
+    top: 55%;
+    left: 9%;
+    z-index: 5;
+
+    width: 80%;
+    height: 75px;
+    border: 2px solid @border-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+
+    text-transform: uppercase;
+    color: @txt-white;
+    font-size: 18px;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.services__item-button:hover,
+.services__item-button:focus {
+    opacity: 0.7;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.services__item-button:active {
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.services_all {
+    min-width: 177px;
+    height: 35px;
+    border: 2px solid @border-red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    min-height: 75px;
+    margin-bottom: 30px;
+
+    color: @txt-red;
+    font-size: 22px;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.services_all:hover,
+.services_all:focus {
+    opacity: 0.7;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.services_all:active {
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.dark-bg--news {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.dark-bg--management { 
+    background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: @desktop-width) {
+    .services__title {
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+
+    .services__list {
+        margin-bottom: 30px;
+    }
+    .services__item {
+        min-height: 285px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .services__item-header {
+        margin-top: 30px;
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .services__item:nth-child(3) .services__item-header {
+        left: auto;
+    }
+
+    .services__item-button {
+        width: 80%;
+        height: 50px;
+        top: 65%;
+    }
+
+    .services_all {
+        margin-bottom: 13px;
+        min-height: 45px;
+    }
+}
+
+@media (max-width: @tablet-width) {
+    .services__title {
+        margin-bottom: 30px;
+        margin-top: 15px;
+        font-size: 28px;
+    }
+
+    .services__list {
+        margin-bottom: 30px;
+    }
+    .services__item {
+        min-height: 285px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .services__item-header {
+        margin-top: 30px;
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .services__item:nth-child(3) .services__item-header {
+        left: auto;
+    }
+
+    .services__item-button {
+        width: 80%;
+        height: 35px;
+        top: 65%;
+        font-size: 16px;
+        width: 90%;
+        left: auto;
+    }
+
+    .services_all {
+        margin-bottom: 13px;
+        min-height: 45px;
+    }
+
+    .services__title {
+        margin: 15px;
+        margin-top: 0;
+
+        font-size: 25px;
+    }
+
+    .services__list {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .services__item {
+        width: 100%;
+        min-height: 185px;
+    }
+
+    .services__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .services__item-header {
+        margin-top: 0;
+        position: static;
+
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .services__item:not(:last-child) {
+         margin-right: 0; 
+    }
+
+    .services_all {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

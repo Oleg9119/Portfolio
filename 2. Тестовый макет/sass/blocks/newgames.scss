@@ -1,0 +1,84 @@
+.newgames {
+    padding-top: 30px;
+    padding-bottom: 55px;
+	background: linear-gradient(270deg,#091024 0%,rgba(25,32,50,0) 100%);
+}
+
+.newgames__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.newgames__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(180px, 185px);
+    grid-column-gap: 7px;
+    grid-row-gap: 8px;
+}
+
+.newgames__item:first-child {
+    position: relative;
+}
+
+.top_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url('../img/new1-2.png') no-repeat 50% 50%;
+}
+
+.newgames__item--fourcells {
+    position: relative;
+    grid-column: span 2;
+    grid-row: span 2;
+    grid-column-gap: 0;
+    width: 100%;
+    
+    .newgames__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .newgames__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .newgames__mark {
+        position: absolute;
+        padding-left: 30px;
+        padding-top: 17px;
+        width: 100px;
+        height: 30px;
+        right: 2px;
+        top: 30px;
+        background: url('../img/new_mark.png') no-repeat 50% 50%;
+        color: $white;
+    }
+
+    .newgames__button {
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.newgames__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

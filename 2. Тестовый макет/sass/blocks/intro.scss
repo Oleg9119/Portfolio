@@ -1,0 +1,48 @@
+.intro {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 70px;
+    min-height: 454px;
+
+    .intro__register-wrap {
+        display: flex;
+    }
+
+    .intro__register {
+        position: relative;
+        background-color: $primaryBg;
+        color: $violet;
+        width: 490px;
+        max-height: 454px;
+        background: linear-gradient(270deg, #091024 0%, rgba(25, 32, 50, 0) 100%);
+    }
+
+    .intro__register::before {
+        position: absolute;
+        z-index: 1;
+        width: 185px;
+        height: 180px;
+        content: '';
+        top: -85px;
+        left: -100px;
+        background: url('../img/crystals-top.png') no-repeat 10% 10%;
+        background-size: cover;
+    }
+
+    .intro__register::after {
+        position: absolute;
+        z-index: 1;
+        width: 185px;
+        height: 195px;
+        content: '';
+        top: 230px;
+        right: 5px;
+        background: url('../img/crystals-bottom.png') no-repeat 10% 10%;
+        background-size: cover;
+    }
+
+    .intro__slider {
+        width: 980px;
+        max-height: 454px;
+    }
+}

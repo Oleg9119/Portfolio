@@ -1,0 +1,111 @@
+.programs-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 156px;
+
+    list-style: none;
+}
+
+.programs-list__item:not(:first-child) {
+    margin-top: 26px;
+}
+
+.programs-list__label {
+    position: relative;
+
+    padding-left: 46px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.programs-list__label:active {
+    opacity: 0.3;
+}
+
+.programs-list__label::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #cecece;
+}
+
+.programs-list__label:active::before {
+    opacity: 0.3;
+}
+
+.programs-list__input:checked + .programs-list__label::after,
+.programs-list__input:checked + .programs-list__label:hover::after,
+.programs-list__input:checked + .programs-list__label:active::after {
+    position: absolute;
+    content: "";
+    left: 9px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: @green;
+}
+
+.programs-list__label--active:active::after {
+    opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+    .programs-list {
+        width: 600px;
+        border: 1px solid @border-light-grey;
+        margin: 0 auto;
+        padding-left: 27px;
+    }
+
+    .programs-list__label {
+        padding-left: 60px;
+    }
+
+    .programs-list__label::before {
+        width: 40px;
+        height: 40px;
+    }
+
+    .programs-list__input:checked + .programs-list__label::after,
+    .programs-list__input:checked + .programs-list__label:hover::after,
+    .programs-list__input:checked + .programs-list__label:active::after {
+        left: 12px;
+        top: 10px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .programs-list__label {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .programs-list-wrapper {
+        position: absolute;
+        right: 470px;
+        bottom: 23px;
+
+        width: 550px;
+    }
+
+    .programs-list {
+        min-height: 168px;
+        width: 570px;
+    }
+}

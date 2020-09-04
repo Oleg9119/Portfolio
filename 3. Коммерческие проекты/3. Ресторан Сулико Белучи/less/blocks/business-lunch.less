@@ -1,0 +1,171 @@
+.business-lunch {
+    display: flex;
+    flex-direction: column;
+    color: @txt-black;
+
+    .business-lunch__ext-container {
+        display: flex;
+        flex-direction: column;
+
+        .business-lunch__description {
+            padding: 30px;
+
+            .business-lunch__title {
+                margin-top: 0;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+
+            .business-lunch__text {
+                margin-top: 0;
+                margin-bottom: 15px;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .business-lunch__button {
+                background-color: @bg-business-lunch-button;
+            }
+        }
+
+        .business-lunch__image-container {
+            position: relative;
+            order: 1;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            .business-lunch__image-bg {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                width: 66.6%;
+                min-height: 300px;
+                background-color: @bg-business-lunch;
+            }
+
+            .business-lunch__image {
+                position: absolute;
+                left: 0;
+                top: center;
+                z-index: 2;
+                min-height: 220px;
+                min-width: 83%;
+                background-image: url(../img/business-lunch.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+@media (min-width: @tablet-width) {
+
+    .business-lunch {
+
+        .business-lunch__ext-container {
+            display: flex;
+            flex-direction: row;
+
+            .business-lunch__description {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .business-lunch__title {
+                    margin-bottom: 25px;
+                }
+
+                .business-lunch__text {
+                    margin-bottom: 25px;
+                }
+
+                .business-lunch__button {
+                    align-self: flex-start;
+                    min-width: 322px;
+                }
+            }
+
+            .business-lunch__image-container {
+                width: 50%;
+
+                .business-lunch__image {
+                    position: absolute;
+                    right: 60px;
+                    top: center;
+                    z-index: 2;
+                    min-height: 240px;
+                    min-width: 83%;
+                    background-image: url(../img/business-lunch.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .business-lunch__image-bg {
+                    min-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .business-lunch {
+        position: relative;
+        min-height: 561px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+
+        .business-lunch__ext-container {
+            width: 100%;
+
+            .business-lunch__description {
+
+                padding-left: 120px;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .business-lunch__title {
+                    margin-bottom: 50px;
+                    font-size: 48px;
+                    line-height: 48px;
+                }
+
+                .business-lunch__text {
+                    margin-bottom: 50px;
+                }
+
+                .business-lunch__button {
+                    width: 358px;
+                    height: 60px;
+                    border-radius: 60px;
+                    font-size: 20px;
+                    line-height: 22px;
+                    font-weight: bold;
+                }
+
+                .business-lunch__button:hover {
+                    background-color: #7b5d14;
+                }
+            }
+
+            .business-lunch__image-container {
+
+                .business-lunch__image {
+                    min-height: 406px;
+                    right: 120px;
+                }
+            }
+        }
+    }
+}

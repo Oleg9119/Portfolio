@@ -1,0 +1,23 @@
+.partners {
+    border-bottom: 1px solid #172146;
+
+    .partners__top {
+        padding-top: 35px;
+        padding-bottom: 15px;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .partners__bottom {
+        padding-top: 15px;
+        padding-bottom: 35px;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

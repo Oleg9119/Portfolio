@@ -1,0 +1,69 @@
+.products {
+    display: flex;
+    background: url('../img/cardiometr_bg.svg') no-repeat 100% 50%;
+    min-height: 460px;
+    margin-bottom: 120px;
+
+    .products__wrap {
+        display: flex;
+        padding: 0;
+    }
+
+    .carousel__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+        margin-bottom: 35px;
+
+        .carousel__description-list {
+            margin: 0;
+            padding-left: 25px;
+
+            .carousel__description-item {
+                font-size: 14px;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+            .carousel__description-item:last-child {
+                margin-bottom: 25px;
+            }
+        }
+
+        .carousel__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $blue;
+            width: 283px;
+            height: 48px;
+            border-radius: 38px;
+            border: none;
+            cursor: pointer;
+            color: $white;
+            outline: none;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        @media (max-width: 520px) {
+            flex-direction: column;
+
+            .carousel__right {
+                order: 1;
+                margin-bottom: 30px;
+            }
+
+            .carousel__left {
+                order: 2;
+            }
+
+            .carousel__button {
+                width: 100%;
+            }
+        }
+    }
+}

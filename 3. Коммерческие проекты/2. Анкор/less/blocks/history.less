@@ -1,0 +1,165 @@
+.history__title {
+    margin-top: 0;
+
+    font-size: 18px;
+}
+
+.history__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.history__item-photo {
+    width: 100%;
+    min-height: 150px;
+
+    background-color: @bg-dark-grey;
+}
+
+.history__item-title {
+    padding-top: 15px;
+    padding-left: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+}
+
+.history__description-container p {
+    font-size: 14px;
+}
+
+.history__description-container div {
+    padding-left: 5px;
+}
+
+.history__date {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;  
+    
+    .svg-container {
+        padding-top: 5px;
+    }
+}
+
+.history__date-text {
+    margin-left: 10px;
+}
+
+.history__description {
+    display: flex;
+    margin-bottom: 10px; 
+    
+    .svg-container {
+        padding-top: 3px;
+    }
+}
+
+.history__description-text {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.history__organization {
+    display: flex;
+
+    .svg-container {
+        padding-top: 3px;
+    }
+}
+
+.history__organization-text {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+@media (min-width: @tablet-width) {
+
+    .history__item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .history__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .history__item-photo {
+        width: 33%;
+    }
+
+    .history__description-container {
+        width: 65%;
+    }
+
+    .history__item-title {
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .history__description-text {
+        font-size: 14px;
+    }
+
+    .history__title {
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .history__item-title {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .history__title {
+        padding-left: 30px;
+        font-size: 36px;
+        line-height: 49px;
+        padding-bottom: 0;
+    }
+
+    .history__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .history__item-photo {
+        min-height: 280px;
+    }
+
+    .history__item-title {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .history__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .history__description-container {
+        padding-top: 15px;
+    }
+
+    .history__description-container p {
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .history__date {
+        align-items: flex-start;
+    }
+
+    .history__date .svg-container {
+        padding-top: 16px;
+    }
+
+    .history__organization {
+        align-items: flex-start;
+    }
+
+    .history__organization .svg-container {
+        padding-top: 0;
+    }
+}

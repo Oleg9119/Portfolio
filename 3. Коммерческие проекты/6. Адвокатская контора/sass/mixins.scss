@@ -1,0 +1,57 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+//Устанавливает максимальную и минимальную ширину для элемента, паддинги слева и справа, центрует
+@mixin min-max($min-width, $max-width, $padding) {
+  // min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+@mixin button($bg: $second, $borderColor: transparent) {
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid $white;
+  width: 160px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 13px;
+  font-family: 'Montserrat';
+  color: $white;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: none;
+  appearance: none;
+  transition-property: background-color, border-color;
+  transition-duration: 0.3s;
+  @content;
+
+  &:hover, &:active {
+    background-color: darken($bg, 2%);
+    border-color: darken($bg, 2%);
+  }
+}

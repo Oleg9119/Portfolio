@@ -1,0 +1,38 @@
+.vacancy__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .vacancy{
+    width: 49%;
+  }
+  .vacancy__list .vacancy .skills{
+    margin: 15px 0;
+    display: flex;
+  }
+  .vacancy__list .vacancy .skills p{
+    margin: 0;
+  }
+  .vacancy__list .vacancy .skills:before{
+    display: flex;
+      content: '';
+      min-width: 20px;
+      line-height: 14px;
+      height: 20px;
+      background-image: url('../img/time-green.svg');
+      stroke: #333;
+      fill: #333;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 5px;
+  }
+
+  @media (max-width: @tablet-width) {
+    .vacancy__list{
+      flex-wrap: wrap;
+    }
+    .vacancy{
+      width: 100%;
+    }
+  }

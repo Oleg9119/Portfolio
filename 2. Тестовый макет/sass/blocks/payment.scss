@@ -1,0 +1,16 @@
+.payment {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: linear-gradient(270deg,#091024 0%,rgba(25,32,50,0) 100%);
+    
+    .payment__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+}

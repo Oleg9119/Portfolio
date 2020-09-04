@@ -1,0 +1,136 @@
+.crew {
+    padding-top: 5%;
+
+    .crew__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(205px, auto);
+        grid-column-gap: 20px;
+
+        .crew__item {
+
+            .crew__photo {
+                width: 100%;
+                height: 400px;
+                background: $primary;
+                margin-bottom: 20px;
+            }
+
+            .crew__name {
+                margin: 0;
+                margin-bottom: 8px;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 700;
+                color: $primary;
+            }
+
+            .crew__position {
+                margin: 0;
+                margin-bottom: 15px;
+                font-size: 12px;
+                line-height: 13px;
+                color: $primary;
+            }
+
+            .crew__text {
+                margin: 0;
+                font-size: 12px;
+                line-height: 13px;
+            }
+        }
+
+        .crew__item:first-child {
+
+            .crew__photo {
+                background: url('../img/crew1.jpg') no-repeat 0% 50%;
+                background-size: cover;
+            }
+        }
+
+        .crew__item:nth-child(2) {
+
+            .crew__photo {
+                background: url('../img/crew2.jpg') no-repeat 0% 50%;
+                background-size: cover;
+            }
+        }
+
+        .crew__item:nth-child(3) {
+
+            .crew__photo {
+                background: url('../img/crew3.jpg') no-repeat 0% 50%;
+                background-size: cover;
+            }
+        }
+
+        .crew__item.crew__item--vacancy {
+
+            .crew__photo {
+                background: $primary;
+            }
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .crew {
+        padding-top: 35px;
+
+        .crew__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+
+            .crew__item {
+                display: flex;
+                justify-content: space-between;
+
+                .crew__photo {
+                    width: 150px;
+                    height: auto;
+                    min-height: 230px;
+                    background: $primary;
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    min-width: 153px;
+                    max-height: 170px;
+
+                    @media (max-width: 375px) {
+                        min-width: 103px;
+                        min-height: 170px;
+                    }
+                }
+            }
+
+            .crew__item:first-child {
+
+                .crew__photo {
+                    background: url('../img/crew1-mobile.jpg') no-repeat 50% 50%;
+                    background-size: cover;
+                }
+            }
+
+            .crew__item:nth-child(2) {
+
+                .crew__photo {
+                    background: url('../img/crew2-mobile.jpg') no-repeat 50% 50%;
+                    background-size: cover;
+                }
+            }
+
+            .crew__item:nth-child(3) {
+
+                .crew__photo {
+                    background: url('../img/crew3-mobile.jpg') no-repeat 50% 50%;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.team {
+    width: 989px;
+    min-height: 486px;
+    margin: 0 auto;
+}
+
+.team__header {
+    margin: 0 0 42px 0;
+    font-size: 30px;
+    color: #464646;
+    text-align: center;
+}
+
+.team__text {
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.team__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.team__item-image-container {
+    position: relative;
+    width: 123px;
+    height: 123px;
+    margin: 0 auto;
+}
+
+.team__first-member::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/orion-team-first-number.png);
+    z-index: 5; 
+    top: 30%;
+    left: -15%;
+}
+
+.team__second-member::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/orion-team-second-number.png);
+    z-index: 5; 
+    top: 30%;
+    left: -15%;
+}
+
+.team__third-member::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/orion-team-third-number.png);
+    z-index: 5; 
+    top: 30%;
+    left: -15%;
+}
+
+.team__fourth-member::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/orion-team-fourth-number.png);
+    z-index: 5; 
+    top: 30%;
+    left: -15%;
+}
+
+.team__item-image {
+    width: 100%;
+    height: auto;
+}
+
+.team__item-header {
+    margin: 24px 0 16px 0;
+    font-size: 20px;
+    color: #363636;
+    text-align: center;
+}
+
+.team__item-text {
+    margin: 0 0 20px 0;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    text-align: center;
+}
+
+.social-list {
+    display: flex;
+    width: 111px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.social__item:first-child svg {
+    fill: #3498db;
+}
+
+.social__item:first-child a:hover svg,
+.social__item:first-child a:focus svg {
+    fill: #297ab1;
+}
+
+.social__item:first-child a:active svg {
+    fill: #1b5379;
+}
+
+.social__item:nth-child(2) svg {
+    fill: #66c2ff;
+}
+
+.social__item:nth-child(2) a:hover svg,
+.social__item:nth-child(2) a:focus svg {
+    fill: #03a9f4;
+}
+
+.social__item:nth-child(2) a:active svg {
+    fill: #0871a1be;
+}
+
+.social__item:last-child svg {
+    fill: #ff6dac;
+}
+
+.social__item:last-child a:hover svg,
+.social__item:last-child a:focus svg {
+    fill: #c75586;
+}
+
+.social__item:last-child a:active svg {
+    fill: #a0446c;
+}

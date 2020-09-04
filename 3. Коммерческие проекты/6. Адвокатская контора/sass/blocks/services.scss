@@ -1,0 +1,96 @@
+.services__wrap {
+    max-width: 1070px;
+    padding: 5px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+    @media (min-width: $desktop-width) {
+        .services__title {
+            @include visually-hidden;
+        }
+    }    
+
+    .services__list {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(205px, auto);
+        grid-column-gap: 25px;
+        grid-row-gap: 45px;
+        list-style: none;
+
+        .services__item {
+
+            .services__photo {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $primary;
+            }
+
+            .services__name {
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 700;
+                color: $primary;
+            }
+
+            .services__description {
+                font-size: 12px;
+                line-height: 13px;
+            }
+
+            .services__link {
+                color: $primary;
+                font-size: 10px;
+                line-height: 13px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: darken($second, 35%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .services {
+        margin-top: 75px;
+    }
+
+    .services__wrap {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 35px;
+        padding-top: 10px;
+    
+        .services__title {
+            display: block;
+            margin-bottom: 15px;
+            margin-top: 0;
+            font-size: 72px;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $primary;
+            font-family: 'Bebas Neue';
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .services__wrap { 
+    
+        .services__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            grid-column-gap: 0;
+            grid-row-gap: 30px;
+        }
+    }
+}

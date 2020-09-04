@@ -1,0 +1,94 @@
+.specs-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    list-style: none;
+}
+
+.specs-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.specs-list__label {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: @text-medium-grey;
+}
+
+.specs-list__input {
+    margin-left: auto;
+    height: 43px;
+    padding-left: 15px;
+    border: 1px solid @border-light-grey;
+
+    text-transform: uppercase;
+    font-size: 16px;
+	color: @text-light-grey;
+}
+
+.specs-list__input:hover {
+    outline: none;
+}
+
+.specs-list__input:focus,
+.specs-list__input:active {
+    border: 2px solid @black;
+}
+
+.specs-list__input:invalid {
+    border: 2px solid @red;
+}
+
+.specs-list__input--name {
+    width: 227px;
+    margin-left: 15px;
+}
+
+.specs-list__item--weight {
+    margin-top: 14px;
+}
+
+.specs-list__input--weight {
+    width: 202px;
+    margin-left: 15px;
+}
+
+.specs-list__item--age {
+    margin-top: 14px;
+    margin-bottom: 23px;
+}
+
+.specs-list__input--age {
+    width: 170px;
+    margin-left: 15px;
+}
+
+@media (min-width: @tablet-width) {
+    .specs-list__label {
+        font-size: 20px;
+    }
+
+    .specs-list__input {
+        font-size: 20px;
+    }
+
+    .specs-list__input {
+        width: 100%;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .specs-list {
+        width: 570px;
+    }
+}

@@ -1,0 +1,345 @@
+.page-footer {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 330px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    background-color: @bg-light-black;
+    color: @txt-white;
+}
+
+.page-footer__top {
+    border-bottom: 2px solid @border-dark-black;
+    padding-bottom: 40px;
+}
+
+.page-footer__contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-footer__contacts-item-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+
+    list-style: none;
+}
+
+.page-footer__contacts-item-link svg {
+    fill: @bg-white;
+}
+
+.page-footer__contacts-header {
+    margin: 0;
+
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.page-footer__contacts-text {
+    margin: 0;
+    margin-top: 5px;
+
+    color: @txt-grey;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.footer-email {
+    color: @txt-grey;
+    border-bottom: 1px solid @txt-grey;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.footer-email:hover,
+.footer-email:focus {
+    opacity: 0.8;
+}
+
+.footer-email:active {
+    color: @txt-red;
+    border-bottom: none;
+}
+
+.footer-phone {
+    color: @txt-grey;
+}
+
+.footer-phone:hover,
+.footer-phone:focus {
+    opacity: 0.8;
+}
+
+.footer-phone:active {
+    color: @txt-red;
+    border-bottom: none;
+}
+
+.page-footer__contacts-item-link:hover svg,
+.page-footer__contacts-item-link:focus svg {
+    opacity: 0.8;
+}
+
+.page-footer__contacts-item-link:active svg {
+    opacity: 1;
+    fill: @txt-red;
+}
+
+.page-footer__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 150px;
+}
+
+.page-footer__copyright {
+    margin: 0;
+}
+
+.page-footer__logo {
+    margin-left: auto;
+}
+
+.page-footer__logo-text {
+    margin: 0;
+}
+
+.page-footer__copyright {
+    width: 47%;
+
+    color: @txt-grey;
+}
+
+.page-footer__logo-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.page-footer__logo-container {
+    margin-right: 8px;
+    width: 61px;
+    height: 62px;
+}
+
+.page-footer__logo-text {
+    margin: 0;
+    margin-bottom: 2px;
+
+    font-size: 13px;
+    color: @txt-white;
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    transition: all 0.3s linear;
+}
+
+.page-footer__logo-name {
+    margin: 0;
+
+    color: @txt-red;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'DIN Pro';
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.page-footer__logo-link:hover .page-footer__logo-text,
+.page-footer__logo-link:hover .page-footer__logo-name,
+.page-footer__logo-link:focus .page-footer__logo-text,
+.page-footer__logo-link:focus .page-footer__logo-name {
+    opacity: 0.8;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.page-footer__logo-link:active .page-footer__logo-text,
+.page-footer__logo-link:active .page-footer__logo-name {
+    opacity: 1;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.page-footer__middle-list {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    list-style: none;
+}
+
+.page-footer__middle-link {
+    color: @txt-white;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.page-footer__middle-link:hover,
+.page-footer__middle-link:focus {
+    opacity: 0.8;
+}
+
+.page-footer__middle-link:active {
+    color: @txt-red;
+    border-bottom: none;
+}
+
+.page-footer__middle-link--hot {
+    border-bottom: 1px solid @border-red;
+    color: @txt-red;
+}
+
+
+
+@media (max-width: @desktop-width) {
+
+    .page-footer {
+        min-height: auto;
+    }
+
+    .page-footer__top {
+        padding-bottom: 15px;
+    }
+
+    .page-footer__contacts-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-footer__middle {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-footer__bottom {
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 100px;
+    }
+
+    .page-footer__middle-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: @tablet-width) {
+
+    .page-footer {
+        padding-top: 0;
+    }
+
+    .page-footer__top {
+        padding-bottom: 20px;
+    }
+
+    .page-footer__contacts-list {
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-footer__contacts-item {
+        width: 42%;
+    }
+
+    .page-footer__contacts-item--mail {
+        width: 40%;
+    }
+
+    .page-footer__contacts-item--phone,
+    .page-footer__contacts-item--fax {
+        margin-top: 15px;
+    }
+
+    .page-footer__contacts-header {
+        font-size: 14px;
+    }
+
+    .page-footer__contacts-text {
+        font-size: 12px;
+    }
+
+    .page-footer__middle {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-footer__middle-list {
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .page-footer__middle-item {
+        width: 42%;
+    }
+
+    .page-footer__middle-item:nth-child(3),
+    .page-footer__middle-item:nth-child(4) {
+        margin-top: 15px;
+    }
+
+    .page-footer__middle-link {
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    .page-footer__bottom {
+        justify-content: space-between;
+        min-height: 65px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-footer__copyright {
+        margin-right: 10px;
+
+        font-size: 12px;
+    }
+
+    .page-footer__logo-container {
+        margin-right: 0;
+        width: 55px;
+        height: auto;
+    }
+
+    .page-footer__logo-text {
+        font-size: 12px;
+    }
+
+    .page-footer__logo-name {
+        font-size: 28px;
+    }
+}
+

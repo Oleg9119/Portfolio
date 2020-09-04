@@ -1,0 +1,124 @@
+.management {
+    background-color: #f2f2f2;
+}
+
+.management__main-management.fullwidth {
+    min-height: 250px;
+    margin-bottom: 0;
+}
+
+.fullwidth .management__header-ext-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.management__header-left-block {
+    width: 34%;
+    min-height: 250px;
+    background-image: url(../img/no-photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.management__header-right-block {
+    display: flex;
+    width: 68.4%;
+}
+
+.management__header-right-block-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: @desktop-padding;
+
+    background-color: @bg-white;
+}
+
+.management__header-title {
+    margin: 0;
+
+    font-size: 26px;
+}
+
+.management__header-job {
+    margin: 0;
+    margin-top: 20px;
+
+    font-size: 20px;
+}
+
+.management__header-text {
+    margin: 0;
+    margin-top: 40px;
+}
+
+.management__other-management-list {
+    display: flex;
+    padding: 0;
+    margin-top: 30px;    
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.management__other-management-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.management__other-management-item-top {
+    min-height: 200px;
+    width: 100%;
+
+    background-image: url(../img/no-photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+}
+
+.management__other-management-item-bottom {
+    box-sizing: border-box;
+    padding: 30px;
+
+    background-color: @bg-white;
+}
+
+@media (max-width: @desktop-width) { 
+
+    .management__other-management-item-bottom {
+        padding: 15px;
+    }
+
+    .management__other-management-item-bottom-header {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: @tablet-width) {
+    .fullwidth .management__header-ext-container{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        .management__header-left-block{
+            width: 100%;
+        }
+        .management__header-right-block{
+            width: 100%;
+        }
+    }
+    .management__other-management-list{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .management__other-management-list{
+        grid-template-columns: 1fr;
+    }
+}

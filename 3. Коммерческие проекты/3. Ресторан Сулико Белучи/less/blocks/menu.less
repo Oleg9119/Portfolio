@@ -1,0 +1,200 @@
+.menu {
+    background-image: url(../img/bg-dishes-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: auto;
+}
+
+.menu__title,
+.menu__subtitle {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.menu__title {
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.menu__dishes-ext-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__dishes-map {
+    order: 2;
+}
+
+.menu__dishes-menu {
+    order: 1;
+}
+
+.menu__dishes-map .menu__subtitle {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.menu__dishes-menu .menu__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.menu__slogan,
+.menu__menu-text {
+    margin: 0;
+}
+
+.menu__menu-text {
+    margin-bottom: 35px;
+}
+
+.menu__map-button {
+    margin-bottom: 22px;
+    background-color: @bg-orange-opacity;
+}
+
+.menu__menu-button {
+    margin-bottom: 45px;
+    background-color: @bg-yellow-opacity;
+}
+
+.menu__down-arrows {
+    margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+
+    .menu {
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/traditions-italy.jpg),
+            url(../img/traditions-georgia.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 50% 100%, 50% 100%;
+        background-position: left 100%, right 100%;
+    }
+
+    .menu__top-container {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+    }
+
+    .menu__title {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .menu__slogan {
+        width: 80%;
+        margin-bottom: 0;
+    }
+
+    .menu__dishes-ext-container {
+        flex-direction: row;
+        min-height: 320px;
+        padding-top: 110px;
+        background-image: url(../img/traditions-logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 225px 225px;
+        background-color: @bg-menu-dishes;
+    }
+
+    .menu__dishes-map {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu__dishes-menu {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .menu__menu-text {
+        width: 70%;
+    }
+
+    .menu__menu-button,
+    .menu__map-button {
+        min-width: 322px;
+    }
+
+    .menu__subtitle,
+    .menu__menu-text,
+    .menu__map-button,
+    .menu__menu-button,
+    .menu__dishes-menu .menu__subtitle,
+    .menu__dishes-map .menu__subtitle {
+        margin: 0;
+    }
+
+    .menu__dishes-menu .menu__subtitle,
+    .menu__dishes-map .menu__subtitle {
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+
+    .menu__menu-text {
+        margin-bottom: 45px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .menu {
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    .menu__dishes-ext-container {
+        max-width: 100%;
+        padding-top: 230px;
+        padding-left: 124px;
+        padding-right: 124px;
+    }
+
+    .menu__title {
+        margin-top: 45px;
+    }
+
+    .menu__subtitle {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .menu__top-container {
+        padding-left: 124px;
+    }
+
+    .menu__map-button,
+    .menu__menu-button {
+        width: 322px;
+        height: 60px;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+
+    .menu__down-arrows {
+        display: block;
+        position: absolute;
+        content: "";
+        bottom: 40px;
+        left: 50%;
+        width: 15px;
+        height: 25px;
+        margin-left: -8px;
+        background-image: url(../img/down-arrows-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

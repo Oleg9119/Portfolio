@@ -1,0 +1,19 @@
+.viewall {
+    position: relative;
+    padding-right: 15px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    color: $green;
+    text-decoration: none;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 15%;
+        content: '';
+        width: 7px;
+        height: 13px;
+        background: url('../img/viewall.png') no-repeat 90% 50%;
+    }
+}

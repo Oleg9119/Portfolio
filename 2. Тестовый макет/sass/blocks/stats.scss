@@ -1,0 +1,19 @@
+.stats {    
+	background: linear-gradient(270deg,#091024 0%,rgba(25,32,50,0) 100%);
+}
+
+.stats__wrapper {
+    display: flex;
+
+    .stats__gameofmonth {
+        width: 40%;
+    }
+
+    .stats__overall {
+        width: 20%;
+    }
+
+    .stats__biggest {
+        width: 40%;
+    }
+}

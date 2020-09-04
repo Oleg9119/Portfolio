@@ -1,0 +1,121 @@
+.site-list {
+    list-style: none;
+}
+
+.site-list__item {
+    font-size: 20px;
+}
+
+.site-list__item a {
+    position: relative;
+
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: @text-dark-grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.site-list__item a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: @border-light-grey;
+}
+
+.site-list a[href] {
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .site-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        width: 490px;
+    }
+
+    .site-list__item {
+        margin-right: 35px;
+        font-size: 18px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 27px;
+
+                height: 2px;
+
+                background-color: @green;
+            }
+        }
+    }
+
+    .site-list__item a {
+        padding: 0;
+
+        color: @text-medium-grey;
+    }
+
+    .site-list__item a::before {
+        display: none;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .site-list {
+        margin-left: auto;
+    }    
+
+    .site-list__item {
+        font-size: 20px;
+    }
+
+    .site-list__item a[href] {
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    .site-list__item--index a {
+        color: @bg-white;
+    }
+
+    .site-list__item--index.site-list__item--active::after {
+        background-color: @bg-white;
+    }    
+}

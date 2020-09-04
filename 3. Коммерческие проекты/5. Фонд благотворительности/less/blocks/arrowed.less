@@ -1,0 +1,59 @@
+.arrowed {
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: @gold;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &--white-fill::before {
+        background: #fff;
+    }
+
+    &--green::before {
+        background: #235a36;
+    }
+
+    &--orange-fill::before {
+        background: @orange;
+    }
+
+    &--white-fill-big::before {
+        background: #fff;
+    }
+
+    &--black-fill::before {
+        background: #000000;
+    }
+
+    &--blue::before {
+        background-color: @blue  !important;
+    }
+
+    &--biggest::before {
+        background-color: transparent;
+    }
+
+    &--button::before {
+        width: 125%;
+    }
+
+    &:hover {
+        &::before {
+            height: 6px;
+            opacity: 1;
+        }
+    }
+}

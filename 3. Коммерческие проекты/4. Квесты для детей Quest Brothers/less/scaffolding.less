@@ -1,0 +1,236 @@
+:root {
+	box-sizing: border-box;
+}
+
+*, ::before, ::after {
+	box-sizing: inherit;
+}
+    
+body {
+	position: relative;
+  	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Exo 2', sans-serif;	
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 300;
+	font-style: normal;
+
+	color: @txt-main;	
+	background-color: @bg-sub;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Thin'), local('Exo2-Thin'), url('../fonts/exo2thin.woff2') format('woff2'), url('../fonts/exo2thin.woff') format('woff'), url('../fonts/exo2thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Extra Light'), local('Exo2-ExtraLight'), url('../fonts/exo2extralight.woff2') format('woff2'), url('../fonts/exo2extralight.woff') format('woff'), url('../fonts/exo2extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Light'), local('Exo2-Light'), url('../fonts/exo2light.woff2') format('woff2'), url('../fonts/exo2light.woff') format('woff'), url('../fonts/exo2light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2'), local('Exo2-Regular'), url('../fonts/exo2.woff2') format('woff2'), url('../fonts/exo2.woff') format('woff'), url('../fonts/exo2.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Medium'), local('Exo2-Medium'), url('../fonts/exo2medium.woff2') format('woff2'), url('../fonts/exo2medium.woff') format('woff'), url('../fonts/exo2medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Semi Bold'), local('Exo2-SemiBold'), url('../fonts/exo2semibold.woff2') format('woff2'), url('../fonts/exo2semibold.woff') format('woff'), url('../fonts/exo2semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Bold'), local('Exo2-Bold'), url('../fonts/exo2bold.woff2') format('woff2'), url('../fonts/exo2bold.woff') format('woff'), url('../fonts/exo2bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Extra Bold'), local('Exo2-ExtraBold'), url('../fonts/exo2extrabold.woff2') format('woff2'), url('../fonts/exo2extrabold.woff') format('woff'), url('../fonts/exo2extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: local('Exo 2 Black'), local('Exo2-Black'), url('../fonts/exo2black.woff2') format('woff2'), url('../fonts/exo2black.woff') format('woff'), url('../fonts/exo2black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: @mobile-padding;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+      padding: @desktop-padding;
+  }
+}
+
+input {
+	font: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;  
+  list-style: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+.social-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;	
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.title {
+	margin: 0;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	margin: 0;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;	
+}
+
+p {
+	margin: 0;
+}
+
+.button {
+	position: relative;
+	z-index: 3;
+	min-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: @txt-main;
+	border-radius: 30px;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: @bg-buttons-mobile;
+}
+
+.nav-menu--opened {
+    overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+
+	body {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.subtitle {
+		font-size: 20px;
+	}
+
+	.button {
+		min-height: 50px;
+	}
+}
+
+@media (min-width: @desktop-width) {
+
+	body {
+		font-size: 18px;
+		line-height: 22px;		
+	}
+
+	.nav-menu {
+        overflow: visible;
+    }
+
+	.title {
+		font-size: 48px;
+		line-height: 58px;
+	}
+
+	.subtitle {
+		font-size: 18px;
+		line-height: 22px;
+		text-transform: uppercase;
+	}
+
+	.button {
+		width: 280px;
+		min-height: 60px;
+		transition: all ease-in-out 0.2s;
+		background-color: @bg-buttons-desktop;
+		font-size: 18px;
+		line-height: 22px;
+		
+		&:hover,
+		&:focus {
+  			animation: pulse 1s;
+			  box-shadow: 0 0 0 1.5em rgba(#ffffff,0);
+		}		
+
+		@keyframes pulse {
+			0% { box-shadow: 0 0 0 0 @bg-buttons-desktop; 
+		  }
+		}
+	}
+}

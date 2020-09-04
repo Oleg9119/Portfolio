@@ -1,0 +1,226 @@
+.how {
+    width: 988px;
+    margin: 0 auto;
+    min-height: 534px;
+    border-top: 1px #ffffff solid;
+}
+
+.how__header {
+    margin: 57px 0 0 0;
+    font-size: 30px;
+    color: #464646;
+    text-align: center;
+}
+
+.how__text {
+    margin: 34px 0 0 0;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+.how__speech-header {
+    color: #717171;
+}
+
+.how__speech-first {
+    position: relative;
+    width: 431px;
+    height: 87px;
+    margin: 66px 0 31px auto;
+    border: 1px #e1e5eb solid;
+    padding-left: 10px;
+    box-shadow: 2px -2px 4px #888888;
+}
+
+.how__speech-first::before {
+    content: ''; 
+	position: absolute; 
+	width: 0; 
+    height: 0;
+    left: -5px; 
+    top: 45%;    
+    transform: rotate(-45deg);
+	border: 5px solid; 
+	border-color: #e1e5eb transparent transparent #e1e5eb; 
+}
+
+.how__speech-first::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -4px; 
+    top: 46%;    
+    transform: rotate(-45deg);
+	border: 4px solid; 
+	border-color: #ffffff transparent transparent #ffffff; 
+}
+
+.how__speech-text {
+    position: relative;
+    font-family: 'Open Sans';
+}
+
+.how__speech-first .how__speech-text::after {
+    content:'';
+    position: absolute;
+    width: 443px;
+    height: 5px;
+    top: 30px;
+    right: -2px;
+    background: #4fb1f3;
+}
+
+.how__speech-second {
+    position: relative;
+    width: 431px;
+    height: 87px;
+    margin: 0 auto 0 0;
+    border: 1px #e1e5eb solid;
+    padding-left: 10px;
+    box-shadow: -2px -2px 4px #888888;
+}
+
+.how__speech-second::before {
+    content: ''; 
+	position: absolute; 
+	width: 0; 
+    height: 0;
+    right: -5px; 
+    top: 45%;    
+    transform: rotate(135deg);
+	border: 5px solid; 
+	border-color: #e1e5eb transparent transparent #e1e5eb; 
+}
+
+.how__speech-second::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -4px; 
+    top: 46%;   
+    transform: rotate(135deg);
+	border: 4px solid; 
+	border-color: #ffffff transparent transparent #ffffff; 
+}
+
+.how__speech-second .how__speech-text::after {
+    content:'';
+    position: absolute;
+    width: 443px;
+    height: 5px;
+    top: 30px;
+    right: 0px;
+    background: #ff1e4f;
+}
+
+.how__container-first-circle,
+.how__container-line,
+.how__container-second-circle,
+.how__container-first-checkpoint,
+.how__container-second-checkpoint,
+.how__button-container {
+    position: relative;
+}
+
+.how__container-first-circle::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -150px;
+    left: 483px;
+    border-radius: 50%;
+    background: #d2d3d7;
+}
+
+.how__container-first-circle::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -149px;
+    left: 484px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.how__container-line::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 251px;
+    top: -130px;
+    left: 493px;
+    background: #d2d3d7;
+}
+
+.how__container-second-circle::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 121px;
+    left: 483px;
+    border-radius: 50%;
+    background: #d2d3d7;
+}
+
+.how__container-second-circle::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 122px;
+    left: 484px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.how__container-first-checkpoint::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: -82px;
+    left: 487px;
+    border-radius: 50%;
+    background: #4fb1f3;
+}
+
+.how__container-second-checkpoint::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 38px;
+    left: 487px;
+    border-radius: 50%;
+    background: #ff1e4f;
+}
+
+.how__button {
+    position: absolute;
+    top: 108px;
+    left: 405px;
+    width: 172px;
+    height: 38px;
+    background-color: #ff1e4f;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.how__button:hover,
+.how__button:focus {
+    color: #e5e2e2;
+    background-color: #e71c48;
+}
+
+.how__button:active {
+    color: #d1cdcd;
+    background-color: #ca193f;
+}

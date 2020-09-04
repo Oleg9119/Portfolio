@@ -1,0 +1,44 @@
+.gameofmonth {
+    display: flex;
+    flex-direction: column;
+
+    .gameofmonth__main {
+        position: relative;
+    }
+
+    .gameofmonth__title {
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .gameofmonth__descr {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 18px;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .gameofmonth__text {
+            font-size: 18px;
+            line-height: 19px;
+            text-align: center;
+
+            a {
+                color: $white;
+            }
+        }
+
+        .gameofmonth__button {
+            background: transparent;
+            border: 1px solid $white;
+            border-radius: 50px;
+            color: $white;
+            padding: 5px 15px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+}

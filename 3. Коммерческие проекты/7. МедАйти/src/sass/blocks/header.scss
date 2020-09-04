@@ -1,0 +1,174 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    z-index: 100;
+    transition: background-color .2s ease-in-out;
+
+    &.white-bg {
+        background-color: #fff;
+        box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+
+    .menu-button.toggle {
+        display: none;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            display: flex;
+            align-self: center;
+        }
+    }
+
+    $color: $blue;
+    $active: $blue;
+
+    .toggle {
+        display: block;
+        cursor: pointer;
+
+        input {
+            display: none;
+
+            &+div {
+                width: 20px;
+                height: 14px;
+                position: relative;
+
+                div {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    transition: transform .5s ease;
+
+                    span {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+
+                        &:first-child {
+                            top: 0;
+
+                            &:before,
+                            &:after {
+                                top: 0;
+                            }
+                        }
+
+                        &:last-child {
+                            bottom: 0;
+
+                            &:before,
+                            &:after {
+                                bottom: 0;
+                            }
+                        }
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 47%;
+                            height: 2px;
+                            border-radius: 1px;
+                            background: $color;
+                            position: absolute;
+                            -webkit-backface-visibility: hidden;
+                            transition: transform .5s ease, border-radius .3s ease, background .4s ease;
+                        }
+
+                        &:before {
+                            left: 0;
+                            transform-origin: 0 50%;
+                            transform: translate(1px, 0) scaleX(1.1);
+                        }
+
+                        &:after {
+                            right: 0;
+                            transform-origin: 100% 50%;
+                            transform: translate(-1px, 0) scaleX(1.1);
+                        }
+                    }
+                }
+
+                svg {
+                    display: block;
+                    fill: none;
+                    stroke: $color;
+                    stroke-width: 2px;
+                    width: 44px;
+                    height: 44px;
+                    stroke-linecap: round;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin: -22px 0 0 -22px;
+                    stroke-dasharray: 0 82.801 8 82.801;
+                    stroke-dashoffset: 82.801;
+                    transform-origin: 50% 50%;
+                    -webkit-backface-visibility: hidden;
+                    transform: scale(1);
+                    transition: stroke-dashoffset .5s ease, stroke-dasharray .6s ease, transform .5s ease, stroke .4s ease;
+
+                    &:nth-child(3) {
+                        transform: rotate(180deg) scale(1);
+                    }
+                }
+            }
+
+            &:checked+div {
+                div {
+                    transform: rotate(90deg);
+
+                    span {
+
+                        &:before,
+                        &:after {
+                            background: $active;
+                        }
+
+                        &:first-child {
+                            &:before {
+                                transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
+                            }
+
+                            &:after {
+                                transform: rotate(-45deg) translate(-2.2px, -3px) scaleX(1.05);
+                            }
+                        }
+
+                        &:last-child {
+                            &:before {
+                                transform: rotate(-45deg) translate(2.2px, 3px) scaleX(1.05);
+                            }
+
+                            &:after {
+                                transform: rotate(45deg) translate(-2.2px, 3px) scaleX(1.05);
+                            }
+                        }
+                    }
+                }
+
+                svg {
+                    stroke-dashoffset: 62;
+                    stroke-dasharray: 0 82.801 62 82.801;
+                    transform: rotate(90deg);
+                    stroke: $active;
+
+                    &:nth-child(3) {
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+    }
+}

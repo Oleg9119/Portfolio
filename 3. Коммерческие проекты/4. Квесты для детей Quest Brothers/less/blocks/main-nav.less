@@ -1,0 +1,304 @@
+.main-nav {
+    z-index: 500;
+
+    .main-nav__toggle-container {
+        position: absolute;
+        top: 26px;
+        right: 3%;
+        z-index: 2000;
+
+        .main-nav__toggle {
+            position: relative;
+            width: 24px;
+            height: 18px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+        }
+    }
+
+    .main-nav__wrapper {
+        width: 100%;
+        z-index: 999;
+        background-color: #000000;
+        padding-bottom: 5px;
+        overflow: auto;
+        transition: top 0.5s linear;
+    }
+}
+
+.main-nav--closed {
+
+    .main-nav__wrapper {
+        position: fixed;
+        top: -100%;
+    }
+
+    .main-nav__toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 8px 0 0 rgba(255, 255, 255, 1), 0 16px 0 0 rgba(255, 255, 255, 1);
+    }
+
+    .main-nav__toggle:focus::before,
+    .main-nav__toggle:active::before {
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.8), 0 16px 0 0 rgba(255, 255, 255, 0.8);
+    }
+}
+
+.animated.main-nav--closed {
+
+    .main-nav__wrapper {
+        animation: fadeOutUpBig 0s;
+        animation-fill-mode: both;
+    }
+}
+
+.main-nav--opened {
+
+    .main-nav__wrapper {
+        position: fixed;
+        width: 100%;
+        height: 88%;
+        top: 70px;
+        animation: fadeInDownBig 0.5s;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .main-nav__toggle-container {
+        position: absolute;
+        top: 25px;
+        right: 3%;
+        z-index: 2000;
+
+        .main-nav__toggle {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+        }
+    }
+
+    .main-nav__toggle {
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &:focus::after,
+        &:focus::before,
+        &:active::after,
+        &:active::before {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+.main-nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 120px;
+
+    .main-nav__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        .main-nav__link {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            color: @txt-main;
+            text-align: center;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+}
+
+@media (min-width: @tablet-width) {
+
+    .main-nav {
+
+        .main-nav__toggle-container {
+            position: absolute;
+            top: 43px;
+            right: 3%;
+
+            .main-nav__toggle {
+                width: 34px;
+            }
+        }
+    }
+
+    .main-nav--closed {
+
+        .main-nav__toggle::before {
+            width: 32px;
+        }
+    }
+
+    .main-nav--opened {
+
+        .main-nav__toggle-container {
+            top: 41px;
+
+            .main-nav__toggle {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        .main-nav__toggle {
+
+            &::before,
+            &::after {
+                width: 28px;
+                height: 2px;
+            }
+        }
+    }
+
+    .main-nav__list {
+
+        .main-nav__item {
+
+            .main-nav__link {
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .main-nav {
+        z-index: 500;
+
+        .main-nav__wrapper {
+            width: 100%;
+            z-index: 999;
+            background-color: transparent;
+            padding-bottom: 5px;
+            overflow: auto;
+            transition: top 0.5s linear;
+        }
+
+        .main-nav__toggle-container {
+            display: none;
+        }
+    }
+
+    .main-nav--closed {
+
+        .main-nav__wrapper {
+            position: fixed;
+            top: 0;
+            z-index: 10000;
+            height: auto;
+            padding: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .main-nav__toggle::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            width: 24px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 8px 0 0 rgba(255, 255, 255, 1), 0 16px 0 0 rgba(255, 255, 255, 1);
+        }
+
+        .main-nav__toggle:focus::before,
+        .main-nav__toggle:active::before {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.8), 0 16px 0 0 rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .main-nav__list {
+        position: relative;
+        width: 100%;
+        min-height: 115px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 211px;
+        padding-bottom: 0;
+
+        .main-nav__item {
+            flex-basis: 25%;
+            padding: 0 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            .main-nav__link {
+                position: relative;
+                transition: all 0.6s;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    bottom: 0;
+                    left: 50%;
+                    background-color: @txt-main;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        left: 0;
+                        background-color: @link-2;
+                    }
+                }
+
+                &--dungeon {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

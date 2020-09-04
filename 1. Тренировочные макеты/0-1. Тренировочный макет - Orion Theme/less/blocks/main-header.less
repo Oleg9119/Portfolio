@@ -1,0 +1,196 @@
+.main-header {
+    height: 689px;
+    background-image: url(../img/orion-header-background.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main-header__navigation {
+    width: 989px;
+    min-height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.main-header__site-navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 100px;
+    width: 606px;
+}
+
+.site-navigation__item a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.site-navigation__item a:hover,
+.site-navigation__item a:focus {
+    color: #dacece;
+}
+
+.site-navigation__item a:active {
+    color: #aaa2a2;
+}
+
+.main-header__user-navigation {
+    list-style: none;
+}
+
+.main-header__user-navigation a {
+    display: block;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #3498db;
+    border-radius: 5px;
+    padding: 5px 12px 5px 12px;
+}
+
+.main-header__user-navigation a:hover,
+.main-header__user-navigation a:focus {
+    color: #dacece;
+    background-color: #2f85be;
+}
+
+.main-header__user-navigation a:active {
+    color: #aaa2a2;
+    background-color: #2a78ac;
+}
+
+.main-slider {
+    position: relative;
+    min-height: 415px;
+}
+
+.slider__controls {
+    position: absolute;
+    display: flex;
+    left: 48.2%;
+    bottom: -10px;
+    width: 72px;
+    height: 12px;
+}
+
+.slider__controls-button {
+    position: relative;
+    display: block;
+    margin-right: 18px;
+    width: 18px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #636363;
+}
+
+.slider__controls-button:hover,
+.slider__controls-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px fade(white, 70%);
+}
+
+.slider__controls-button--current {
+    background-color: #b7b7b7;
+}
+
+.main-header__icon img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 104px;
+}
+
+.main-header__slogan {
+    margin: 75px 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.main-header__text {
+    margin: 0;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.button-learn {
+    position: absolute;
+    top: 447px;
+    left: 514px;
+    width: 171px;
+    height: 60px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #59a3fc;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.button-learn:hover,
+.button-learn:focus {
+    background-color: #4c86ce;
+    color: #dacece;
+}
+
+.button-learn:active {
+    background-color: #4172ad;
+    color: #aaa2a2;
+}
+
+.button-contact {
+    position: absolute;
+    top: 447px;
+    left: 685px;
+    width: 171px;
+    height: 60px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #3d92f9;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.button-contact:hover,
+.button-contact:focus {
+    background-color: #4c86ce;
+    color: #dacece;
+}
+
+.button-contact:active {
+    background-color: #4172ad;
+    color: #aaa2a2;
+}
+
+.main-header__or-container {
+    position: absolute;
+}
+
+.main-header__or-container::before {
+    position: relative;
+    top: -122px;
+    left: 671px;
+    z-index: 1;
+    content: "Or";
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #0078b2;
+    font-size: 12px; 
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+}

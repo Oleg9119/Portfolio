@@ -1,0 +1,134 @@
+.contacts {
+    padding: @desktop-padding;
+
+    background-color: @bg-light-grey;
+}
+
+.contacts__main-contacts.fullwidth {
+    margin: 0 auto;
+    min-height: 385px;
+    width: 100%;
+}
+
+.contacts__header-ext-container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contacts__header-left-block {
+    padding: 30px;
+    width: 43%;
+
+    background-color: @bg-white;
+}
+
+.contacts__header-left-block .contacts__title:first-child {
+    margin-top: 0;
+}
+
+.contacts__header-right-block {
+    padding: 30px;
+    width: 43%;
+    margin-left: auto;
+
+    background-color: @bg-white;
+}
+
+.contacts__inner-container {
+    display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+}
+
+.contacts__inner-container .contacts__title,
+.contacts__inner-container .contacts__text {
+    margin: 0;
+    padding: 0;
+}
+
+.contacts__inner-container .contacts__title {
+    width: 100px;
+}
+
+.contacts__inner-container .contacts__text {
+    margin-left: 40px;
+}
+
+.contacts__header-right-block .contacts__title:first-child,
+.contacts__inner-container:first-child {
+    margin-top: 0;
+}
+
+.map {
+    height: 400px;
+}
+
+@media (max-width: @desktop-width) { 
+
+    .contacts {
+        padding: 15px;
+    }
+
+    .contacts__title {
+        font-size: 18px;
+    }
+
+    .contacts__header-ext-container {
+        justify-content: space-between;
+    }
+
+    .contacts__header-left-block,
+    .contacts__header-right-block {
+        padding: 15px;
+        width: 45%;
+    }
+
+    .contacts__title,
+    .contacts__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .map {
+        height: 300px;
+    }
+}
+
+@media (max-width: @tablet-width) {
+
+    .contacts__header-ext-container {
+        flex-direction: column;
+    }
+
+    .contacts__header-right-block,
+    .contacts__header-left-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .contacts__header-right-block {
+        padding-top: 0;
+    }
+
+    .contacts__title {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .contacts__text {
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .contacts__inner-container .contacts__text {
+        margin-left: auto;
+    }
+
+    .map {
+        height: 200px;
+    }
+}

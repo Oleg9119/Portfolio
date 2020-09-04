@@ -1,0 +1,1142 @@
+.main-nav {
+    display: flex;
+    width: 100%;
+    padding-left: 29%;
+    background-image: url(../img/logo-noise2.png), linear-gradient(to right, #188ed9, @bg-second-logo 80%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 40% 50%, 50% 50%;
+    background-size: 50% 54px, 100%;
+    color: @txt-white;
+
+    .main-nav__inner {
+        padding-left: 15px;
+    }
+
+    .main-nav__title {
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 3px;
+
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 400;
+    }
+
+    .main-nav__wrapper {
+        padding: 0;
+
+        .main-nav__list {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            padding-right: 10px;
+            list-style: none;
+
+            .main-nav__item {
+                padding-bottom: 7px;
+
+                &--goodnews {
+                    min-width: 170px;
+                    background-image: url(../img/gold-line.png);
+                    background-repeat: no-repeat;
+                    background-position: 92% 36%;
+                }
+
+                &--contacts {
+                    min-width: 110px;
+                    background-image: url(../img/gold-line.png);
+                    background-repeat: no-repeat;
+                    background-position: 87% 36%;
+                }
+
+                &--fond {
+                    min-width: 85px;
+                    background-image: url(../img/gold-line.png);
+                    background-repeat: no-repeat;
+                    background-position: 83% 36%;
+                }
+
+                .main-nav__link {
+                    font-weight: 500;
+                    color: @txt-white;
+
+                    &:hover {
+                        color: @orange;
+                    }
+
+                    .nowrap {
+                        white-space: nowrap;
+                    }
+
+                    &--main {
+                        text-transform: uppercase;
+                    }
+
+                    .main-nav__important {
+                        color: @txt-white;
+
+                        &:hover {
+                            color: @orange;
+                        }
+                    }
+
+                    .main-nav__uppercase {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .main-nav__link-subdiv {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+                    position: absolute;
+                    z-index: 10;
+                    left: 0;
+                    right: 0;
+                    bottom: -125px;
+                    min-width: 1220px;
+                    min-height: 125px;
+                    width: 100%;
+                    padding-top: 13px;
+                    background-color: #ffffff;
+                }
+
+                &:hover {
+
+                    .main-nav__link-subdiv {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                .goodnews__sublist-container {
+                    background-color: #fffaf7;
+
+                    .main-nav__link-sublist {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        margin: 0 auto;
+
+                        &.goodnews__sublist {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 800px;
+
+                            .goodnews__subitem {
+
+                                .goodnews__subitem__sublist {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+
+                                    .goodnews__subitem__subitem {
+
+                                        .goodnews__subitem-link {
+                                            display: inline-block;
+                                            margin-bottom: 5px;
+                                            color: @txt-main;
+                                            font-size: 14px;
+                                            font-weight: 700;
+
+                                            span {
+                                                color: #1081d1;
+                                                font-style: italic;
+                                                text-decoration: underline;
+                                            }
+
+                                            &:hover {
+                                                color: @orange;
+
+                                                span {
+                                                    color: @orange;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .contacts__sublist-container {
+                    background-color: #fffaf7;
+                    padding-top: 15px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .main-nav__link-sublist {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        margin: 0 auto;
+
+                        &.contacts__sublist {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 1220px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+
+                            color: @txt-main;
+
+                            .contacts__subitem {
+
+                                .contacts__subitem-text {
+                                    color: @txt-main;
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    font-weight: 500;
+                                    font-style: italic;
+                                    text-align: center;
+
+                                    span {
+                                        text-transform: uppercase;
+                                    }
+                                }
+
+                                .contacts__subitem-link {
+                                    font-size: 12px;
+                                    font-style: italic;
+                                    color: #1081d1;
+                                    text-decoration: underline;
+
+                                    &:hover {
+                                        color: @orange;
+                                    }
+                                }
+
+                                &:first-child {
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 260px;
+                                    padding-left: 45px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -25px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -21px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding-top: 15px;
+                                    width: 200px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -58px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -54px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-text {
+                                        font-style: initial;
+                                        text-align: right;
+                                        font-weight: 400;
+                                    }
+
+                                    .contacts__subitem-link-phone {
+                                        color: @txt-main;
+
+                                        &:hover {
+                                            color: @orange;
+                                        }
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fond__sublist-container {
+                    background-color: #fffaf7;
+                    padding-top: 15px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .main-nav__link-sublist {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        margin: 0 auto;
+
+                        &.fond__sublist {
+                            display: flex;
+                            width: 1220px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            min-height: 110px;
+                            color: @txt-main;
+
+                            .fond__subitem {
+
+                                &:first-child {
+
+                                    .fond__subitem-text {
+                                        font-size: 12px;
+                                        line-height: 15px;
+                                        font-weight: 500;
+                                        font-style: italic;
+                                        text-align: center;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    align-items: center;
+
+                                    .fond__subitem-text {
+                                        font-size: 12px;
+                                        line-height: 15px;
+                                        font-weight: 400;
+                                        margin-right: 10px;
+                                        font-style: initial;
+                                    }
+                                }
+
+                                .fond__fond-link {
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100px;
+                                    height: 35px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        width: 75px;
+                                        height: 1px;
+                                        bottom: 5px;
+                                        left: 10px;
+                                        background-color: #727272;
+                                        transition: 0.3s ease-in-out all;
+                                    }
+
+                                    svg {
+                                        stroke: @txt-main;
+                                        stroke-width: 2px;
+                                        padding-bottom: 3px;
+
+                                        path {
+                                            transition: 0.3s ease-in-out all;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        color: @orange;
+
+                                        &::before {
+                                            background-color: @orange;
+                                        }
+
+                                        svg {
+                                            path {
+                                                fill: @orange;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .fond__subitem-text {
+                                    color: @txt-main;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    font-style: italic;
+                                    text-align: center;
+
+                                    span {
+                                        text-transform: uppercase;
+                                    }
+                                }
+
+                                .fond__subitem-link {
+                                    font-size: 12px;
+                                    font-style: italic;
+                                    color: #1081d1;
+                                    text-decoration: underline;
+
+                                    &:hover {
+                                        color: @orange;
+                                    }
+                                }
+
+                                &:first-child {
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    min-width: 200px;
+                                    padding-left: 45px;
+                                    margin-right: 60px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -25px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -21px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    display: flex;
+                                    min-width: 200px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -80px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -84px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-text {
+                                        font-style: initial;
+                                        text-align: right;
+                                    }
+
+                                    .contacts__subitem-link-phone {
+                                        color: @txt-main;
+
+                                        &:hover {
+                                            color: @orange;
+                                        }
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                        font-weight: normal;
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    position: relative;
+                                    margin-left: auto;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -390px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -386px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .donation__sublist-container {
+                    background-color: #fffaf7;
+                    padding-top: 15px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .main-nav__link-sublist {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        margin: 0 auto;
+
+                        &.donation__sublist {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 1220px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            min-height: 110px;
+                            color: @txt-main;
+
+                            .donation__subitem {
+                                width: 33.3%;
+
+                                .donation__fond-link {
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100px;
+                                    height: 35px;
+
+                                    svg {
+                                        stroke: @txt-main;
+                                        padding-bottom: 3px;
+
+                                        path {
+                                            transition: 0.3s ease-in-out all;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        color: @orange;
+
+                                        &::before {
+                                            background-color: @orange;
+                                        }
+
+                                        svg {
+                                            path {
+                                                fill: @orange;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .donation__subitem-text {
+                                    margin-right: 10px;
+
+                                    color: @txt-main;
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    font-weight: 400;
+                                    text-align: right;
+                                }
+
+                                &:first-child {
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    min-width: 200px;
+                                    padding-left: 45px;
+                                    margin-right: 35px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -25px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -21px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                    }
+
+                                    .donation__fond-link {
+                                        min-width: 160px;
+
+                                        &::before {
+                                            position: absolute;
+                                            content: '';
+                                            width: 135px;
+                                            height: 1px;
+                                            bottom: 5px;
+                                            left: 10px;
+                                            background-color: #727272;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+
+                                        &:hover {
+                                            &::before {
+                                                background-color: @orange;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    min-width: 200px;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -65px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -69px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .contacts__subitem-text {
+                                        font-style: initial;
+                                        text-align: right;
+                                    }
+
+                                    .contacts__subitem-link-phone {
+                                        color: @txt-main;
+
+                                        &:hover {
+                                            color: @orange;
+                                        }
+                                    }
+
+                                    .contacts__subitem-link {
+                                        padding-top: 5px;
+                                        font-weight: normal;
+                                    }
+
+                                    .donation__fond-link {
+                                        width: 200px;
+
+                                        &::before {
+                                            position: absolute;
+                                            content: '';
+                                            width: 180px;
+                                            height: 1px;
+                                            bottom: 5px;
+                                            left: 7px;
+                                            background-color: #727272;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+
+                                        &:hover {
+                                            &::before {
+                                                background-color: @orange;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -60px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        left: -56px;
+                                        top: 50%;
+                                        width: 80px;
+                                        height: 1px;
+                                        background-color: @border-black;
+                                        transform: rotate(105deg);
+                                    }
+
+                                    .donation__fond-link {
+
+                                        &::before {
+                                            position: absolute;
+                                            content: '';
+                                            width: 75px;
+                                            height: 1px;
+                                            bottom: 5px;
+                                            left: 12px;
+                                            background-color: #727272;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+
+                                        &:hover {
+                                            &::before {
+                                                background-color: @orange;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .filler {
+                            position: relative;
+
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                left: -60px;
+                                top: 50%;
+                                width: 80px;
+                                height: 1px;
+                                background-color: @border-black;
+                                transform: rotate(105deg);
+                            }
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                left: -56px;
+                                top: 50%;
+                                width: 80px;
+                                height: 1px;
+                                background-color: @border-black;
+                                transform: rotate(105deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    iframe {
+        border: none;
+    }
+
+    .main-nav__toggle-container {
+
+        .main-nav__toggle {
+            display: none;
+        }
+    }
+}
+
+.main-nav__tabbed {
+    display: none;
+}
+
+.main-nav__socials-mobile {
+    display: none;
+}
+
+@media (max-width: @desktop-width) {
+
+    .main-nav {
+
+        .main-nav__inner {
+
+            .main-nav__title {
+                padding: 0 15px;
+            }
+        }
+
+        .main-nav__toggle-container {
+            position: absolute;
+            z-index: 30;
+            right: 10px;
+            top: 15px;
+
+            .main-nav__toggle {
+                position: relative;
+
+                display: block;
+                width: 24px;
+                height: 24px;
+
+                border: none;
+                background-color: transparent;
+            }
+        }
+
+        .main-nav__wrapper {
+
+            .main-nav__list {
+                display: none;
+            }
+        }
+    }
+
+    .main-nav--closed {
+
+        .main-nav__inner {
+            position: fixed;
+            top: -100%;
+            height: 100%;
+        }
+
+        .main-nav__toggle-container {
+            position: fixed;
+            width: 34px;
+
+            .main-nav__toggle {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 2px;
+                    right: 0;
+
+                    width: 34px;
+                    height: 3px;
+
+                    border-radius: 3px;
+                    background-color: @txt-white;
+                    box-shadow: 0 8px 0 0 @txt-white, 0 16px 0 0 @txt-white;
+                }
+            }
+        }
+    }
+
+    .main-nav--opened {
+
+        .main-nav__inner {
+            position: fixed;
+            top: 54px;
+            left: 0;
+            width: 100%;
+            z-index: 1000000;
+            background: #fff;
+            height: 100%;
+            padding-left: 0;
+            overflow: auto;
+            color: @txt-main;
+        }
+
+        .main-nav__toggle-container {
+            position: fixed;
+            width: 34px;
+
+            .main-nav__toggle {
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 9px;
+                    left: 3px;
+
+                    width: 30px;
+                    height: 3px;
+
+                    background-color: @txt-white;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .main-nav__tabbed {
+            position: relative;
+            display: block;
+            max-width: 100%;
+            height: 100%;
+            margin: 0 auto;
+
+            .company__trigger {
+
+                .checkbox-1,
+                .checkbox-2,
+                .checkbox-3,
+                .checkbox-4 {
+                    display: none;
+
+                    &:checked+label {
+                        i {
+                            &:before {
+                                transform: translate(5px, 8px) rotate(45deg);
+                            }
+
+                            &:after {
+                                transform: translate(-5px, 8px) rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+
+                .checkbox {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 20px;
+                    color: @txt-main;
+                    cursor: pointer;
+                    background-color: #fff;
+                    border-bottom: 1px solid @txt-main;
+                    font-size: 20px;
+
+                    i {
+                        position: absolute;
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        right: 20px;
+
+                        &:before,
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 16px;
+                            height: 3px;
+                            background-color: @txt-main;
+                            transition: transform 0.3s ease-in-out;
+                        }
+
+                        &:before {
+                            transform: translate(-5px, 8px) rotate(45deg);
+                        }
+
+                        &:after {
+                            transform: translate(5px, 8px) rotate(-45deg);
+                        }
+                    }
+                }
+
+                .content {
+                    position: relative;
+                    z-index: 20000000000000;
+                    color: @txt-main;
+                    max-height: 0px;
+                    width: 100%;
+                    padding: 0;
+                    overflow-y: hidden;
+                    transition: max-height 0.5s ease-in-out;
+
+                    h3 {
+                        margin: 30px 0 15px 30px;
+                    }
+
+                    p {
+                        color: @txt-main;
+                        font-size: 13px;
+                        line-height: 17px;
+                    }
+
+                    .more-link--right {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+        .main-nav__tabbed {
+            .company__trigger:last-child {
+                margin-bottom: 120px;
+            }
+        }
+
+        .checkbox-1:checked~.content {
+            max-height: 250px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .checkbox-2:checked~.content {
+            max-height: 450px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .checkbox-3:checked~.content {
+            max-height: 200px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .checkbox-4:checked~.content {
+            max-height: 550px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .main-nav__socials-mobile {
+            position: fixed;
+            display: block;
+            width: 100%;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 3000000000;
+
+            .socials-sign__list {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                align-items: stretch;
+            }
+
+            .socials-sign__item {
+                width: 100%;
+                border-width: 1px 0 1px 1px;
+                border-color: #dcdad8;
+                border-style: solid;
+            }
+
+            .socials-sign__link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            .socials-sign__item {
+                svg {
+                    path {
+                        fill: #1781d9;
+                    }
+                }
+            }
+
+            .socials-sign__item:nth-child(2) {
+                padding-bottom: 5px;
+
+                svg {
+                    path {
+                        fill: #1781d9;
+                    }
+                }
+            }
+        }
+
+        .content__sublist {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .content__subitem {
+            padding: 5px 15px 5px 25px;
+            border-width: 0px 0 1px 0px;
+            border-color: #dcdad8;
+            border-style: solid;
+        }
+
+        .content__subitem--map {
+            padding: 0;
+
+            iframe {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        .content__text {
+            margin-bottom: 0;
+        }
+
+        .content__subitem-link {
+            color: @txt-main;
+        }
+
+        .content__subitem-link--blue {
+            color: #1081d1;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,208 @@
+.modal-menu--closed {   
+    position: fixed;
+    top: 108px;
+    left: 0;    
+    animation: fadeOutRightBig 0s;  
+    animation-fill-mode: both;
+    
+}
+@keyframes fadeOutRightBig{
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;        
+        transform: translate3d(2000px, 0, 0);
+    }
+}
+.modal-menu--opened {
+    position: fixed;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    top: 215px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation-delay: 0.5s;
+}
+
+.modal-menu__bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-menu__navigation-list-container {    
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.modal-menu__navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-top: 160px;
+
+    list-style: none;
+}
+
+.modal-menu__navigation__submenu-list {
+    padding: 0; 
+    list-style: none;
+
+    .modal-menu__navigation__submenu-item{
+        a{
+            margin-left: 15px;
+        }
+        a::before {
+            content: '-';
+            padding-right: 8px;
+
+            display: inline-block;            
+        } 
+    }  
+}
+
+.modal-menu__navigation-link {
+    position: relative;
+    display: inline-block;
+
+    color: @txt-light-red;
+    font-size: 24px;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: color 0.5s ease-in-out;
+
+    font-family: 'DIN Pro';
+    font-weight: 500;
+
+    outline: none;    
+}
+
+.modal-menu__navigation-link:hover,
+.modal-menu__navigation-link:focus {
+    color: @txt-white;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.modal-menu__navigation-link:active {
+    color: @txt-white;
+    opacity: 0.5;
+}
+
+.modal-menu__navigation-list--second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.modal-menu__navigation-list--second .modal-menu__navigation-item:not(:first-child) {
+    margin-top: 40px;
+}
+
+.modal-menu__navigation__submenu-link {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+
+    color: @txt-white;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    font-size: 20px;
+
+    outline: none;
+
+    font-family: 'DIN Pro';
+}
+
+.modal-menu__navigation__submenu-link:hover,
+.modal-menu__navigation__submenu-link:focus {
+    color: @txt-light-red;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.modal-menu__navigation__submenu-link:active {
+    color: @txt-white;
+    opacity: 0.5;
+}
+
+.modal-menu__navigation__submenu-link--active:hover,
+.modal-menu__navigation__submenu-link--active:focus {
+    color: @txt-white;
+}
+
+.modal-menu__navigation__menu-link--active {
+    color: @txt-red;
+}
+
+.modal-menu__navigation__menu-link--active:hover,
+.modal-menu__navigation__menu-link--active:focus {
+    color: @txt-red;
+}
+
+@media (max-width: @desktop-width) {
+
+    .modal-menu__bg {
+        display: flex;
+        align-items: center;
+    }
+    .modal-menu__navigation-list-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: -50px;
+        
+    }
+
+    .modal-menu__navigation-list--first {
+        margin-right: 0;
+    }
+
+    .modal-menu__navigation-list {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: @tablet-width) {
+
+    .modal-menu__navigation-link {
+        font-size: 18px;
+    }
+
+    .modal-menu__navigation__submenu-link {
+        margin-top: 15px;
+
+        font-size: 16px;
+    }
+
+    .modal-menu--opened {
+        top: 160px;
+    }    
+}

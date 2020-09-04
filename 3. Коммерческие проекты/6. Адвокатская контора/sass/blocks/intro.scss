@@ -1,0 +1,126 @@
+ .intro__wrap {
+     max-width: 100%;
+     padding: 5px;
+     padding-bottom: 0;
+
+     .intro__title {
+         @include visually-hidden;
+     }
+
+     .intro__main {
+         display: flex;
+         margin: 0 auto;
+         width: 100%;
+         min-height: 744px;
+
+         .intro__bg {
+             width: 50%;
+             height: auto;
+             background: url('../img/bg-main.jpg') no-repeat 50% 0%;
+             background-size: cover;
+         }
+
+         .intro__description {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             box-sizing: border-box;
+             background: $primary;
+             width: 50%;
+             color: $white;
+             padding-right: 20%;
+
+             .intro__header {
+                 margin-left: 5.7%;
+                 margin-bottom: 15px;
+                 margin-top: 0;
+                 font-size: 72px;
+                 line-height: 1;
+                 text-transform: uppercase;
+                 font-weight: 700;
+                 font-family: 'Bebas Neue';
+             }
+
+             .intro__text {
+                 margin-left: 5.7%;
+                 font-size: 12px;
+                 line-height: 13px;
+
+                 &--second {
+                     margin-bottom: 4.7%;
+                 }
+             }
+
+             .intro__button {
+                 @include button() {
+                     margin-left: 5.7%;
+                     text-decoration: none;
+                 }
+
+                 ;
+             }
+         }
+     }
+ }
+
+ @media (max-width: $desktop-width) {
+     .intro {
+         margin-top: 75px;
+     }
+
+     .intro__wrap {
+         padding: 0;
+
+         .intro__main {
+
+             .intro__description {
+                 padding-right: 10%;
+             }
+         }
+     }
+ }
+
+ @media (max-width: $tablet-width) {
+     .intro__wrap {
+
+         .intro__main {
+             display: flex;
+             flex-direction: column;
+
+             .intro__bg {
+                 width: 100%;
+                 min-height: 488px;
+                 background: url('../img/bg-main.jpg') no-repeat 50% 0%;
+                 background-size: cover;
+             }
+
+             .intro__description {
+                 width: 100%;
+                 padding-top: 30px;
+                 padding-left: 20px;
+                 padding-right: 20px;
+                 padding-bottom: 30px;
+
+                 .intro__header {
+                     margin-left: 0;
+                 }
+
+                 .intro__text {
+                     margin-left: 0;
+
+                     &--second {
+                         margin-bottom: 40px;
+                     }
+                 }
+
+                 .intro__button {
+                     @include button() {
+                         margin-left: 0;
+                     }
+
+                     ;
+                 }
+             }
+         }
+     }
+ }

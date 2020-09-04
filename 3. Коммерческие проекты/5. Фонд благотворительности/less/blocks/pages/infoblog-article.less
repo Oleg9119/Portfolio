@@ -1,0 +1,209 @@
+.infoblog-article {
+    position: relative;
+    z-index: 1;
+    background-color: #f4f3ef;
+
+    .infoblog-article-ext {
+        max-width: 1220px;
+        margin: 0 auto;
+
+        .infoblog-article__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            border-bottom: 1px solid @txt-main;
+
+            .infoblog-article__name {
+                text-transform: uppercase;
+            }
+
+            .infoblog-article__right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .infoblog-article__date {
+                    padding-left: 20px;
+                    margin-right: 30px;
+                    margin-bottom: 10px;
+                    background: url('../img/calendar.png') no-repeat 0 50%;
+                    background-size: 15px;
+                    font-size: 14px;
+                }
+
+                .infoblog-article__hashtags-list {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    list-style: none;
+
+                    .infoblog-article__hashtags-item:not(:last-child) {
+                        margin-right: 15px;
+                    }
+
+                    .infoblog-article__hashtags-link {
+                        border-bottom: 1px dashed #302f2c;
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: #302f2c;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: #e7c479;
+                            border-bottom: 1px dashed #e7c479;
+                        }
+                    }
+                }
+            }
+        }
+
+        .infoblog-article__image-ext {
+            height: auto;
+        }
+
+        .infoblog-article__title {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        a {
+            color: @blue;
+
+            &:hover {
+                color: @orange;
+            }
+        }
+
+        .page-infoblog__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(485px, auto);
+            grid-column-gap: 35px;
+            grid-row-gap: 35px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            .page-infoblog__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ffffff;
+                transition: background-color 0.5s ease-in-out;
+
+                &:hover {
+                    background-color: #dddddd;
+                }
+
+                .page-infoblog__link {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    color: @txt-main;
+
+                    .page-infoblog__photo-container {
+                        width: 100%;
+                        min-height: 250px;
+                        background: url(../img/test-pages.jpg) no-repeat 0% 0%;
+                        background-size: cover;
+                    }
+
+                    .page-infoblog__text-container {
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+
+                        .page-infoblog__subtitle {
+                            min-height: 120px;
+                            position: relative;
+                            margin: 0;
+                            font-family: 'Merriweather', sans-serif;
+                            font-size: 22px;
+                            line-height: 28px;
+
+                            a {
+                                color: @txt-main;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+
+                        .page-infoblog__text {
+                            min-height: 135px;
+                        }
+
+                        .page-infoblog__author {
+                            display: flex;
+                            align-items: center;
+                            justify-self: flex-end;
+                            justify-content: space-between;
+                            width: 35%;
+                            margin-top: auto;
+
+                            a {
+                                color: @txt-main;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+
+                        .page-infoblog__photo {
+                            margin-bottom: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-self: flex-end;
+                            justify-content: space-between;
+                            width: 106px;
+                            margin-top: auto;
+
+                            a {
+                                color: @txt-main;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:first-child {
+
+                    .page-infoblog__link {
+
+                        .page-infoblog__photo-container {
+                            background: url(../img/infoblog-article1.jpg) no-repeat 0% 0%;
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .infoblog-article__carousel {
+        margin: 50px 0;
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+}

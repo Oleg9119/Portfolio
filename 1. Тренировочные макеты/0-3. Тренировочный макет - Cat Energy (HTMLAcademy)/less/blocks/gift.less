@@ -1,0 +1,65 @@
+.gift {
+    background: url(../img/icon-gift.svg) no-repeat, url(../img/gift-photo-mobile@1x.jpg) no-repeat;
+    background-size: 55px, contain;
+    background-position: center 30%;
+    text-align: center;
+}
+
+.gift__link {
+    text-decoration: none;
+    color: @bg-white; 
+    cursor: pointer;
+}
+
+.gift__slogan {
+    margin: 0 auto;
+    padding-top: 190px;
+    width: 165px;
+
+    font-size: 16px;
+    font-family: Arial;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {  
+    .gift {          
+        background: url(../img/icon-gift.svg) no-repeat, url(../img/gift-photo-mobile@2x.jpg) no-repeat;                 
+        background-size: 55px, contain;
+        background-position: center 30%;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .gift {
+        background: url(../img/icon-gift.svg) no-repeat, url(../img/gift-photo-tablet@1x.jpg) no-repeat;
+        background-size: 55px, contain;
+        background-position: left 90px top 65px, 0 0;
+    }
+
+    .gift__slogan {
+        margin: 0;
+        margin-left: 420px;
+        padding-top: 75px;
+    
+        font-size: 16px;
+        font-family: Arial;
+        text-align: left;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .gift {
+        height: 315px;
+        background: url(../img/icon-gift.svg) no-repeat, url(../img/gift-photo-desktop@1x.jpg) no-repeat;
+        background-size: 55px, cover;
+        background-position: left 95px top 65px, 0 0;
+    }
+
+    .gift__slogan {
+        padding-top: 0;
+        margin: 0 auto;
+        margin-top: 185px;
+        
+
+        text-align: center;
+    }
+}

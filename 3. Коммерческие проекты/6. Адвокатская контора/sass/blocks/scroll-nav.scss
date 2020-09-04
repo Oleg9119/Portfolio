@@ -1,0 +1,138 @@
+.scroll {
+    position: relative;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .scroll__mouse {
+        width: 17px;
+        height: 30px;
+        fill: $primary;
+        transition-property: fill;
+        transition-duration: 0.3s;
+
+        &:hover,
+        &:active {
+            fill: darken($primary, 15%);
+        }
+    }
+}
+
+.scroll__more-pages {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+
+.scroll__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+    .scroll__item {
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-bottom: 5px;
+        
+        .scroll__link {
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            display: flex;
+            color: $black;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .scroll__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .scroll__item.active {
+        border-bottom: 1px solid $primary;            
+        
+        .scroll__link {
+            color: $primary;
+        }
+    }
+}
+
+.scroll__more-pages {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.scroll--nav {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    min-height: auto;
+}
+
+.about .scroll__list {
+    margin-top: 30px;
+}
+
+.publications .scroll__list {
+    margin-top: 100px;
+    margin-bottom: 0;
+
+    @media (max-width: $desktop-width) {
+        margin-top: 60px;
+    }
+}
+
+.publication .scroll__list {
+    margin-top: 100px;
+    margin-bottom: 0;
+
+    @media (max-width: $desktop-width) {
+        margin-top: 60px;
+    }
+}
+
+.news .scroll__list {
+    margin-top: 100px;
+    margin-bottom: 0;
+
+    @media (max-width: $desktop-width) {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .scroll {
+        display: none;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .scroll__list .scroll__item:nth-child(6),
+    .scroll__list .scroll__item:nth-child(7),
+    .scroll__list .scroll__item:nth-child(8) {
+        display: none;
+    }
+}

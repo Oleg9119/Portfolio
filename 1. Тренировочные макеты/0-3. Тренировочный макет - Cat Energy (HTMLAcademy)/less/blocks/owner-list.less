@@ -1,0 +1,136 @@
+.owner-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 45px;
+    list-style: none;
+}
+
+.owner-list__item {
+    position: relative;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.owner-list__item:not(:first-child) {
+    margin-top: 14px;
+}
+
+.owner-list__label {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: @text-medium-grey;
+}
+
+.owner-list__input {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-left: 15px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    color: @text-light-grey;
+    border: 1px solid @border-light-grey;	
+}
+
+.owner-list__input:hover {
+    border: 1px solid @border-dark-grey;
+}
+
+.owner-list__input:focus {
+    border: 2px solid @black;
+    outline: none;
+}
+
+.owner-list__input:invalid {
+    border: 2px solid @red;
+} 
+
+.owner-list__input--email {
+    height: 43px;
+    margin-left: 12px;
+}
+
+.owner-list__input--phone {
+    height: 43px;
+    margin-left: 11px;
+}
+
+.owner-list__button {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.owner-list__input:focus + .owner-list__button svg {
+    fill: @green;
+}
+
+.owner-list__input:invalid + .owner-list__button svg {
+    fill: @red;
+}
+
+.email-button svg {
+    width: 20px;
+    height: 16px;
+}
+
+.phone-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+    .owner-list {
+        margin-top: 70px;
+        padding-left: 40px;
+        padding-right: 35px;
+    }
+
+    .owner-list__label {
+        font-size: 20px;
+    }
+
+    .owner-list__input {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .owner-list {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .owner-list__item {
+        width: 570px;
+    }
+
+    .owner-list__item:not(:first-child) {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,214 @@
+.how {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.how__wrapper {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.how__title {
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    font-size: 36px;
+    font-weight: normal;
+    color: @text-dark-grey;
+}
+
+.how__list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.how__item {
+    position: relative;
+    padding-left: 80px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        background-color: @green;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px 50px;
+    }
+
+    &--contains::before {
+        background-image: url(../img/advantage-leaf@1x.png);
+    }
+
+    &--cooking::before {
+        background-image: url(../img/advantage-powder@1x.png);
+    }
+
+    &--change::before {
+        background-image: url(../img/advantage-dining@1x.png);
+    }
+
+    &--time::before {
+        background-image: url(../img/advantage-clock@1x.png);
+    }
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .how__item{
+        &--contains::before {
+            background-image: url(../img/advantage-leaf@2x.png);
+        }
+    
+        &--cooking::before {
+            background-image: url(../img/advantage-powder@2x.png);
+        }
+    
+        &--change::before {
+            background-image: url(../img/advantage-dining@2x.png);
+        }
+    
+        &--time::before {
+            background-image: url(../img/advantage-clock@2x.png);
+        }
+    }
+}
+
+.how__item:not(:first-child) {
+    margin-top: 20px;
+}
+
+.how__item:last-child {
+    padding-bottom: 42px;
+}
+
+.how__description {
+    margin: 0;
+    padding-top: 5px;   
+
+    font-family: Arial;
+}
+
+@media (min-width: @tablet-width) {
+    .how {
+        width: auto;
+        min-height: 780px;
+        margin: 0 auto;
+
+        border-bottom: 1px solid @border-light-grey;
+    }
+
+    .how__wrapper {
+        width: 708px;
+    }
+
+    .how__title {
+        padding-top: 55px;
+        padding-bottom: 65px;
+
+        font-size: 60px;
+    }
+
+    .how__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        counter-reset: li;
+    }
+
+    .how__item {
+        width: 335px;
+        min-height: 180px;
+        padding-left: 0;
+        padding-top: 120px;
+
+        &::before {
+            width: 80px;
+            height: 80px;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            counter-increment: li; 
+            content: counter(li);
+            top: -15px;
+            right: 76px;
+            min-width: 136px;
+            font-size: 281px;
+            line-height: 235px;
+            font-family: "Oswald", "Arial", sans-serif;
+            color: @bg-grey;
+            z-index: -1;
+            text-align: center;
+        }
+    }
+
+    .how__item:nth-child(odd) {
+        margin-right: 30px;
+    }
+
+    .how__item:not(:first-child) {
+        margin-top: 0px;
+    }
+
+    .how__item:last-child {
+        padding-bottom: 0px;
+    }
+
+    .how__description {
+        width: 230px;
+
+        font-size: 16px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .how {
+        min-height: 480px;
+        border-bottom: none;
+    }
+
+    .how__wrapper {
+        width: 1220px;
+    }
+
+    .how__title {
+        padding-top: 80px;
+    }
+
+    .how__item:nth-child(odd) {
+        margin-right: 60px;
+    }
+
+    .how__item {
+        width: 245px;
+        margin-right: 60px;
+
+        &::after {
+            position: absolute;
+            display: block;
+            counter-increment: li; 
+            content: counter(li);
+            top: -15px;
+            right: 76px;
+            min-width: 136px;
+            font-size: 281px;
+            line-height: 235px;
+            font-family: "Oswald", "Arial", sans-serif;
+            color: @bg-grey;
+            z-index: -1;
+            text-align: center;
+        }
+    }
+}

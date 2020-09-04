@@ -1,0 +1,94 @@
+.appeal {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: @bg-appeal;
+    background-image: url(../img/selin.png);
+    background-repeat: no-repeat;
+    background-size: 145px;
+    background-position: bottom right;
+
+    .appeal__slogan {
+        margin: 0;
+        text-align: left;
+    }
+
+    .appeal__text {
+        width: 80%;
+    }
+
+    .appeal__author {
+        margin: 0;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: @tablet-width) {
+
+    .appeal {
+        position: relative;
+        margin-top: 125px;
+        margin-bottom: 30px;
+        background-image: url(../img/sergey-selin.png), url(../img/selin-logo.png);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 145px, 100px;
+        background-position: bottom left, 95% 50%;
+
+        .appeal__text-container {
+            padding-left: 10%;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .appeal {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 346px;
+        max-width: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 0;
+        margin-right: 0;
+        background-image: url(../img/selin-logo.png);
+        background-repeat: no-repeat;
+        background-size: 261px;
+        background-position: 95% 50%;
+
+        .appeal__text-container {
+            padding-left: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .appeal__slogan {
+                font-size: 48px;
+                line-height: 48px;
+                margin-bottom: 27px;
+            }
+
+            .appeal__text {
+                width: 64%;
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+
+            .appeal__author {
+                font-size: 24px;
+                line-height: 150%;
+            }
+        }
+
+        .appeal__photo-container {
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 360px;
+            height: 480px;
+            background-image: url(../img/sergey-selin.png);
+            background-repeat: no-repeat;
+            background-position-y: -20px;
+        }
+    }
+}

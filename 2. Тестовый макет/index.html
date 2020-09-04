@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Main page</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__wrap wrap">
+        <div class="header__left">
+          <button class="header__search" type="button"></button>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Casino</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Shop</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Promotions</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__center logo">
+          <a class="logo__link" href="#">             
+            <img src="img/cards.png" alt="Logo" class="logo__image">  
+            <p class="logo__descr">Casino Test</p>
+          </a>  
+        </div>
+        <div class="header__right">
+          <button class="button" type="button">Deposit</button>
+          <button class="button button--login" type="submit">Log In</button>
+        </div>  
+      </div>    
+    </header>
+    <section class="intro">
+      <h1 class="intro__title visually-hidden">Intro</h1>      
+      <div class="intro__register-wrap wrap">
+        <div class="intro__register register">
+          <div class="register__wrapper">
+            <h2 class="register__title">Sign up and start winning</h2>
+            <p class="register__slogan">With your social network</p>
+            <ul class="register__list social">
+              <li class="social__item">
+                <a class="social__link arroba" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link ok" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link facebook" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link vk" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link google" href="#"></a>
+              </li>
+            </ul>
+            <p class="register__slogan">or</p>
+            <input type="text" id="email-field" class="input-text input-text--email" name="email-field" placeholder="E-mail *" required>
+            <div class="register__input-wrapper">
+              <div class="register__password-wrapper"> 
+                <input type="password" id="password-field" class="input-text input-text--password" name="password-field" placeholder="Password *" required>
+                <button class="password-button" type="button"></button>
+              </div>
+              <select class="register__select" name="currency-field" id="currency-field">
+                <option value="Currency *" selected>Currency *</option>
+                <option value="Currency 2">Currency 2</option>
+                <option value="Currency 3">Currency 3</option>
+              </select>
+            </div>
+            <div class="register__promo-wrapper">          
+              <input type="text" id="promo-field" class="input-text" name="promo-field" placeholder="Promo-code">
+              <button class="promo-button" type="button"></button>
+            </div>        
+            <div class="register__checkbox-container">
+              <input class="register__checkbox" id="agreement" type="checkbox" name="agreement">
+              <label for="agreement">I agree with &nbsp;<a href="#">Teame and Confidence</a></label>
+            </div>       
+            <div class="register__checkbox-container">
+              <input class="register__checkbox" id="confirm" type="checkbox" name="confirm">
+              <label for="confirm">I comfirm that I’m 18 years or older</label>
+            </div>
+            <button class="button" type="submit">Register</button>
+            <a class="register__acount" href="#">Have an account?</a>
+          </div>
+        </div>
+        <div class="intro__slider slider">
+          <div class="slider__wrap wrap">
+            <h2 class="slider__title visually-hidden">Main slider</h2>
+            <div class="slider__carousel carousel owl-carousel owl-theme">
+              <div class="carousel__item">
+                <img class="carousel__image" src="img/brice-laville-saint-martin-asset.jpg" alt="slider-background">
+                <div class="carousel__bg"></div>
+                <div class="carousel__descr">
+                  <p class="carousel__slogan">FIRST bonuses</p>
+                  <h3 class="carousel__title">Welcome <br> BonusPackage</h3>
+                  <p class="carousel__text">200 bonus and 100 free spins</p>
+                  <button class="button" type="button">Deposit</button>
+                </div>
+              </div>
+              <div class="carousel__item">
+                <img class="carousel__image" src="img/brice-laville-saint-martin-asset.jpg" alt="slider-background">
+                <div class="carousel__bg"></div>                
+                <div class="carousel__descr">
+                  <p class="carousel__slogan">FIRST bonuses</p>
+                  <h3 class="carousel__title">Welcome <br> BonusPackage</h3>
+                  <p class="carousel__text">200 bonus and 100 free spins</p>
+                  <button class="button" type="button">Deposit</button>
+                </div>
+              </div>
+              <div class="carousel__item">
+                <img class="carousel__image" src="img/brice-laville-saint-martin-asset.jpg" alt="slider-background">
+                <div class="carousel__bg"></div>                              
+                <div class="carousel__descr">
+                  <p class="carousel__slogan">FIRST bonuses</p>
+                  <h3 class="carousel__title">Welcome <br> BonusPackage</h3>
+                  <p class="carousel__text">200 bonus and 100 free spins</p>
+                  <button class="button" type="button">Deposit</button>
+                </div>
+              </div>
+              <div class="carousel__item">
+                <img class="carousel__image" src="img/brice-laville-saint-martin-asset.jpg" alt="slider-background">
+                <div class="carousel__bg"></div>              
+                <div class="carousel__descr">
+                  <p class="carousel__slogan">FIRST bonuses</p>
+                  <h3 class="carousel__title">Welcome <br> BonusPackage</h3>
+                  <p class="carousel__text">200 bonus and 100 free spins</p>
+                  <button class="button" type="button">Deposit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="categories">
+      <h1 class="categories__title visually-hidden">Categories</h1>
+      <div class="categories__wrap wrap">
+        <ul class="categories__list">
+          <li class="categories__item categories__item--new">
+            <a class="categories__link" href="#">New games</a>
+          </li>
+          <li class="categories__item categories__item--popular">
+            <a class="categories__link" href="#">Popular</a>
+          </li>
+          <li class="categories__item categories__item--slots">
+            <a class="categories__link" href="#">Slots</a>
+          </li>
+          <li class="categories__item categories__item--casino">
+            <a class="categories__link" href="#">Casino Live</a>
+          </li>
+          <li class="categories__item categories__item--table">
+            <a class="categories__link" href="#">Table Games</a>
+          </li>
+          <li class="categories__item categories__item--favourites">
+            <a class="categories__link" href="#">Favorites</a>
+          </li>
+          <li class="categories__item categories__item--last">
+            <a class="categories__link" href="#">Last played</a>
+          </li>
+          <li class="categories__item">
+            <select name="all-categories" id="all-categories">
+              <option value="All category" selected>All category</option>
+              <option value="All category2">All category2</option>
+              <option value="All category3">All category3</option>
+            </select>
+          </li>
+          <li class="categories__item categories__item--search">
+            <input type="search" placeholder="Search games or providers">
+            <button class="search-button" type="button"></button>
+          </li>
+        </ul>
+        <ul class="providers__list">
+          <li class="providers__item providers__item--active">
+            <button class="providers__button" type="button">All Providers</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">NetEnt</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">Microgaming</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">Quickspin</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">PragmaticPlay</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">BoomingGames</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">MrSlotty</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">BoomingGames</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">BetRadar</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">PariPlay</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">BetConstruct</button>
+          </li>
+          <li class="providers__item">
+            <button class="providers__button" type="button">NetEnt</button>
+          </li>
+        </ul>
+      </div>      
+    </section>
+    <section class="newgames">
+      <div class="newgames__wrapper wrap">
+        <div class="newgames__top">
+          <h1 class="newgames__title">New games</h1>
+          <a class="newgames__viewall viewall" href="#">View all (46)</a>
+        </div>
+        <ul class="newgames__list">
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new1.png" alt="game">
+              <div class="top_bg"></div>
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new2.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new3.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new4.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item newgames__item--fourcells">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/newmain.png" alt="game">
+              <div class="newgames__mark">New game</div>
+              <button class="newgames__button button" type="button">Play now</button>
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new5.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new6.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new7.png" alt="game">
+            </a>
+          </li>
+          <li class="newgames__item">
+            <a class="newgames__link" href="#">
+              <img class="newgames__img" src="img/new8.png" alt="game">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="winning">
+      <div class="winning__wrapper wrap">
+        <h1 class="winning__title">Winning now</h1>
+        <ul class="winning__list">
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Ivan-khopin</p>
+              <a href="#" class="winning__gamelink">100 Cats</a>
+              <p class="winning__cash">1020 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Daria</p>
+              <a href="#" class="winning__gamelink">The Story of Alex</a>
+              <p class="winning__cash">3420 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Ivan-khopin</p>
+              <a href="#" class="winning__gamelink">100 Cats</a>
+              <p class="winning__cash">1020 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Daria</p>
+              <a href="#" class="winning__gamelink">The Story of Alex</a>
+              <p class="winning__cash">3420 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Ivan-khopin</p>
+              <a href="#" class="winning__gamelink">100 Cats</a>
+              <p class="winning__cash">1020 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Daria</p>
+              <a href="#" class="winning__gamelink">The Story of Alex</a>
+              <p class="winning__cash">3420 P</p>
+            </div>
+          </li>
+          <li class="winning__item">
+            <div class="winning__img"></div>
+            <div class="winning__descr">
+              <p class="winning__name">Ivan-khopin</p>
+              <a href="#" class="winning__gamelink">100 Cats</a>
+              <p class="winning__cash">1020 P</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="popular">
+      <div class="popular__wrapper wrap">
+        <div class="popular__top">
+          <h1 class="popular__title">Popular</h1>
+          <a class="popular__viewall viewall" href="#">View all (46)</a>
+        </div>
+        <ul class="popular__list">
+          <li class="popular__item popular__item--fourcells">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/popmain.png" alt="game">
+              <div class="popular__mark">Popular</div>
+              <button class="popular__button button" type="button">Play now</button>
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop1.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop2.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop3.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop4.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop5.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop6.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop7.png" alt="game">
+            </a>
+          </li>
+          <li class="popular__item">
+            <a class="popular__link" href="#">
+              <img class="popular__img" src="img/pop8.png" alt="game">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="recommended">
+      <div class="recommended__wrapper wrap">
+        <div class="recommended__top">
+          <h1 class="recommended__title">Recommends games</h1>
+          <a class="recommended__viewall viewall" href="#">View all (46)</a>
+        </div>
+        <ul class="recommended__list">
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec1.png" alt="game">
+              <div class="popular__mark">Popular</div>
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec2.png" alt="game">
+              <div class="newgames__mark">New</div>
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec3.png" alt="game">
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec4.png" alt="game">
+            </a>
+          </li>
+          <li class="recommended__item recommended__item--fourcells">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/recmain.png" alt="game">
+              <div class="recommended__mark">Recommends</div>
+              <button class="recommended__button button" type="button">Play now</button>
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec5.png" alt="game">
+              <div class="newgames__mark">New</div>
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec6.png" alt="game">
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec7.png" alt="game">
+              <div class="popular__mark">Popular</div>
+            </a>
+          </li>
+          <li class="recommended__item">
+            <a class="recommended__link" href="#">
+              <img class="recommended__img" src="img/rec8.png" alt="game">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="stats__wrapper wrap">
+        <h1 class="stats__title visually-hidden">Statistics</h1>
+        <div class="stats__gameofmonth gameofmonth">
+          <h2 class="gameofmonth__title">Game of month</h2>
+          <div class="gameofmonth__main">
+            <img src="img/junglebook.jpg" alt="game">
+            <div class="gameofmonth__descr">
+              <p class="gameofmonth__text">87% of players played the <a href="#">JUNGLE BOOKS</a> all month</p>
+              <button class="gameofmonth__button" type="button">Start playing</button>
+            </div>
+          </div>
+        </div>
+        <div class="stats__overall overall">
+          <ul class="overall__list">
+            <li class="overall__item">
+              <span class="overall__number">+100</span>
+              <p class="overall__text">Players every day</p>
+            </li>
+            <li class="overall__item">
+              <span class="overall__number">30</span>
+              <p class="overall__text">Providers</p>
+            </li>
+            <li class="overall__item">
+              <span class="overall__number">+500</span>
+              <p class="overall__text">of over games</p>
+            </li>
+          </ul>
+        </div>
+        <div class="stats__biggest biggest">
+          <h2 class="biggest__title">Biggest wins</h2>
+          <table class="biggest__table">
+            <thead>
+              <th>Player</th>
+              <th>Game</th>
+              <th>Points</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+              <tr>
+                <td>SlotPirot12</td>
+                <td><a class="biggest__link" href="#">GonzoQuest</a></td>
+                <td><span class="biggest__bold">5000 &#8364;</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="payment">
+      <div class="payment__wrapper wrap">
+        <ul class="payment__list">
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay1.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay2.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay3.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay4.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay5.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay6.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+          <li class="payment__item">
+            <a href="#" class="payment__link">
+              <img src="img/pay7.png" alt="payment" class="payment__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <h1 class="footer__title visually-hidden">Footer</h1>
+      <div class="footer__wrapper wrap">
+        <div class="footer__top partners">
+          <ul class="partners__top">
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part2.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part3.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part5.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part3.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__top-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1.png" alt="partner">
+              </a>
+            </li>
+          </ul>
+          <ul class="partners__bottom">
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-1.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-2.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-3.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-1.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part2.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-3.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-4.png" alt="partner">
+              </a>
+            </li>
+            <li class="partners__bottom-item">
+              <a href="#" class="partners__link">
+                <img src="img/part1-1.png" alt="partner">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__main">
+          <div class="footer__main-left">
+            <div class="footer__main-logo">
+              <a href="#" class="footer__main-logo-link">
+                <img src="img/footer-logo.png" alt="footer-logo">
+              </a>
+            </div>
+            <div class="footer__bottom-logo">
+              <img src="img/18plus.png" alt="footer-logo">
+            </div>
+          </div>
+          <div class="footer__main-center">
+            <ul class="footer__main-list">
+              <li class="footer__main-item">
+                <h2 class="footer__main-title">Navigation</h2>
+                <a href="#" class="footer__main-link">Promotions</a>
+                <a href="#" class="footer__main-link">Casino Live</a>
+                <a href="#" class="footer__main-link">Casino</a>
+                <a href="#" class="footer__main-link">Sportbook</a>
+              </li>
+              <li class="footer__main-item">
+                <h2 class="footer__main-title">Categories</h2>
+                <a href="#" class="footer__main-link">New games</a>
+                <a href="#" class="footer__main-link">Popular</a>
+                <a href="#" class="footer__main-link">Slots</a>
+                <a href="#" class="footer__main-link">Casino Live</a>
+                <a href="#" class="footer__main-link">Other</a>
+              </li>
+              <li class="footer__main-item">
+                <h2 class="footer__main-title">License</h2>
+                <a href="#" class="footer__main-link">Responsible&nbsp;Game</a>
+                <a href="#" class="footer__main-link">Fair Play</a>
+              </li>
+              <li class="footer__main-item">
+                <h2 class="footer__main-title">Сontacts</h2>
+                <a href="#" class="footer__main-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__main-right">
+            <p class="footer__main-right-slogan">To test one’s luck, one don’t even need to leave his or her house</p>
+            <p class="footer__main-right-text">Today online casinos have ceased to be something unusual, they are pretty much the same organizations as genuine gambling-houses, and their activities are strictly controlled. The online casino WebbySlot is being repeatedly tested for its honesty, and passes such tests successfully!</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-text">Deuscasino.com is operated by SG International N.V., which is registered in E-Commerce park, Vredenberg, Curacao, having gaming<br> licence No.8048/JAZZ2015-035 and all rights to operate the gaming software. SG International LP is providing payment services as an agent according to the licence agreement concluded between SG International LP and SG International N.V.<br> © Deus Casino. All rights reserved.<br> Developed by <span>Softgamings</span></p>
+        </div>
+      </div>
+    </footer>
+    <div class="cloud">
+      <ul class="cloud__list">
+        <li class="cloud__item">
+          <a href="#" class="cloud__link">
+            <span class="visually-hidden">USA</span>
+          </a>
+        </li>
+        <li class="cloud__item">
+          <a href="#" class="cloud__link">
+            <span class="visually-hidden">Cloud</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+  <script src="js/all.min.js"></script>
+</body>
+</html>
