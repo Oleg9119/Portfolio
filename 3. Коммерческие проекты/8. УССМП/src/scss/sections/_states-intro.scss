@@ -1,0 +1,404 @@
+.states-intro {
+  padding-top: 15px;
+  overflow-x: hidden;
+
+  @include respond(desktop) {
+    display: flex;
+    padding-top: 204px;
+    padding-bottom: 35px;
+  }
+
+  &__title {
+    @include respond(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__picture-wrapper {
+    position: relative;
+    overflow-x: auto;
+    padding-left: 10px;
+
+    @include respond(tablet) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1035px) {
+      width: 1035px;
+    }
+
+    @include respond(desktop) {
+      margin: 0;
+      margin-left: auto;
+      overflow-x: initial;
+    }
+  }
+
+  &__picture {
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 911px;
+      height: 488px;
+      max-width: none;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $blue-bright;
+
+    appearance: none;
+    margin: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -3px;
+      left: -3px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgba($blue-bright, 0.1);
+      animation: scaleDot1 infinite 3s;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -5px;
+      left: -5px;
+      display: block;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background-color: rgba($blue-bright, 0.05);
+      animation: scaleDot2 infinite 3s;
+    }
+  }
+
+  &__dot:hover+span,
+  &__dot+span:hover {
+    @include respond(desktop) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // &__dot ~ span:hover
+
+  &__dot-container {
+    position: absolute;
+  }
+
+  &__dot-container--sevastopol {
+    top: 248px;
+    left: 0;
+  }
+
+  &__dot--sevastopol {
+
+    &::before,
+    &::after {
+      animation-delay: 1s;
+    }
+  }
+
+  &__dot-container--crimea {
+    top: 245px;
+    left: 15px;
+  }
+
+  &__dot--crimea {
+
+    &::before,
+    &::after {
+      animation-delay: 1.5s;
+    }
+  }
+
+  &__dot-container--belgorod {
+    top: 231px;
+    left: 82px;
+  }
+
+  &__dot--belgorod {
+
+    &::before,
+    &::after {
+      animation-delay: 2s;
+    }
+  }
+
+  &__dot-container--voronezh {
+    top: 245px;
+    left: 97px;
+  }
+
+  &__dot--voronezh {
+
+    &::before,
+    &::after {
+      animation-delay: 2.5s;
+    }
+  }
+
+  &__dot-container--adigeya {
+    top: 295px;
+    left: 36px;
+  }
+
+  &__dot--adigeya {
+
+    &::before,
+    &::after {
+      animation-delay: 3s;
+    }
+  }
+
+  &__dot-container--kalmikiya {
+    top: 314px;
+    left: 84px;
+  }
+
+  &__dot--kalmikiya {
+
+    &::before,
+    &::after {
+      animation-delay: 3.5s;
+    }
+  }
+
+  &__dot-container--stavropol {
+    top: 315px;
+    left: 59px;
+  }
+
+  &__dot--stavropol {
+
+    &::before,
+    &::after {
+      animation-delay: 4s;
+    }
+  }
+
+  &__dot-container--karachaevo {
+    top: 314px;
+    left: 36px;
+  }
+
+  &__dot--karachaevo {
+
+    &::before,
+    &::after {
+      animation-delay: 4.5s;
+    }
+  }
+
+  &__dot-container--kabardino-balkaria {
+    top: 327px;
+    left: 42px;
+  }
+
+  &__dot--kabardino-balkaria {
+
+    &::before,
+    &::after {
+      animation-delay: 5s;
+    }
+  }
+
+  &__dot-container--ingushetia {
+    top: 337px;
+    left: 44px;
+  }
+
+  &__dot--ingushetia {
+
+    &::before,
+    &::after {
+      animation-delay: 5.5s;
+    }
+  }
+
+  &__dot-container--checnya {
+    top: 345px;
+    left: 57px;
+  }
+
+  &__dot--checnya {
+
+    &::before,
+    &::after {
+      animation-delay: 6s;
+    }
+  }
+
+  &__dot-container--kaluga {
+    top: 193px;
+    left: 108px;
+  }
+
+  &__dot--kaluga {
+
+    &::before,
+    &::after {
+      animation-delay: 6.5s;
+    }
+  }
+
+  &__dot-container--vladimir {
+    top: 210px;
+    left: 148px;
+  }
+
+  &__dot--vladimir {
+
+    &::before,
+    &::after {
+      animation-delay: 7s;
+    }
+  }
+
+  &__dot-container--ivanovskaya {
+    top: 208px;
+    left: 161px;
+  }
+
+  &__dot--ivanovskaya {
+
+    &::before,
+    &::after {
+      animation-delay: 7.5s;
+    }
+  }
+
+  &__dot-container--tyumen {
+    top: 309px;
+    left: 305px;
+  }
+
+  &__dot--tyumen {
+
+    &::before,
+    &::after {
+      animation-delay: 8s;
+    }
+  }
+
+  &__dot-container--kamchatka {
+    top: 235px;
+    left: 873px;
+  }
+
+  &__dot--kamchatka {
+
+    &::before,
+    &::after {
+      animation-delay: 8.5s;
+    }
+  }
+
+  &__dot-name {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-main;
+    background-color: $bg-white;
+    border-radius: 0 2px 2px 2px;
+    box-shadow: 0px 0px 15px rgba(29, 51, 65, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      border: 3px solid transparent;
+      border-bottom: 3px solid $bg-white;
+      border-left: 3px solid $bg-white;
+    }
+  }
+
+  &__dot-container--kamchatka .states-intro__dot-name {
+    right: -13px;
+    left: unset;
+  }
+
+  &__dot-container--kamchatka .states-intro__dot-name::before {
+    right: 0;
+    left: unset;
+    border-right: 3px solid #fff;
+    border-left: 3px solid transparent;
+  }
+
+  &__dot-name--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__dot-name--mobile--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img.states-intro__dot--active {
+    background-color: $bg-white;
+  }
+
+  &__dot:hover,
+  &__dot:checked,
+  &__dot--hovered {
+    width: 11px;
+    height: 11px;
+    background-color: $red;
+    border: 1px solid $bg-white;
+    transform: translate(-1px, -1px);
+
+    &::before {
+      background-color: rgba($bg-white, 0.3);
+      animation: scaleDot1Active infinite 3s;
+      animation-delay: 0;
+    }
+
+    &::after {
+      background-color: rgba($bg-white, 0.05);
+      animation: scaleDot2Active infinite 3s;
+      animation-delay: 0;
+    }
+  }
+
+  &__dot:checked+span {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.states-intro>.wrapper {
+  @include respond(desktop) {
+    width: 758px;
+    padding-right: 0;
+  }
+}

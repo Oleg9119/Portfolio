@@ -1,0 +1,302 @@
+.states-integration-oms {
+  @include respond(desktop) {
+    display: flex;
+  }
+}
+
+.states-integration {
+  display: flex;
+  flex-direction: column;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 0;
+  background-size: 320px;
+  background-color: $bg-lightgrey;
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 0;
+    background-size: 320px;
+    background-color: $bg-lightgrey;
+  }
+
+  @include respond(tablet) {
+    padding-top: 85px;
+    padding-right: 70px;
+    padding-bottom: 90px;
+    padding-left: 105px;
+    background: url(../img/bg-about-intro-desktop.png) no-repeat 0 0;
+    background-size: cover;
+    background-color: $bg-lightgrey;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-about-intro-desktop@2x.png) no-repeat 0 0;
+      background-size: cover;
+      background-color: $bg-lightgrey;
+    }
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+    padding-top: 160px;
+    padding-bottom: 180px;
+  }
+
+  @include respond(big-desktop) {
+    padding-left: $big-desktop-padding;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    color: $text-main;
+
+    @include respond(desktop) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    @include cleanList;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    background: url(../img/bg-states-integration-bottom-mobile.png) no-repeat 0
+      0;
+    background-size: cover;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-states-integration-bottom-mobile@2x.png)
+        no-repeat 0 0;
+      background-size: cover;
+    }
+
+    @include respond(tablet) {
+      width: 515px;
+      align-self: stretch;
+      background: url(../img/bg-states-integration-bottom-tablet.png) no-repeat
+        0 0;
+      background-size: 468px 380px;
+
+      @media (min-resolution: 192dpi) {
+        background: url(../img/bg-states-integration-bottom-tablet@2x.png)
+          no-repeat 0 0;
+        background-size: 468px 380px;
+      }
+    }
+  }
+
+  &__item {
+    min-width: 60px;
+    padding: 7px 7px 6px 7px;
+    font-family: "Boxed";
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $bg-white;
+    border: 2px solid $text-main;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+
+    @include respond(tablet) {
+      min-width: 105px;
+      padding: 10px 25px 12px 23px;
+      font-size: 20px;
+    }
+  }
+
+  &__item--sanaviation {
+    align-self: flex-end;
+    margin-right: 55px;
+
+    @include respond(tablet) {
+      margin-right: 85px;
+    }
+  }
+
+  &__item--ip {
+    align-self: flex-start;
+    margin-top: -7px;
+  }
+
+  &__item--tfoms {
+    align-self: flex-end;
+    width: 75px;
+    margin-top: -4px;
+
+    @include respond(tablet) {
+      width: 116px;
+    }
+  }
+
+  &__item--system {
+    align-self: center;
+    width: 110px;
+    margin-top: -8px;
+    margin-bottom: 25px;
+
+    @include respond(tablet) {
+      width: 172px;
+    }
+  }
+
+  &__item--glonass {
+    align-self: start;
+    width: 90px;
+
+    @include respond(tablet) {
+      width: 135px;
+    }
+  }
+
+  &__item--ermis {
+    align-self: center;
+    width: 75px;
+    margin-top: -4px;
+
+    @include respond(tablet) {
+      width: 111px;
+    }
+  }
+}
+
+.states-oms {
+  padding-top: 65px;
+  padding-bottom: 55px;
+  background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 100%,
+    linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 100%,
+      linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+  }
+
+  @include respond(tablet) {
+    padding-top: 85px;
+    padding-right: 40px;
+    padding-bottom: 85px;
+    padding-left: 40px;
+    background: url(../img/bg-about-intro-desktop.png) no-repeat 100% 100%,
+      linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+    padding-top: 160px;
+    padding-bottom: 180px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    text-align: left;
+
+    @include respond(tablet) {
+      margin-bottom: 30px;
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    color: $text-main;
+
+    @include respond(tablet) {
+      width: 80%;
+    }
+  }
+
+  &__text:first-of-type {
+    margin-bottom: 30px;
+
+    @include respond(desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    @include cleanList;
+    margin-bottom: 20px;
+
+    @include respond(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 98px;
+    padding-left: 110px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include respond(tablet) {
+      width: calc(50% - 20px);
+      font-size: 16px;
+    }
+  }
+
+  &__item--qr {
+    background: url(../img/states-oms-1-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-oms-1-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+
+    @include respond(tablet) {
+      order: 1;
+    }
+  }
+
+  &__item--bill {
+    background: url(../img/states-oms-2-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-oms-2-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+
+    @include respond(tablet) {
+      order: 3;
+    }
+  }
+
+  &__item--tariff {
+    background: url(../img/states-oms-3-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-oms-3-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+
+    @include respond(tablet) {
+      order: 2;
+    }
+  }
+
+  &__item--registry {
+    background: url(../img/states-oms-4-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-oms-4-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+
+    @include respond(tablet) {
+      order: 4;
+    }
+  }
+}

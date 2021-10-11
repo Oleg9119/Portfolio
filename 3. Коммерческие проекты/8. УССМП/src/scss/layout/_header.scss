@@ -1,0 +1,176 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 5px 5px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: $bg-white;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+
+    @include respond(tablet) {
+        box-shadow: none;
+
+        &::after {
+            position: absolute;
+            content: '';
+            z-index: 2000;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $bg-lightgrey;
+        }
+    }
+
+    @include respond(desktop) {
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: transparent;
+
+        padding-top: 30px;
+        padding-bottom: 15px;
+        transition: padding 0.35s;
+
+        &::after {
+            display: none;
+        }
+
+        &--fixed {
+            padding-top: 15px;
+            background-color: $bg-white;
+            box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+        }
+    }
+
+    @include respond(big-desktop) {
+        padding-left: 135px;
+        padding-right: 135px;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 20000;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        background-color: $bg-white;
+
+        @include respond(desktop) {
+            margin-right: 50px;
+            background-color: transparent;
+        }
+
+        @media(min-width:1480px) {
+            margin-right: 85px;
+        }
+
+        @include respond(big-desktop) {
+            margin-right: 120px;
+        }
+    }
+
+    &__logo-img {
+        margin-right: 7px;
+        width: 31px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(tablet) {
+            margin-right: 18px;
+            width: 41px;
+        }
+
+        @include respond(desktop) {
+            margin-right: 20px;
+            width: 50px;
+        }
+    }
+
+    &__logo-text {
+        padding-top: 3px;
+        font-size: 10px;
+        line-height: 1.2;
+        color: $text-tertiary;
+        text-transform: uppercase;
+        font-family: 'Boxed';
+        font-weight: 400;
+
+        @include respond(tablet) {
+            font-size: 12px;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+        bottom: 0;
+        left: -1000px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.2s;
+        background-color: $bg-white;
+        width: 0;
+        height: 100vh;
+        padding-top: 65px;
+
+        &--opened {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 68%;
+            height: 100vh;
+        }
+
+        @include respond(tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            bottom: auto;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+        }
+
+        @include respond(desktop) {
+            position: static;
+            padding-top: 0;
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+
+    &__request {
+        margin-left: auto;
+        margin-right: 9px;
+
+        @include respond(tablet) {
+            position: relative;
+            z-index: 100;
+            margin-right: 0;
+        }
+
+        @include respond(desktop) {
+            flex-shrink: 0;
+        }
+    }
+
+    &__communications {
+        display: none;
+
+        @include respond(tablet) {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+    }
+}

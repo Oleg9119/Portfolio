@@ -1,0 +1,100 @@
+.card-list {
+    @include cleanList;
+
+    @include respond(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.card {
+    position: relative;
+    padding: 30px 45px 35px 25px;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+
+    @include respond(tablet) {
+        padding: 60px 145px 65px 50px;
+    }
+
+    @include respond(desktop) {
+        width: 50%;
+        min-height: 400px;
+        padding: 100px 300px 100px 50px;
+    }
+
+    @include respond(big-desktop) {
+        padding: 100px 300px 100px 135px;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 7px;
+
+        @include respond(desktop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+
+        @include respond(tablet) {
+            width: 80%;
+        }
+
+        @media(min-width: 1000px) {
+            width: 60%;
+        }
+
+        @include respond(desktop) {
+            width: 100%;
+        }
+    }
+
+    &__gradient {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-image: linear-gradient(88.75deg, $bg-lightgrey 55.57%, rgba(232, 237, 241, 0) 88.93%);
+
+        @media(min-width: 500px) {
+            background-image: linear-gradient(88.75deg, $bg-lightgrey 80%, rgba(232, 237, 241, 0) 88.93%);
+        }
+
+        @include respond(tablet) {
+            background-image: linear-gradient(88.75deg, $bg-lightgrey 55.57%, rgba(232, 237, 241, 0) 88.93%);
+        }
+
+        @media(min-width: 1000px) {
+            background-image: linear-gradient(88.75deg, $bg-lightgrey 70%, rgba(232, 237, 241, 0) 88.93%);
+        }
+
+        @include respond(desktop) {
+            background-image: linear-gradient(88.75deg, $bg-lightgrey 55.57%, rgba(232, 237, 241, 0) 88.93%);
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        z-index: -2;
+        right: 0;
+        top: 0;
+        height: 100%;
+        overflow: hidden;
+        opacity: .7;
+
+        img {
+            height: 100%;
+        }
+    }
+}

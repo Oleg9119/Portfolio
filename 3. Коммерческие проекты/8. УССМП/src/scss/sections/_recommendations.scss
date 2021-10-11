@@ -1,0 +1,90 @@
+.recommendations {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: url(../img/bg-recommendations-mobile.png) no-repeat -30px 40px;
+    background-size: 430px 370px;
+
+    @media (min-resolution: 192dpi) {
+        background: url(../img/bg-recommendations-mobile@2x.png) no-repeat -30px 40px;
+        background-size: 430px 370px;
+    }
+
+    @include respond(tablet) {
+        position: relative;
+        padding-top: 130px;
+        padding-bottom: 60px;
+        background: url(../img/bg-recommendations-tablet.png) no-repeat 0 70px;
+        background-size: 560px 450px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/bg-recommendations-tablet@2x.png) no-repeat 0 70px;
+            background-size: 560px 450px;
+        }
+    }
+
+    @include respond(desktop) {
+        position: relative;
+        top: -120px;
+        padding-top: 340px;
+        padding-bottom: 60px;
+        background: url(../img/bg-recommendations-desktop.png) no-repeat 0 0;
+        background-size: 900px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/bg-recommendations-desktop@2x.png) no-repeat 0 0;
+            background-size: 900px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+
+        @include respond(tablet) {
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: left;
+        }
+
+        @include respond(desktop) {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        @include respond(big-desktop) {
+            padding-right: 135px;
+            padding-left: 135px;
+        }
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        padding-right: 65px;
+        padding-left: 65px;
+        margin-bottom: 25px;
+
+        @include respond(big-desktop) {
+            padding-right: 135px;
+            padding-left: 135px;
+        }
+    }
+
+    &__more {
+        @include respond(tablet) {
+            position: absolute;
+            right: 15px;
+            top: 140px;
+        }
+
+        @include respond(desktop) {
+            top: 350px;
+            right: 50px;
+        }
+
+        @include respond(big-desktop) {
+            right: 135px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.states-numbers {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 30px;
+  background-size: 320px;
+  background-color: $bg-lightgrey;
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 30px;
+    background-size: 320px;
+    background-color: $bg-lightgrey;
+  }
+
+  @include respond(tablet) {
+    padding-top: 40px;
+    background: url(../img/bg-states-number-tablet.png) no-repeat 0 0;
+    background-size: 516px;
+    background-color: $bg-lightgrey;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-states-number-tablet@2x.png) no-repeat 0 0;
+      background-size: 516px;
+      background-color: $bg-lightgrey;
+    }
+  }
+
+  @include respond(desktop) {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: url(../img/bg-about-intro-desktop.png) no-repeat 0 -40px;
+    background-size: 958px;
+    background-color: $bg-lightgrey;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-about-intro-desktop@2x.png) no-repeat 0 -40px;
+      background-size: 958px;
+      background-color: $bg-lightgrey;
+    }
+  }
+
+  @include respond(big-desktop) {
+    padding-right: $big-desktop-padding;
+  }
+
+  &__list {
+    @include respond(desktop) {
+      min-height: auto;
+    }
+  }
+}

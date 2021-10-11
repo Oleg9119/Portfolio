@@ -1,0 +1,49 @@
+.title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Boxed';
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include respond(tablet) {
+        margin-bottom: 25px;
+        font-size: 46px;
+    }
+
+    @include respond(desktop) {
+        margin-bottom: 40px;
+        font-size: 54px;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 64px;
+    }
+}
+
+.title--main {
+    text-transform: none;
+}
+
+.title--small {
+    font-size: 20px;
+    text-transform: none;
+
+    @include respond(tablet) {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    @include respond(desktop) {
+        font-size: 40px;
+    }
+}
+
+.title--uppercase {
+    text-transform: uppercase;
+}
+
+.title--thin {
+    font-weight: 600; 
+}

@@ -1,0 +1,56 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/animations";
+
+@import "base/fonts";
+@import "base/reset";
+@import "base/common";
+
+@import "components/button";
+@import "components/link";
+@import "components/slider";
+@import "components/title";
+@import "components/text";
+@import "components/toggle";
+@import "components/form";
+@import "components/card";
+@import "components/numbers";
+@import "components/communications";
+@import "components/implantation";
+@import "components/news";
+@import "components/preloader";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/body-bg";
+@import "layout/modal-intro";
+@import "layout/modal-form";
+
+@import "sections/recommendations";
+@import "sections/clients";
+@import "sections/mobile-workplace";
+@import "sections/complex";
+@import "sections/service";
+
+@import "sections/index-intro";
+@import "sections/index-news";
+@import "sections/about-intro";
+@import "sections/about-directions";
+@import "sections/about-values";
+@import "sections/privates-intro";
+@import "sections/privates-calls";
+@import "sections/privates-integration-reporting";
+@import "sections/privates-implantation";
+@import "sections/privates-tariffs";
+@import "sections/states-intro";
+@import "sections/states-numbers";
+@import "sections/states-calls";
+@import "sections/states-integration-oms";
+@import "sections/states-implantation";
+@import "sections/contacts";
+@import "sections/nopage";
+@import "sections/article";
+@import "sections/useful";
+
+@import "base/utilities";

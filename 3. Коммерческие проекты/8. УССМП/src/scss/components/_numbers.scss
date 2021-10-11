@@ -1,0 +1,113 @@
+.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include respond(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 65px;
+    min-height: 200px;
+  }
+
+  &__value {
+    font-size: 60px;
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: "Boxed";
+    text-align: center;
+    color: $text-white;
+    text-shadow: 0px 0px 20px rgba(17, 67, 92, 0.3),
+      0 0 1px rgba(136, 156, 163, 0.29);
+
+    @include respond(tablet) {
+      margin-bottom: 5px;
+      font-size: 94px;
+      line-height: 1;
+    }
+  }
+
+  &__item:nth-child(2n) &__value {
+    color: $blue;
+    text-shadow: none;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    color: $text-blue;
+
+    @include respond(tablet) {
+      font-size: 16px;
+    }
+  }
+}
+
+.numbers--two-in-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include respond(desktop) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .numbers__item {
+    width: 50%;
+
+    @include respond(desktop) {
+      width: auto;
+    }
+  }
+
+  .numbers__item--stations {
+    @include respond(desktop) {
+      margin-right: 150px;
+    }
+  }
+
+  .numbers__item--brigades {
+    @include respond(desktop) {
+      margin-right: 105px;
+    }
+  }
+
+  .numbers__item--people {
+    @include respond(desktop) {
+      margin-right: 85px;
+    }
+  }
+}
+
+.numbers--two-in-row:first-of-type {
+  margin-bottom: 20px;
+
+  @include respond(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.numbers--two-in-row:last-of-type {
+  .numbers__item:first-of-type .numbers__text {
+    margin-bottom: 21px;
+  }
+
+  .numbers__item:last-of-type {
+    order: -1;
+
+    .numbers__text {
+      width: 150px;
+      margin: 0 auto;
+
+      @include respond(desktop) {
+        width: auto;
+      }
+    }
+  }
+}

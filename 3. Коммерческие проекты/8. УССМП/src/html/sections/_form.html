@@ -1,0 +1,22 @@
+<div class="form__header">
+    <h2 class="form__title title wow animated fadeIn">Есть вопросы?</h2>
+    <p class="form__text text wow animated fadeIn">Оставьте свои контактные данные и получите подробную консультацию специалиста.</p>
+</div>
+<form class="form__form wow animated fadeIn" action="" method="POST">
+    <div class="form__inner-wrapper">
+        <div class="form__inputs-wrapper">
+            <input class="form__input" id="name" name="name" type="text" required placeholder="* Ваше имя">
+            <input class="form__input" id="email" name="email" type="email" required placeholder="* E-mail">
+            <input class="form__input" id="phone" name="phone" type="text" required placeholder="* Телефон">
+        </div>
+        <textarea class="form__input form__textarea" name="message" id="message" required
+            placeholder="* Текст сообщения"></textarea>
+    </div>
+    <button class="form__button button button--request button--red" type="submit">Отправить</button>
+    <fieldset class="form__checkbox-wrapper">
+        <input class="form__checkbox" type="checkbox" id="agreement" name="agreement" required>
+        <label class="form__label" for="agreement">Я согласен с пользовательским соглашением и <a
+                class="form__label-link link link--simple" href="#">политикой
+                конфиденциальности</a></label>
+    </fieldset>
+</form>

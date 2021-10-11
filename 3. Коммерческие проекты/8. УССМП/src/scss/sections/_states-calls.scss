@@ -1,0 +1,182 @@
+.states-calls {
+  position: relative;
+  padding-top: 65px;
+
+  @include respond(tablet) {
+    padding-top: 40px;
+    padding-bottom: 75px;
+  }
+
+  @include respond(desktop) {
+    padding-top: 170px;
+    padding-bottom: 170px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+
+    @include respond(desktop) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__slider-prev,
+  &__slider-next {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+    @include respond(tablet) {
+      transform: translate3d(0, 0px, 0px) !important;
+      flex-wrap: wrap;
+    }
+
+    @include respond(desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .swiper-slide-duplicate {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    min-height: 270px;
+    padding-top: 46px;
+
+    @include respond(tablet) {
+      width: 42% !important;
+      min-width: 276px;
+      flex-shrink: 0;
+    }
+
+    @include respond(desktop) {
+      width: 234px !important;
+      height: 286px;
+      min-width: auto;
+    }
+
+    @media (min-width: 1700px) {
+      width: 276px !important;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__icon--server {
+    background: url(../img/states-calls-1-mobile.png) no-repeat 50% -20px;
+    background-size: 132px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-calls-1-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--map {
+    background: url(../img/privates-calls-1-mobile.png) no-repeat 50% -20px;
+    background-size: 132px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-1-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--checklist {
+    background: url(../img/privates-calls-2-mobile.png) no-repeat 50% -20px;
+    background-size: 132px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-2-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--point {
+    background: url(../img/privates-calls-3-mobile.png) no-repeat 50% -20px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-3-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--substation {
+    background: url(../img/states-calls-5-mobile.png) no-repeat 50% -20px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/states-calls-5-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__slide--substation {
+    @include respond(tablet) {
+      margin: 0 auto;
+    }
+
+    @include respond(desktop) {
+      margin: 0;
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 187px;
+    margin-bottom: 25px;
+    padding-top: 75px;
+    padding-right: 15px;
+    padding-bottom: 35px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__next {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../img/slider-mobile-only-arrow.png) no-repeat 50% 50%;
+    transform: rotate(90deg);
+
+    @include respond(tablet) {
+      display: flex;
+      align-self: center;
+      transform: rotate(0);
+    }
+
+    @include respond(desktop) {
+      margin-top: 45px;
+      margin-bottom: 0;
+      transform: rotate(0);
+    }
+  }
+}

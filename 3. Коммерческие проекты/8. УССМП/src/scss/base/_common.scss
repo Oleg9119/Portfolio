@@ -1,0 +1,61 @@
+html {
+  background: $bg-white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 16px/24px "Open Sans", Arial, sans-serif;
+  color: $text-main;
+}
+
+a {
+  cursor: pointer;
+  transition: color 0.15s linear;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+
+  @include respond(tablet) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  @include respond(desktop) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+
+  @include respond(big-desktop) {
+    padding-left: $big-desktop-padding;
+    padding-right: $big-desktop-padding;
+  }
+}
+
+.main {
+  padding-top: 57px;
+
+  @include respond(tablet) {
+    padding-top: 102px;
+  }
+
+  @include respond(desktop) {
+    padding-top: 0;
+  }
+}

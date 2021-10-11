@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Комплексная автоматизация - О компании</title>
+    <link rel="shortcut icon" href="/ussmp.ru/favicon.ico">
+
+    <link rel="stylesheet" href="/ussmp.ru/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/ussmp.ru/css/style.css">
+    <link rel="stylesheet" href="/ussmp.ru/wow/animate.min.css">
+</head>
+
+<body>
+    <header class="header wrapper">
+        @@include('sections/_header.html')
+    </header>
+    <main class="main">
+        <section class="about-intro">
+            @@include('sections/2_about/1_about-intro.html')
+        </section>
+        <section class="about-directions">
+            @@include('sections/2_about/2_about-directions.html')
+        </section>
+        <section class="about-values">
+            @@include('sections/2_about/3_about-values.html')
+        </section>
+        <section class="about-recommendations recommendations wow animated fadeIn" data-wow-duration="0.5" data-wow-delay="0.3s">
+            @@include('sections/_recommendations.html')
+        </section>
+        <section class="about-clients clients wow animated fadeIn" data-wow-duration="0.5" data-wow-delay="0.3s">
+            @@include('sections/_clients.html')
+        </section>
+    </main>
+    <section class="form">
+        @@include('sections/_form.html')
+    </section>
+    <div class="modal-form">
+        @@include('sections/_modal-form.html')
+    </div>
+    <footer class="footer wrapper">
+        @@include('sections/_footer.html')
+    </footer>
+
+    <script src="/ussmp.ru/swiper/swiper-bundle.js"></script>
+    <script src="/ussmp.ru/js/all.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

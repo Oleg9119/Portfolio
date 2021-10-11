@@ -1,0 +1,240 @@
+.privates-integration-reporting {
+  @include respond(desktop) {
+    display: flex;
+  }
+}
+
+.privates-integration {
+  display: flex;
+  flex-direction: column;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 0;
+  background-size: 320px;
+  background-color: $bg-lightgrey;
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 0;
+    background-size: 320px;
+    background-color: $bg-lightgrey;
+  }
+
+  @include respond(tablet) {
+    padding-top: 85px;
+    padding-right: 70px;
+    padding-bottom: 90px;
+    padding-left: 105px;
+    background: url(../img/bg-about-intro-desktop.png) no-repeat 0 0;
+    background-size: cover;
+    background-color: $bg-lightgrey;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-about-intro-desktop@2x.png) no-repeat 0 0;
+      background-size: cover;
+      background-color: $bg-lightgrey;
+    }
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+    padding-top: 175px;
+    padding-bottom: 225px;
+  }
+
+  @include respond(big-desktop) {
+    padding-left: $big-desktop-padding;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+
+    @include respond(tablet) {
+      width: 80%;
+    }
+  }
+
+  &__list {
+    @include cleanList;
+    display: flex;
+    align-self: center;
+
+    @include respond(tablet) {
+      align-self: stretch;
+    }
+  }
+
+  &__list--top {
+    margin-bottom: 25px;
+
+    @include respond(tablet) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__list--bottom {
+    padding-left: 35px;
+
+    @include respond(tablet) {
+      padding-left: 18%;
+    }
+  }
+
+  &__item {
+    min-width: 60px;
+    padding: 7px 7px 6px 7px;
+    font-family: "Boxed";
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $bg-white;
+    border: 2px solid $text-main;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+
+    @include respond(tablet) {
+      min-width: 105px;
+      padding: 10px 25px 12px 23px;
+      font-size: 20px;
+    }
+  }
+
+  &__item:first-child {
+    margin-right: 40px;
+
+    @include respond(tablet) {
+      margin-right: 18%;
+    }
+  }
+}
+
+.privates-reporting {
+  padding-top: 65px;
+  padding-bottom: 55px;
+  background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 100%,
+    linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 100%,
+      linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+  }
+
+  @include respond(tablet) {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    background: url(../img/bg-about-intro-desktop.png) no-repeat 100% 100%,
+      linear-gradient(to right bottom, #ffffff 44.2%, #e8edf1 92.35%);
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+    padding-top: 175px;
+    padding-bottom: 225px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    text-align: center;
+
+    @include respond(tablet) {
+      margin-bottom: 55px;
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 45px;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    @include cleanList;
+
+    @include respond(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include respond(desktop) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 98px;
+    padding-left: 110px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include respond(tablet) {
+      width: calc(50% - 30px);
+    }
+
+    @include respond(desktop) {
+      width: 55%;
+    }
+  }
+
+  &__item:nth-child(odd) {
+    @include respond(tablet) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item:nth-child(1),
+  &__item:nth-child(2) {
+    @include respond(tablet) {
+      margin-bottom: 25px;
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--storage {
+    background: url(../img/privates-reporting-1-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-reporting-1-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+  }
+
+  &__item--payment {
+    background: url(../img/privates-reporting-2-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-reporting-2-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+  }
+
+  &__item--reporting {
+    background: url(../img/privates-reporting-3-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-reporting-3-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+  }
+
+  &__item--unloading {
+    background: url(../img/privates-reporting-4-mobile.png) no-repeat 0 -3px;
+    background-size: 98px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-reporting-4-mobile@2x.png) no-repeat 0 -3px;
+      background-size: 98px;
+    }
+  }
+}

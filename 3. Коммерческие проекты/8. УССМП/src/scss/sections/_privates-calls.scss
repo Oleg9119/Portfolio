@@ -1,0 +1,155 @@
+.privates-calls {
+  position: relative;
+  padding-top: 65px;
+
+  @include respond(tablet) {
+    padding-top: 100px;
+    padding-bottom: 90px;
+  }
+
+  @include respond(desktop) {
+    padding-top: 170px;
+    padding-bottom: 170px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+
+    @include respond(desktop) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__slider-prev,
+  &__slider-next {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+    @include respond(tablet) {
+      transform: translate3d(0, 0px, 0px) !important;
+      flex-direction: column;
+    }
+
+    @include respond(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  .swiper-slide-duplicate {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__slide {
+    min-height: 270px;
+    padding-top: 46px;
+
+    @include respond(tablet) {
+      width: 100% !important;
+      min-width: 276px;
+      flex-shrink: 0;
+    }
+
+    @include respond(desktop) {
+      width: 30% !important;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__icon--receive {
+    background: url(../img/privates-calls-1-mobile.png) no-repeat 50% -20px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-1-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--processing {
+    background: url(../img/privates-calls-2-mobile.png) no-repeat 50% -20px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-2-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__icon--brigade {
+    background: url(../img/privates-calls-3-mobile.png) no-repeat 50% -20px;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/privates-calls-3-mobile@2x.png) no-repeat 50% -20px;
+      background-size: 132px;
+    }
+  }
+
+  &__text-wrapper {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 187px;
+    margin-bottom: 25px;
+    padding-top: 75px;
+    padding-right: 15px;
+    padding-bottom: 35px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 154, 249, 0.12);
+
+    @include respond(tablet) {
+      width: 354px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__next {
+    display: none;
+
+    @include respond(tablet) {
+      display: flex;
+      align-self: center;
+      transform: rotate(90deg);
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background: url(../img/slider-mobile-only-arrow.png) no-repeat 50% 50%;
+    }
+
+    @include respond(desktop) {
+      margin-top: 45px;
+      margin-bottom: 0;
+      transform: rotate(0);
+    }
+  }
+}

@@ -1,0 +1,186 @@
+.preloader-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.preloader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  clip-path: polygon(35% 0%,
+      65% 0%,
+      65% 35%,
+      100% 35%,
+      100% 65%,
+      65% 65%,
+      65% 100%,
+      35% 100%,
+      35% 65%,
+      0% 65%,
+      0% 35%,
+      35% 35%);
+  animation-name: rotateLoader;
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-iteration-count: infinite;
+  background-color: $bg-darkgrey;
+}
+
+@keyframes rotateLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes increaseHeight1 {
+  0% {
+    height: 0;
+  }
+
+  25% {
+    height: 64px;
+  }
+
+  26% {
+    height: 0;
+  }
+}
+
+@keyframes increaseHeight2 {
+  25% {
+    height: 0;
+  }
+
+  50% {
+    height: 64px;
+  }
+
+  51% {
+    height: 0;
+  }
+}
+
+@keyframes increaseHeight3 {
+  50% {
+    height: 0;
+  }
+
+  75% {
+    height: 64px;
+  }
+
+  76% {
+    height: 0;
+  }
+}
+
+@keyframes increaseHeight4 {
+  75% {
+    height: 0;
+  }
+
+  100% {
+    height: 64px;
+  }
+}
+
+.preloader__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+}
+
+.preloader__bg-1 {
+  animation-name: increaseHeight1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  background-color: $red;
+}
+
+.preloader__bg-2 {
+  animation-name: increaseHeight2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  background-color: $blue;
+}
+
+.preloader__bg-3 {
+  animation-name: increaseHeight3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  background-color: $text-secondary;
+}
+
+.preloader__bg-4 {
+  animation-name: increaseHeight4;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  background-color: teal;
+
+  // clip-path: polygon(35% 0%,
+  //     65% 0%,
+  //     65% 35%,
+  //     100% 35%,
+  //     100% 65%,
+  //     65% 65%,
+  //     65% 100%,
+  //     35% 100%,
+  //     35% 65%,
+  //     0% 65%,
+  //     0% 35%,
+  //     35% 35%,
+  //     40% 35%,
+  //     40% 95%,
+  //     60% 95%,
+  //     60% 5%,
+  //     40% 5%,
+  //     40% 35%,
+  //     35% 35%);
+  // background-color: transparent;
+  // border: 2px solid teal;
+}
+
+.preloader__bg-4-1 {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  clip-path: polygon(40% 95%,
+      60% 95%,
+      60% 60%,
+      95% 60%,
+      95% 40%,
+      60% 40%,
+      60% 5%,
+      40% 5%,
+      40% 40%,
+      5% 40%,
+      5% 60%,
+      40% 60%);
+}

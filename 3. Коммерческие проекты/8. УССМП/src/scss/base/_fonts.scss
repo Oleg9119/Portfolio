@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedHeavy-Italic.eot');
+    src: local('Boxed Heavy Italic'), local('BoxedHeavy-Italic'),
+        url('../fonts/BoxedHeavy-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedHeavy-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedHeavy-Italic.woff') format('woff'),
+        url('../fonts/BoxedHeavy-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedRegular-Bold.eot');
+    src: local('Boxed Regular Bold'), local('BoxedRegular-Bold'),
+        url('../fonts/BoxedRegular-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedRegular-Bold.woff2') format('woff2'),
+        url('../fonts/BoxedRegular-Bold.woff') format('woff'),
+        url('../fonts/BoxedRegular-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedMedium-Italic.eot');
+    src: local('Boxed Medium Italic'), local('BoxedMedium-Italic'),
+        url('../fonts/BoxedMedium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedMedium-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedMedium-Italic.woff') format('woff'),
+        url('../fonts/BoxedMedium-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedSemibold-Italic.eot');
+    src: local('Boxed Semibold Italic'), local('BoxedSemibold-Italic'),
+        url('../fonts/BoxedSemibold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedSemibold-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedSemibold-Italic.woff') format('woff'),
+        url('../fonts/BoxedSemibold-Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedThin-Italic.eot');
+    src: local('Boxed Thin Italic'), local('BoxedThin-Italic'),
+        url('../fonts/BoxedThin-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedThin-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedThin-Italic.woff') format('woff'),
+        url('../fonts/BoxedThin-Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedExtralight-Italic.eot');
+    src: local('Boxed Extralight Italic'), local('BoxedExtralight-Italic'),
+        url('../fonts/BoxedExtralight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedExtralight-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedExtralight-Italic.woff') format('woff'),
+        url('../fonts/BoxedExtralight-Italic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedRegular.eot');
+    src: local('Boxed Regular'), local('BoxedRegular'),
+        url('../fonts/BoxedRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedRegular.woff2') format('woff2'),
+        url('../fonts/BoxedRegular.woff') format('woff'),
+        url('../fonts/BoxedRegular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedRegular-Italic.eot');
+    src: local('Boxed Regular Italic'), local('BoxedRegular-Italic'),
+        url('../fonts/BoxedRegular-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedRegular-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedRegular-Italic.woff') format('woff'),
+        url('../fonts/BoxedRegular-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedLight.eot');
+    src: local('Boxed Light'), local('BoxedLight'),
+        url('../fonts/BoxedLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedLight.woff2') format('woff2'),
+        url('../fonts/BoxedLight.woff') format('woff'),
+        url('../fonts/BoxedLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedMedium.eot');
+    src: local('Boxed Medium'), local('BoxedMedium'),
+        url('../fonts/BoxedMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedMedium.woff2') format('woff2'),
+        url('../fonts/BoxedMedium.woff') format('woff'),
+        url('../fonts/BoxedMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedSemibold.eot');
+    src: local('Boxed Semibold'), local('BoxedSemibold'),
+        url('../fonts/BoxedSemibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedSemibold.woff2') format('woff2'),
+        url('../fonts/BoxedSemibold.woff') format('woff'),
+        url('../fonts/BoxedSemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedHeavy.eot');
+    src: local('Boxed Heavy'), local('BoxedHeavy'),
+        url('../fonts/BoxedHeavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedHeavy.woff2') format('woff2'),
+        url('../fonts/BoxedHeavy.woff') format('woff'),
+        url('../fonts/BoxedHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedRegular-BoldItalic.eot');
+    src: local('Boxed Regular Bold Italic'), local('BoxedRegular-BoldItalic'),
+        url('../fonts/BoxedRegular-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedRegular-BoldItalic.woff2') format('woff2'),
+        url('../fonts/BoxedRegular-BoldItalic.woff') format('woff'),
+        url('../fonts/BoxedRegular-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedThin.eot');
+    src: local('Boxed Thin'), local('BoxedThin'),
+        url('../fonts/BoxedThin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedThin.woff2') format('woff2'),
+        url('../fonts/BoxedThin.woff') format('woff'),
+        url('../fonts/BoxedThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedLight-Italic.eot');
+    src: local('Boxed Light Italic'), local('BoxedLight-Italic'),
+        url('../fonts/BoxedLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedLight-Italic.woff2') format('woff2'),
+        url('../fonts/BoxedLight-Italic.woff') format('woff'),
+        url('../fonts/BoxedLight-Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Boxed';
+    src: url('../fonts/BoxedExtralight.eot');
+    src: local('Boxed Extralight'), local('BoxedExtralight'),
+        url('../fonts/BoxedExtralight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BoxedExtralight.woff2') format('woff2'),
+        url('../fonts/BoxedExtralight.woff') format('woff'),
+        url('../fonts/BoxedExtralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/opensanslight.woff2') format('woff2'), url('../fonts/opensanslight.woff') format('woff'), url('../fonts/opensanslight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('../fonts/opensanslightitalic.woff2') format('woff2'), url('../fonts/opensanslightitalic.woff') format('woff'), url('../fonts/opensanslightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'), url('../fonts/opensans.woff2') format('woff2'), url('../fonts/opensans.woff') format('woff'), url('../fonts/opensans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../fonts/opensansitalic.woff2') format('woff2'), url('../fonts/opensansitalic.woff') format('woff'), url('../fonts/opensansitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('../fonts/opensanssemibold.woff2') format('woff2'), url('../fonts/opensanssemibold.woff') format('woff'), url('../fonts/opensanssemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url('../fonts/opensanssemibolditalic.woff2') format('woff2'), url('../fonts/opensanssemibolditalic.woff') format('woff'), url('../fonts/opensanssemibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/opensansbold.woff2') format('woff2'), url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../fonts/opensansbolditalic.woff2') format('woff2'), url('../fonts/opensansbolditalic.woff') format('woff'), url('../fonts/opensansbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url('../fonts/opensansextrabold.woff2') format('woff2'), url('../fonts/opensansextrabold.woff') format('woff'), url('../fonts/opensansextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url('../fonts/opensansextrabolditalic.woff2') format('woff2'), url('../fonts/opensansextrabolditalic.woff') format('woff'), url('../fonts/opensansextrabolditalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}

@@ -1,0 +1,143 @@
+.navigation {
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 10px 15px 10px;
+        transition: all .2s;
+
+        @include respond(tablet) {
+            padding-bottom: 0;
+        }
+
+        @include respond(desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @include cleanList;
+
+        @include respond(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 75px;
+            padding-left: 75px;
+        }
+
+        @include respond(desktop) {
+            flex-shrink: 0;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        @include respond(tablet) {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        @include respond(desktop) {
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 500;
+        font-family: 'Boxed';
+        text-transform: uppercase;
+        color: rgba($text-main, .7);
+
+        @include respond(tablet) {
+            padding-top: 7px;
+            padding-right: 5px;
+            padding-bottom: 7px;
+            padding-left: 5px;
+        }
+    }
+
+    &__link--active {
+        position: relative;
+
+        @include respond(tablet) {
+            &::after {
+                position: absolute;
+                content: "";
+                width: 38px;
+                height: 3px;
+                background: $red;
+                bottom: 3px;
+                left: 50%;
+                pointer-events: none;
+                opacity: 1;
+                transform-origin: 50% 0%;
+                transform: translate3d(-50%, 3px, 0);
+                transition-property: transform, opacity;
+                transition-duration: 0.3s;
+                transition-timing-function: cubic-bezier(0.2, 1, 0.8, 1);
+            }
+        }
+    }
+
+    &__link--active {
+        @include respond(tablet) {
+            &::after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 38px;
+                height: 3px;
+                background-color: $red;
+            }
+        }
+    }
+
+    &__request {
+        margin-top: auto;
+        max-width: 145px;
+        min-height: 32px;
+        margin-bottom: 20px;
+
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+
+    &__communications {
+        display: flex;
+        flex-direction: column;
+
+        @include respond(desktop) {
+            margin-right: 30px;
+        }
+    }
+}

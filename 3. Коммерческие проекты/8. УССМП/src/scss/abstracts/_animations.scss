@@ -1,0 +1,27 @@
+@keyframes scaleDot1 {
+  50% {
+    transform: scale(1.5);
+    background-color: rgba($blue-bright, 0.2);
+  }
+}
+
+@keyframes scaleDot1Active {
+  50% {
+    transform: scale(1.5);
+    background-color: rgba($bg-white, 0.2);
+  }
+}
+
+@keyframes scaleDot2 {
+  50% {
+    transform: scale(1.5);
+    background-color: rgba($blue-bright, 0.1);
+  }
+}
+
+@keyframes scaleDot2Active {
+  50% {
+    transform: scale(1.5);
+    background-color: rgba($bg-white, 0.1);
+  }
+}

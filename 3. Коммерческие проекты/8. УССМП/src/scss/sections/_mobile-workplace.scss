@@ -1,0 +1,201 @@
+.mobile-workplace {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+
+    @include respond(desktop) {
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    &__description {
+        padding-top: 65px;
+        padding-bottom: 30px;
+        background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 0;
+        background-size: 320px;
+        background-color: $bg-lightgrey;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 0;
+            background-size: 320px;
+            background-color: $bg-lightgrey;
+        }
+
+        @include respond(tablet) {
+            padding-top: 75px;
+            padding-right: 105px;
+            padding-bottom: 55px;
+            padding-left: 105px;
+        }
+
+        @include respond(desktop) {
+            width: 50%;
+            padding-top: 215px;
+            padding-right: 250px;
+            padding-bottom: 225px;
+            padding-left: 145px;
+            background: url(../img/bg-about-intro-desktop.png) no-repeat;
+            background-size: cover;
+            background-color: $bg-lightgrey;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/bg-about-intro-desktop@2x.png) no-repeat;
+                background-size: cover;
+                background-color: $bg-lightgrey;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include cleanList;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__item {
+        margin-bottom: 25px;
+        padding-left: 35px;
+        background: url(../img/list-item.png) no-repeat 0 3px;
+        background-size: 16px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/list-item@2x.png) no-repeat 0 3px;
+            background-size: 16px;
+        }
+    }
+
+    &__phone-bg {
+        position: absolute;
+        right: 39px;
+        width: 773px;
+        height: 100%;
+        z-index: 100;
+
+        background-image: url(../img/slider-mobile-place-cover.png);
+        background-size: 772px 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 220px;
+
+        @media only screen and(max-width: 1899px) {
+            width: 615px;
+            height: 322px;
+            transform: translate3d(0, 225px, 0);
+            background-size: 615px 320px;
+            left: calc(50% - 290px);
+            background-position: 50% 50%;
+        }
+
+        @media only screen and(max-width: 1439px) {
+            width: 599px;
+            height: 314px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: 597px 308px;
+        }
+
+        @media only screen and(max-width: 767px) {
+            width: 355px;
+            height: 186px;
+            background-size: 351px 181px;
+        }
+
+        @media only screen and(max-width: 359px) {
+            width: 310px;
+            height: 159px;
+            background-size: 310px 159px;
+        }
+    }
+
+    &__slider-ext-wrapper {
+        @include respond(desktop) {
+            position: relative;
+            order: -1;
+            width: 50%;
+        }
+
+        @media(max-width: 1439px) {
+            position: relative;
+            min-height: 400px;
+        }
+
+        @media(max-width: 767px) {
+            position: relative;
+            min-height: 250px;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        right: 102px;
+        z-index: 100;
+        width: 645px;
+        margin-top: 246px;
+        background-color: $bg-white;
+
+        @media only screen and(max-width: 1899px) {
+            position: relative;
+            right: 0;
+            width: 512px;
+            margin-top: 0;
+            transform: translate3d(18px, 247px, 0);
+        }
+
+        @media only screen and(max-width: 1439px) {
+            width: 498px;
+            transform: translate3d(0, 64px, 0);
+        }
+
+        @media only screen and(max-width: 767px) {
+            width: 294px;
+            transform: translate3d(0px, 46px, 0);
+        }
+
+        @media only screen and(max-width: 359px) {
+            width: 260px;
+            transform: translate3d(1px, 55px, 0);
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+
+            @include respond(desktop) {
+                bottom: 0;
+            }
+
+            @include respond(big-desktop) {
+                bottom: 10px;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 13px;
+            height: 13px;
+            background-color: $text-blue;
+        }
+
+        .swiper-pagination-bullet:not(:last-of-type) {
+            margin-right: 22px !important;
+        }
+    }
+}
+
+.swiper__picture {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+    @media only screen and(max-width: 1899px) {
+        filter: none;
+    }
+
+    @media only screen and(max-width: 1439px) {
+        transform: none;
+        -webkit-transform: none;
+    }
+}

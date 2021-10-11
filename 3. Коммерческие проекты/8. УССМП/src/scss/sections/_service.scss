@@ -1,0 +1,196 @@
+.service-container {
+    margin-bottom: 20px;
+    padding-top: 65px;
+    padding-bottom: 60px;
+
+    @include respond(tablet) {
+        margin-bottom: 10px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    @include respond(desktop) {
+        margin-bottom: 0;
+        padding-top: 175px;
+        padding-bottom: 175px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+
+        @include respond(desktop) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.service-container--privates {
+    background-color: $bg-lightgrey;
+}
+
+.service {
+    @include cleanList;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        width: 50%;
+        padding-top: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba($text-main, .9);
+
+        @include respond(tablet) {
+            width: 33.3%;
+            padding-top: 135px;
+        }
+
+        @include respond(desktop) {
+            width: 20%;
+            padding-top: 150px;
+        }
+    }
+
+    &__item:not(:last-of-type) {
+        margin-bottom: 30px; 
+
+        @include respond(desktop) {
+            margin-bottom: 0; 
+        }
+    }
+
+    &__item--call {
+        background: url(../img/privates-service-1-mobile.png) no-repeat 50% 0;
+        background-size: 115px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/privates-service-1-mobile@2x.png) no-repeat 50% 0;
+            background-size: 115px;
+        }
+
+        @include respond(tablet) {
+            background: url(../img/privates-service-1-tablet.png) no-repeat 50% 0;
+            background-size: 135px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/privates-service-1-tablet@2x.png) no-repeat 50% 0;
+                background-size: 135px;
+            }
+        }
+
+        @include respond(desktop) {
+            background: url(../img/privates-service-1-tablet@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--support {
+        background: url(../img/privates-service-2-mobile.png) no-repeat 50% 0;
+        background-size: 115px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/privates-service-2-mobile@2x.png) no-repeat 50% 0;
+            background-size: 115px;
+        }
+
+        @include respond(tablet) {
+            background: url(../img/privates-service-2-tablet.png) no-repeat 50% 0;
+            background-size: 135px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/privates-service-2-tablet@2x.png) no-repeat 50% 0;
+                background-size: 135px;
+            }
+        }
+
+        @include respond(desktop) {
+            background: url(../img/privates-service-2-tablet@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--specialists {
+        background: url(../img/privates-service-3-mobile.png) no-repeat 50% 0;
+        background-size: 115px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/privates-service-3-mobile@2x.png) no-repeat 50% 0;
+            background-size: 115px;
+        }
+
+        @include respond(tablet) {
+            background: url(../img/privates-service-3-tablet.png) no-repeat 50% 0;
+            background-size: 135px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/privates-service-3-tablet@2x.png) no-repeat 50% 0;
+                background-size: 135px;
+            }
+        }
+
+        @include respond(desktop) {
+            background: url(../img/privates-service-3-tablet@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--notifications {
+        background: url(../img/privates-service-4-mobile.png) no-repeat 50% 0;
+        background-size: 115px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/privates-service-4-mobile@2x.png) no-repeat 50% 0;
+            background-size: 115px;
+        }
+
+        @include respond(tablet) {
+            margin-left: auto;
+            background: url(../img/privates-service-4-tablet.png) no-repeat 50% 0;
+            background-size: 135px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/privates-service-4-tablet@2x.png) no-repeat 50% 0;
+                background-size: 135px;
+            }
+        }
+
+        @include respond(desktop) {
+            background: url(../img/privates-service-4-tablet@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--monitoring {
+        width: 100%;
+        background: url(../img/privates-service-5-mobile.png) no-repeat 50% 0;
+        background-size: 115px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/privates-service-5-mobile@2x.png) no-repeat 50% 0;
+            background-size: 115px;
+        }
+
+        @include respond(tablet) {
+            width: 33.3%;
+            margin-right: auto;
+            background: url(../img/privates-service-5-tablet.png) no-repeat 50% 0;
+            background-size: 135px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/privates-service-5-tablet@2x.png) no-repeat 50% 0;
+                background-size: 135px;
+            }
+        }
+
+        @include respond(desktop) {
+            width: 20%;
+            background: url(../img/privates-service-5-tablet@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+}

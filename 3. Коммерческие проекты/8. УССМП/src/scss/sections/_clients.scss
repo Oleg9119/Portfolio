@@ -1,0 +1,92 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  background: url(../img/bg-clients-mobile.png) no-repeat 100% 0;
+  background-size: 340px;
+
+  @media (min-resolution: 192dpi) {
+    background: url(../img/bg-clients-mobile@2x.png) no-repeat 100% 0;
+    background-size: 340px;
+  }
+
+  @include respond(tablet) {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background: url(../img/bg-clients-tablet.png) no-repeat 100% 100%;
+    background-size: 60%;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-clients-tablet@2x.png) no-repeat 100% 100%;
+      background-size: 60%;
+    }
+  }
+
+  @include respond(desktop) {
+    // margin-top: -120px;
+    padding-bottom: 95px;
+    background: url(../img/bg-clients-desktop.png) no-repeat 100% -125px;
+    background-size: 60%;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-clients-desktop@2x.png) no-repeat 100% -125px;
+      background-size: 60%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include respond(tablet) {
+      padding-right: 15px;
+      padding-left: 15px;
+      text-align: left;
+    }
+
+    @include respond(desktop) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+
+    @include respond(big-desktop) {
+      padding-right: 135px;
+      padding-left: 135px;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    padding-right: 65px;
+    padding-left: 65px;
+    margin-bottom: 25px;
+
+    @include respond(big-desktop) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+  }
+
+  &__more {
+    @include respond(tablet) {
+      position: absolute;
+      right: 15px;
+      top: 140px;
+    }
+
+    @include respond(desktop) {
+      top: 350px;
+    }
+  }
+
+  .swiper__picture {
+    max-width: 170px;
+    max-height: 200px;
+
+    @media(min-width: 400px) {
+      max-width: 230px;
+    }
+  }
+}

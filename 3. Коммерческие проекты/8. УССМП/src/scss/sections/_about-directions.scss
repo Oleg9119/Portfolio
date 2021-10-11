@@ -1,0 +1,36 @@
+.about-directions {
+
+    @include respond(tablet) {
+        padding-right: $tablet-padding;
+        padding-left: $tablet-padding;
+    }
+
+    @include respond(desktop) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__item {
+        background: url(../img/bg-about-directions-mobile.png) no-repeat 0 100%;
+        background-size: 182px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/bg-about-directions-mobile@2x.png) no-repeat 0 100%;
+            background-size: 182px;
+        }
+
+        @include respond(tablet) {
+            min-height: 235px;
+        }
+
+        @include respond(desktop) {
+            background: url(../img/bg-about-directions-desktop.png) no-repeat 0 100%;
+            background-size: 300px 370px;
+
+            @media (min-resolution: 192dpi) {
+                background: url(../img/bg-about-directions-desktop@2x.png) no-repeat 0 100%;
+                background-size: 300px 370px;
+            }
+        }
+    }
+}

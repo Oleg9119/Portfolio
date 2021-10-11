@@ -1,0 +1,115 @@
+.about-values {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 100%,linear-gradient(to right, $bg-white 27.96%, $bg-lightgrey 72.91%);
+
+    @media (min-resolution: 192dpi) {
+        background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 100%,linear-gradient(to right, $bg-white 27.96%, $bg-lightgrey 72.91%);
+    }
+
+    @include respond(tablet) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include respond(desktop) {
+        position: relative;
+        z-index: 1;
+        padding-top: 250px;
+        padding-bottom: 250px;
+        background: url(../img/bg-about-intro-desktop.png) no-repeat 115% 115%,linear-gradient(to right, $bg-white 27.96%, $bg-lightgrey 72.91%);
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+
+        @include respond(desktop) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 $mobile-padding;
+        list-style: none;
+
+        @include respond(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        padding-top: 145px;
+        text-align: center;
+
+        @include respond(tablet) {
+            width: 50%;
+        }
+
+        @include respond(desktop) {
+            width: 33.333%;
+        }
+    }
+
+    &__item--care {
+        background: url(../img/about-values-1-care-mobile.png) no-repeat 50% 0;
+        background-size: 150px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/about-values-1-care-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+
+        @include respond(desktop) {
+            background: url(../img/about-values-1-care-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--team {
+        background: url(../img/about-values-2-team-mobile.png) no-repeat 50% 0;
+        background-size: 150px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/about-values-2-team-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+
+        @include respond(desktop) {
+            background: url(../img/about-values-2-team-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__item--work {
+        background: url(../img/about-values-3-work-mobile.png) no-repeat 50% 0;
+        background-size: 150px;
+
+        @media (min-resolution: 192dpi) {
+            background: url(../img/about-values-3-work-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+
+        @include respond(tablet) {
+            width: 100%;
+            align-self: center;
+            margin-top: 50px;
+        }
+
+        @include respond(desktop) {
+            width: 33.3333333333333%;
+            margin-top: 0;
+            background: url(../img/about-values-3-work-mobile@2x.png) no-repeat 50% 0;
+            background-size: 150px;
+        }
+    }
+
+    &__text {
+        @include respond(tablet) {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+}

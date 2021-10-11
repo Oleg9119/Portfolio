@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Комплексная автоматизация - Частные</title>
+    <link rel="shortcut icon" href="/ussmp.ru/favicon.ico">
+
+    <link rel="stylesheet" href="/ussmp.ru/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/ussmp.ru/css/style.css">
+    <link rel="stylesheet" href="/ussmp.ru/wow/animate.min.css">
+</head>
+
+<body>
+    <header class="header wrapper">
+        @@include('sections/_header.html')
+    </header>
+    <main class="main">
+        <section class="privates-intro wrapper">
+            @@include('sections/3_privates/1_privates-intro.html')
+        </section>
+        <section class="privates-calls wrapper">
+            @@include('sections/3_privates/2_privates-calls.html')
+        </section>
+        <section class="mobile-workplace">
+            @@include('sections/3_privates/8_privates-mobile-workplace.html')
+        </section>
+        <section class="privates-integration-reporting">
+            @@include('sections/3_privates/3_privates-integration-reporting.html')
+        </section>
+        <section class="privates-implantation wrapper">
+            @@include('sections/3_privates/4_privates-implantation.html')
+        </section>
+        <section class="service-container service-container--privates wrapper">
+            @@include('sections/service.html')
+        </section>
+        <section class="complex">
+            @@include('sections/3_privates/6_privates-complex.html')
+        </section>
+        <section class="privates-tariffs wrapper">
+            @@include('sections/3_privates/7_privates-tariffs.html')
+        </section>
+    </main>
+    <section class="form">
+        @@include('sections/_form.html')
+    </section>
+    <div class="modal-form">
+        @@include('sections/_modal-form.html')
+    </div>
+    <footer class="footer wrapper">
+        @@include('sections/_footer.html')
+    </footer>
+
+    <script src="/ussmp.ru/swiper/swiper-bundle.js"></script>
+    <script src="/ussmp.ru/js/all.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

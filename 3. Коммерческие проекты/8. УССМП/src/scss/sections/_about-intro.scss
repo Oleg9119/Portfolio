@@ -1,0 +1,93 @@
+.about-intro {
+  padding-top: 15px;
+  margin-bottom: 15px;
+
+  @include respond(tablet) {
+    padding-top: 25px;
+    margin-bottom: 75px;
+  }
+
+  @include respond(desktop) {
+    display: flex;
+    padding-top: 0;
+    min-height: 700px;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    @include respond(desktop) {
+      padding-top: 170px;
+      flex-basis: 50%;
+    }
+  }
+
+  &__description {
+    @include respond(tablet) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__description-title {
+    @include respond(tablet) {
+      margin-bottom: 60px;
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 105px;
+    }
+  }
+
+  &__description-title.title--small {
+    @include respond(tablet) {
+      margin-bottom: 20px;
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__numbers {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: url(../img/bg-about-intro-mobile.png) no-repeat 100% 30px;
+    background-size: 320px;
+    background-color: $bg-lightgrey;
+
+    @media (min-resolution: 192dpi) {
+      background: url(../img/bg-about-intro-mobile@2x.png) no-repeat 100% 30px;
+      background-size: 320px;
+      background-color: $bg-lightgrey;
+    }
+
+    @include respond(tablet) {
+      padding-top: 40px;
+      background: url(../img/bg-about-intro-tablet.png) no-repeat 100% 0;
+      background-size: 786px;
+      background-color: $bg-lightgrey;
+
+      @media (min-resolution: 192dpi) {
+        background: url(../img/bg-about-intro-tablet@2x.png) no-repeat 100% 0;
+        background-size: 786px;
+        background-color: $bg-lightgrey;
+      }
+    }
+
+    @include respond(desktop) {
+      flex-basis: 50%;
+      background: url(../img/bg-about-intro-desktop.png) no-repeat 0 0;
+      background-size: 958px;
+      background-color: $bg-lightgrey;
+
+      @media (min-resolution: 192dpi) {
+        background: url(../img/bg-about-intro-desktop@2x.png) no-repeat 100% 0;
+        background-size: 786px;
+        background-color: $bg-lightgrey;
+      }
+    }
+
+    @include respond(big-desktop) {
+      padding-right: $big-desktop-padding;
+    }
+  }
+}

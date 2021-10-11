@@ -1,0 +1,31 @@
+@mixin cleanList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==tablet {
+        @media only screen and (min-width: 768px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==desktop {
+        @media only screen and (min-width: 1440px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width: 1900px) {
+            @content
+        }
+
+        ;
+    }
+}

@@ -1,0 +1,98 @@
+.article-main {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  @include respond(tablet) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  @include respond(desktop) {
+    padding-top: 100px;
+  }
+
+  @include respond(big-desktop) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-transform: initial;
+
+    @include respond(big-desktop) {
+      margin-bottom: 15px;
+      font-size: 54px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 45px;
+  }
+
+  &__picture {
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: $text-secondary;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  p,
+  ul li {
+    font-size: 14px;
+    line-height: 23px;
+    color: $text-secondary;
+
+    @include respond(tablet) {
+      font-size: 16px;
+      line-height: 1.55;
+    }
+  }
+
+  p.article-main__date {
+    padding-left: 20px;
+    background: url(../img/calendar.svg) no-repeat 0 50%;
+    background-size: 15px;
+    color: $text-main;
+
+    @include respond(tablet) {
+      padding-left: 22px;
+      background-size: 17px;
+    }
+  }
+
+  &__buttons-block {
+    display: flex;
+  }
+
+  &__button {
+    min-width: 120px;
+    margin: 0;
+  }
+
+  &__button--back {
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 30px;
+    background: url(../img/back@2x.png) no-repeat 7% 50%;
+    background-size: 19px 17px;
+  }
+
+  &__button--next {
+    padding-right: 35px;
+    padding-left: 20px;
+    background: url(../img/next@2x.png) no-repeat 95% 50%;
+    background-size: 19px 17px;
+  }
+}

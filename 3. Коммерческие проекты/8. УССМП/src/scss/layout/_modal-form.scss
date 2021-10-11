@@ -1,0 +1,61 @@
+.modal-form {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+
+  &__bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.7);
+  }
+
+  &__main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3000;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 15px 10px;
+    width: calc(100% - 30px);
+    background-color: $bg-white;
+
+    @include respond(tablet) {
+      max-width: 810px;
+    }
+  }
+
+  &__button-close {
+    align-self: flex-end;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    box-sizing: content-box;
+    appearance: none;
+    border: none;
+    background: url(../img/close@2x.png) no-repeat 50% 50%;
+    background-size: 15px;
+  }
+
+  .form__title {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .form__text {
+    margin: 0 auto;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.modal-form--show {
+  display: block;
+}

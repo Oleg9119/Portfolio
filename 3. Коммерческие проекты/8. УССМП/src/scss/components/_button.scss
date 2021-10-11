@@ -1,0 +1,118 @@
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(#ffffff, 0);
+  transition: color 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &--red:not(:disabled) {
+
+    &:hover,
+    &:focus {
+      color: $red;
+      outline: 2px solid $red;
+
+      &::before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      }
+    }
+  }
+
+  &--white {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition: transform 0.5s ease-in-out;
+      background: $red;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-white;
+
+      &::before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      }
+    }
+  }
+
+  &--request {
+    padding: 4px 10px;
+    color: $text-white;
+    text-transform: uppercase;
+    background-color: $red;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 400;
+
+    @include respond(tablet) {
+      padding: 12px 13px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @include respond(desktop) {
+      min-width: 180px;
+      min-height: 50px;
+    }
+  }
+
+  &--more {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 7px 11px 6px 11px;
+    border: 2px solid $red;
+    color: $red;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $bg-white;
+
+    @include respond(tablet) {
+      padding: 7px 15px 6px 15px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @include respond(desktop) {
+      padding: 10px 17px 9px 17px;
+    }
+  }
+
+  &--prev,
+  &--next {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+}

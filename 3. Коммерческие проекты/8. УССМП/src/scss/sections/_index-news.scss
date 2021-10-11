@@ -1,0 +1,36 @@
+.index-news {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
+
+  @include respond(tablet) {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include respond(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__button-more {
+    margin: 0 auto;
+
+    @include respond(tablet) {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+
+    @include respond(desktop) {
+      right: 50px;
+    }
+
+    @include respond(big-desktop) {
+      right: 135px;
+    }
+  }
+}

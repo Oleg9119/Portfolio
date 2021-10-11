@@ -1,0 +1,251 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background-color: $bg-darkgrey;
+
+    @include respond(tablet) {
+        position: relative;
+    }
+
+    @include respond(desktop) {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__main {
+        @include respond(tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include respond(desktop) {
+            flex-grow: 1;
+        }
+
+        @include respond(big-desktop) {
+            margin-right: 45px;
+        }
+    }
+
+    &__contacts {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.7;
+
+        @include respond(tablet) {
+            margin-bottom: 0;
+        }
+
+        @include respond(big-desktop) {
+            display: flex;
+        }
+    }
+
+    &__address {
+        margin-bottom: 5px;
+
+        @include respond(big-desktop) {
+            margin-right: 80px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        color: $text-main;
+    }
+
+    &__link--phone {
+        margin-bottom: 3px;
+
+        @include respond(big-desktop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link--email {
+        text-transform: uppercase;
+    }
+
+    &__link-icon {
+        flex-shrink: 0;
+        margin-right: 10px;
+        padding-top: 4px;
+    }
+
+    &__link-text {
+        margin: 0;
+    }
+
+    &__link-text--address {
+        max-width: 320px;
+    }
+
+    &__other {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 1.7;
+
+        @include respond(desktop) {
+            margin: 0 auto;
+        }
+
+        @include respond(big-desktop) {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0;
+        }
+    }
+
+    &__misc {
+        @include respond(tablet) {
+            display: flex;
+            align-items: center;
+        }
+
+        @include respond(big-desktop) {
+            margin-right: 55px;
+        }
+    }
+
+    &__link--useful {
+        display: inline-block;
+        padding-right: 13px;
+        background: url(../img/arrow-small.svg) no-repeat 100% 7px;
+        background-size: 6px;
+
+        @include respond(tablet) {
+            margin-right: 30px;
+        }
+
+        @include respond(big-desktop) {
+            margin-right: 45px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social-text {
+        margin: 0;
+        margin-right: 7px;
+    }
+
+    &__social-list {
+        @include cleanList;
+    }
+
+    &__social-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social-link {
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        font-size: 0;
+    }
+
+    &__seo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+
+        @include respond(tablet) {
+            align-self: flex-end;
+            line-height: 1;
+        }
+
+        @include respond(big-desktop) {
+            align-self: flex-start;
+            margin-bottom: 0;
+        }
+    }
+
+    &__counter,
+    &__devlogo {
+        @include respond(big-desktop) {
+            display: flex;
+        }
+    }
+
+    &__counter-link {
+        display: inline-block;
+        width: 87px;
+        height: 30px;
+        margin-right: 15px;
+        font-size: 0;
+        background: url(../img/counter.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    &__devlogo-link {
+        display: inline-block;
+        width: 87px;
+        height: 30px;
+        font-size: 0;
+        background: url(../img/sputnik@2x.png) no-repeat;
+        background-size: cover;
+    }
+
+    &__docs {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        line-height: 1.7;
+        color: rgba($text-main, .7);
+
+        @include respond(tablet) {
+            position: absolute;
+            right: $tablet-padding;
+            bottom: $tablet-padding;
+            flex-direction: row;
+            align-self: flex-end;
+        }
+
+        @include respond(desktop) {
+            position: static;
+            align-self: flex-start;
+        }
+    }
+
+    &__docs-link {
+        color: rgba($text-main, .7);
+    }
+
+    &__politics {
+        @include respond(tablet) {
+            margin-right: 10px;
+        }
+    }
+
+    &__divider {
+        display: none;
+
+        @include respond(tablet) {
+            position: relative;
+            display: block;
+            width: 1px;
+            height: 15px;
+            margin-top: 4px;
+            margin-right: 10px;
+            opacity: .7;
+
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 1px;
+                height: 15px;
+                background-color: $text-main;
+            }
+        }
+    }
+}
