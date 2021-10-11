@@ -1,0 +1,48 @@
+<div class="form-header">
+    <p class="form-header__step">Шаг 2 из 2</p>
+</div>
+<form class="address__form form" action="" method="post">
+    <fieldset class="form__fieldset">
+        <label for="intro-address-name" class="form__label form__label--special">Краткое наименование адреса<span
+                class="form__required-mark">*</span>:</label>
+        <input class="form__input" id="intro-address-name" name="name" type="text" required
+            placeholder="Дом, дача и т.д." oninvalid="this.setCustomValidity('Введите краткое наименование адреса')"
+            oninput="this.setCustomValidity('')">
+    </fieldset>
+    <div class="form__separator"></div>
+    <label for="intro-search" class="form__label form__label--special">Начните набирать адрес*:</label>
+    <div class="home__cordinates">
+        <span class="home__cordinates-latitude"></span> <span class="home__cordinates-longitude"></span>
+    </div>
+    <div class="search-input-wrapper">
+        <div class="search-input">
+            <span class="search-input__search-icon"></span>
+            <div class="search-input__inner-wrapper">
+                <input id="intro-search" class="search-input__field" type="text" placeholder="Адрес..."
+                    onfocus="this.value = this.value;">
+                <button class="search-input__close-button" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="search-input-results"></div>
+    <div class="material-group">
+        <p class="form__label form__label--special">Ваш адрес:</p>
+        <p class="form__label form__label--special" id="intro-addressString"></p>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="intro-floor" name="floor" placeholder="Этаж">
+        <label class="material-label material-label--fullwidth" for="intro-floor">Этаж</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="intro-apartment" name="apartment"
+            placeholder="Квартира">
+        <label class="material-label material-label--fullwidth" for="intro-apartment">Квартира</label>
+    </div>
+    <div class="material-group">
+        <textarea class="material-field" name="additional" id="intro-additional" placeholder="Your Message"
+            rows="5"></textarea>
+        <label class="material-label" for="intro-additional">Дополнительная информация</label>
+    </div>
+    <p class="form__explain">* отмечены поля обязательные к заполнению</p>
+    <button class="form-address-button form__button button button--main" type="submit">Сохранить</button>
+</form>

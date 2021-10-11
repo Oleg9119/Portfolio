@@ -1,0 +1,60 @@
+.address-map {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: 5px;
+    color: $primary-color-dark;
+    background-color: $main-white;
+
+    &__picture {
+        width: 25px;
+        height: 25px;
+        background: url(../img/ambulance.svg) no-repeat 50% 50%;
+        opacity: .7;
+        flex-shrink: 0;
+    }
+
+    &__address-wrapper {
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    &__address-button {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3px;
+        min-height: 50px;
+        padding: 5px 5px 5px 35px;
+        line-height: 20px;
+        color: $primary-text-color;
+        background: url(../img/ambulance.svg) no-repeat 0 3px;
+        background-size: 25px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $main-white;
+        }
+    }
+
+    &__address-main {
+        display: inline-block;
+        margin-bottom: 3px;
+        line-height: 20px;
+        color: $primary-text-color;
+    }
+
+    &__address-secondary {
+        font-size: 14px;
+        line-height: 16px;
+        color: $secondary-text-color;
+    }
+}
+
+.address-map .address-map__address-main,
+.address-map .address-map__address-secondary {
+    padding: 0;
+}

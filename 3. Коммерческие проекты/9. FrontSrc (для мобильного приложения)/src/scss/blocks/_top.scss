@@ -1,0 +1,63 @@
+.top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 400;
+    display: flex;
+    min-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $primary-color-text;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 auto;
+        padding-right: 30px;
+        padding-top: 3px;
+    }
+
+    &__toggle {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    &__toggle-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &,
+        &::before,
+        &::after {
+            width: 20px;
+            height: 2px;
+            background-color: $primary-color-dark;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -6px;
+        }
+
+        &::after {
+            top: 6px;
+        }
+    }
+}

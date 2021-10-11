@@ -1,0 +1,124 @@
+#person-search {
+    padding-top: 2px;
+
+    .form-header {
+        padding-bottom: 5px;
+        box-shadow: none;
+    }
+
+    .form {
+        padding-top: 0;
+    }
+
+    .material-group:last-of-type {
+        margin-bottom: 25px;
+    }
+
+    .persons_list {
+        display: flex;
+        // margin-right: 10px;
+    }
+}
+
+.person-compact-button__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 5px;
+    border-top: 1px solid $divider-color;
+}
+
+.person-compact-button {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3px;
+    min-height: 50px;
+    padding: 5px 5px 5px 35px;
+    line-height: 20px;
+    color: $primary-text-color;
+    background: url(../img/account-circle.svg) no-repeat 0 3px;
+    background-size: 25px;
+    background-color: $main-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $main-white;
+    }
+
+    span {
+        padding: 0;
+    }
+
+    .person-compact__person-main {
+        margin-bottom: 3px;
+        line-height: 20px;
+    }
+
+    .person-compact__person-secondary {
+        line-height: 16px;
+        color: $secondary-text-color;
+    }
+}
+
+.person-home-list,
+.person-contacts-list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 65px;
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+        color: $primary-text-color;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+
+        span {
+            padding: 0 !important;
+            display: inline-block;
+            font-weight: 400;
+        }
+    }
+
+    &__data-container {
+        font-size: 15px;
+        font-weight: 700;
+        text-align: left;
+
+        &:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__image {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        margin-right: 10px;
+        background: url(../img/account-circle.svg) no-repeat 50% 50%;
+        background-size: cover;
+    }
+
+    &__data {
+        flex-grow: 1;
+        padding-top: 3px;
+    }
+}
+
+#person-search-contacts {
+    .home__section {
+        margin-bottom: 15px;
+    }
+}

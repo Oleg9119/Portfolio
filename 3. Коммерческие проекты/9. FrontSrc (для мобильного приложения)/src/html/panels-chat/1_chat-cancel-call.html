@@ -1,0 +1,29 @@
+<h2 class="chat-cancel__title">Выберите причину отмены вызова:</h2>
+<form class="chat-cancel__form">
+    <div class="chat-cancel__radio-group">
+        <input type="radio" class="chat-cancel__radio-input" id="patientBetter" name="cancelReason" checked>
+        <label class="chat-cancel__radio-label" for="patientBetter">
+            Стало лучше СМП не требуется
+        </label>
+    </div>
+    <div class="chat-cancel__radio-group">
+        <input type="radio" class="chat-cancel__radio-input" id="patientLeave" name="cancelReason">
+        <label class="chat-cancel__radio-label" for="patientLeave">
+            Пациент ушел
+        </label>
+    </div>
+    <div class="chat-cancel__radio-group">
+        <input type="radio" class="chat-cancel__radio-input" id="patientOwnTransport" name="cancelReason">
+        <label class="chat-cancel__radio-label" for="patientOwnTransport">
+            Поехали своим транспортом
+        </label>
+    </div>
+    <div class="chat-cancel__radio-group">
+        <input type="radio" class="chat-cancel__radio-input" id="patientYourAnswer" name="cancelReason">
+        <label class="chat-cancel__radio-label" for="patientYourAnswer">
+            Свой ответ
+        </label>
+    </div>
+    <textarea class="chat-cancel__textarea"></textarea>
+</form>
+<button class="system_chat_cancel_button chat-cancel__button button--main button">Отменить вызов</button>

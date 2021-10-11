@@ -1,0 +1,29 @@
+<div class="form-header">
+    <p class="form-header__step">Описание пострадавшего:</p>
+</div>
+<form class="person__form form" action="" method="post">
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="alienName" name="alienName"
+            placeholder="ФИО">
+        <label class="material-label material-label--fullwidth" for="alienName">ФИО</label>
+    </div>
+    <div class="material-group material-group--select">
+        <select class="material-field material-field--select" id="alienGender" name="alienGender">
+            <option class="form__hidden-option" value=""></option>
+            <option value="МУЖ">Мужской</option>
+            <option value="ЖЕН">Женский</option>
+        </select>
+        <label class="material-label" for="alienGender">Пол</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--date" type="date" id="alienBirthday" placeholder="Your Message"
+            name="alienBirthday">
+        <label class="material-label" for="alienBirthday">Дата рождения</label>
+    </div>
+    <div class="material-group">
+        <textarea class="material-field material-field--textarea" name="alienAdditional" id="alienAdditional"
+            placeholder="Your Message" rows="5"></textarea>
+        <label class="material-label" for="alienAdditional">Дополнительная информация</label>
+    </div>
+    <button class="form-person-button form__button button button--main" type="submit">Подтвердить</button>
+</form>

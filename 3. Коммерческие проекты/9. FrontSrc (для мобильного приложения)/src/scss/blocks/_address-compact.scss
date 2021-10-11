@@ -1,0 +1,35 @@
+.address-compact-button {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3px;
+    min-height: 50px;
+    padding: 5px 5px 5px 35px;
+    line-height: 20px;
+    color: $primary-text-color;
+    background: url(../img/ambulance.svg) no-repeat 0 3px;
+    background-size: 25px;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $main-white;
+    }
+
+    span {
+        padding: 0;
+    }
+
+    .address-compact__address-main {
+        display: inline-block;
+        margin-bottom: 3px;
+        line-height: 20px;
+        color: $primary-text-color;
+    }
+
+    .address-compact__address-secondary {
+        font-size: 16px;
+        line-height: 16px;
+        color: $secondary-text-color;
+    }
+}

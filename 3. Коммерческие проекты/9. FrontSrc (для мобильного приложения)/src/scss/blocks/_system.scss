@@ -1,0 +1,23 @@
+.hidden-start {
+  display: none;
+}
+
+.documentPart-on {
+  display: flex;
+}
+
+.documentPart-off {
+  display: none;
+}
+
+.panel-off {
+  display: none;
+}
+
+.panel-on {
+  display: flex;
+}
+
+.panel-block--fullscreen {
+  height: calc(100vh - 85px);
+}

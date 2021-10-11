@@ -1,0 +1,48 @@
+<div class="form-header">
+    <p class="form-header__step">Данные пользователя:</p>
+</div>
+<form class="person__form form" action="" method="post">
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="last-name-3" name="secondName" required
+            placeholder="Фамилия" oninvalid="this.setCustomValidity('Введите фамилию')"
+            oninput="this.setCustomValidity('')">
+        <label class="material-label material-label--fullwidth" for="last-name-3">Фамилия*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="first-name-3" name="firstName" required
+            placeholder="Имя" oninvalid="this.setCustomValidity('Введите имя')" oninput="this.setCustomValidity('')">
+        <label class="material-label material-label--fullwidth" for="first-name-3">Имя*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="patronymic-name-3" name="thirdName"
+            placeholder="Отчество">
+        <label class="material-label material-label--fullwidth" for="patronymic-name-3">Отчество</label>
+    </div>
+    <div class="material-group material-group--select">
+        <select class="material-field material-field--select" id="sex-3" name="gender" required
+            oninvalid="this.setCustomValidity('Укажите пол')" oninput="this.setCustomValidity('')">
+            <option class="form__hidden-option" value=""></option>
+            <option value="МУЖ">Мужской</option>
+            <option value="ЖЕН">Женский</option>
+        </select>
+        <label class="material-label" for="sex-3">Пол*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--date" type="date" id="birthday-3" placeholder="Your Message"
+            name="dateBirth" required oninvalid="this.setCustomValidity('Введите дату рождения')"
+            oninput="this.setCustomValidity('')">
+        <label class="material-label" for="birthday-3">Дата рождения*</label>
+    </div>
+    <div class="material-group">
+        <textarea class="material-field material-field--textarea" name="additional" id="additional-3"
+            placeholder="Your Message" rows="5"></textarea>
+        <label class="material-label" for="additional-3">Дополнительная информация</label>
+    </div>
+    <p class="form__explain">* отмечены поля обязательные к заполнению</p>
+    <!-- <button class="form-person-button form__button button button--main" type="submit">Сохранить</button> -->
+
+    <div class="button-wrapper">
+        <button class="form-person-button button button--main button--save" type="submit">Сохранить</button>
+        <button class="form-person-button button button--main button--cancel" type="submit">Отмена</button>
+    </div>
+</form>

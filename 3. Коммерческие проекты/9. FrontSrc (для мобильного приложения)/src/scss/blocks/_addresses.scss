@@ -1,0 +1,37 @@
+.addresses__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.addresses__button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    transition: all 0.1s;
+    border: none;
+    background-color: $main-white;
+    font-size: 16px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $divider-color;
+    }
+
+    &-text-main {
+        color: $primary-text-color;
+    }
+
+    &-text-secondary {
+        color: $secondary-text-color;
+    }
+}

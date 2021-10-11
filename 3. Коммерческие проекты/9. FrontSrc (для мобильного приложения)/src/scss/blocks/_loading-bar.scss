@@ -1,0 +1,43 @@
+.ldBar {
+    position: absolute;
+    top: calc(50% + 110px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    width: calc(100% - 15px) !important;
+    margin: 0 auto;
+}
+
+.ldBar.label-center>.ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #fff;
+}
+
+.ldBar-label {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+.ldBar-label:after {
+    content: "%";
+    display: inline;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+    content: "";
+}
+
+.ldBar path.mainline {
+    stroke-width: 9;
+    stroke-linecap: round;
+}
+
+.ldBar path.baseline {
+    stroke-width: 0.5;
+}

@@ -1,0 +1,163 @@
+.button {
+  position: relative;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: $accent-color;
+  color: $primary-color-text;
+  transition: background-color .3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 100%;
+    background-color: rgba(236, 240, 241, .3);
+    transform: translate(-50%, -50%);
+  }
+
+  &:active::before {
+    width: 120%;
+    padding-top: 120%;
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+
+  &>* {
+    position: relative;
+  }
+
+  & span {
+    display: block;
+    padding: 12px 24px;
+  }
+
+  &--main {
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px 40px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &-accept {
+      width: 245px;
+    }
+
+    &-cancel {
+      width: 245px;
+      background-color: $primary-color;
+    }
+  }
+
+  &--add {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 200;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    transition: all 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: $main-white;
+    }
+  }
+
+  &--where {
+    background-color: $input-background;
+    color: $primary-text-color;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+
+    &:hover,
+    &:focus {
+      background-color: $input-background;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  &--back {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+    position: absolute;
+    top: -50px;
+
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba($main-white, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    top: -60px;
+    left: 10px;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 28px;
+      height: 28px;
+
+      path {
+        fill: $primary-color-dark;
+      }
+    }
+  }
+
+  &--grey {
+    padding: 17px 15px 15px 15px;
+    background-color: $input-background;
+    color: $primary-text-color;
+    font-size: 16px;
+  }
+
+  &--white {
+    padding: 17px 15px 15px 15px;
+    background-color: $main-white;
+    color: $primary-text-color;
+    font-size: 16px;
+  }
+
+  &--list {
+    box-shadow: none;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}

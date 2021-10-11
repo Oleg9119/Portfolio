@@ -1,0 +1,83 @@
+.screen-main {
+    padding-top: 65px;
+
+    .settings__item {
+        display: flex;
+        min-height: 75px;
+    }
+
+    .settings__button {
+        width: 100%;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    .settings__button-text-main {
+        margin-bottom: 5px;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .settings__button-text-secondary {
+        padding: 0;
+        font-size: 14px;
+        color: $secondary-text-color;
+    }
+}
+
+.screen-person {
+    padding-top: 65px;
+
+    .form-header {
+        padding-bottom: 5px;
+        box-shadow: none;
+    }
+
+    .form {
+        padding-top: 0;
+    }
+}
+
+.screen-contacts,
+.screen-contacts-form {
+  padding-top: 65px;
+}
+
+.screen-contacts-form,
+.screen-person {
+
+    .form {
+        padding-top: 0;
+
+        .material-group:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    .button--main {
+        padding: 15px;
+        margin: 0;
+        font-size: 16px;
+        flex-basis: 50%;
+        box-shadow: none;
+    }
+
+    .button--save {
+        border-radius: 2px 0 0 2px;
+    }
+
+    .button--cancel {
+        background-color: $main-white;
+        color: $primary-text-color;
+        border-radius: 0 2px 2px 0;
+    }
+
+    .button--delete {
+        position: absolute;
+        top: -50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $primary-color-dark;
+        min-width: auto;
+    }
+}

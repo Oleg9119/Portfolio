@@ -1,0 +1,38 @@
+<form class="person__form form" action="" method="post">
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="last-name3" name="secondName" required
+            placeholder="Фамилия" oninvalid="this.setCustomValidity('Введите фамилию')"
+            oninput="this.setCustomValidity('')">
+        <label class="material-label material-label--fullwidth" for="last-name3">Фамилия*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="first-name3" name="firstName" required
+            placeholder="Имя" oninvalid="this.setCustomValidity('Введите имя')" oninput="this.setCustomValidity('')">
+        <label class="material-label material-label--fullwidth" for="first-name3">Имя*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--text" type="text" id="patronymic-name3" name="thirdName"
+            placeholder="Отчество">
+        <label class="material-label material-label--fullwidth" for="patronymic-name3">Отчество</label>
+    </div>
+    <div class="material-group material-group--select">
+        <select class="material-field material-field--select" id="sex3" name="gender" required
+            oninvalid="this.setCustomValidity('Укажите пол')" oninput="this.setCustomValidity('')">
+            <option class="form__hidden-option" value=""></option>
+            <option value="МУЖ">Мужской</option>
+            <option value="ЖЕН">Женский</option>
+        </select>
+        <label class="material-label" for="sex3">Пол*</label>
+    </div>
+    <div class="material-group">
+        <input class="material-field material-field--date" type="date" id="birthday3" placeholder="Your Message"
+            name="dateBirth" required oninvalid="this.setCustomValidity('Введите дату рождения')"
+            oninput="this.setCustomValidity('')">
+        <label class="material-label" for="birthday3">Дата рождения*</label>
+    </div>
+    <p class="form__explain">* отмечены поля обязательные к заполнению</p>
+    <div class="button-wrapper">
+        <button class="form-person-button button button--main button--save" type="submit">Сохранить</button>
+        <button class="form-person-button button button--main button--cancel" type="submit">Отмена</button>
+    </div>
+</form>

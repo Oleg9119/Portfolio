@@ -1,0 +1,311 @@
+.form {
+    // overflow-x: auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    overflow: initial;
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        width: 100%;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        position: relative;
+        padding-left: 5px;
+
+        &--special {
+            font-style: italic;
+        }
+    }
+
+    &__input,
+    &__select {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: $input-background;
+        border: 1px solid $divider-color;
+        padding: 10px;
+        border-radius: 3px;
+        font-size: 17px;
+        line-height: 26px;
+        color: $primary-color-dark;
+        appearance: none;
+    }
+
+    &__textarea,
+    &__textarea:focus {
+        min-height: 100px;
+        width: 100%;
+        padding: 10px;
+        background-color: $input-background;
+        border: 1px solid $divider-color;
+        border-radius: 3px;
+        resize: none;
+        font-size: 17px;
+        line-height: 26px;
+        color: $primary-color-dark;
+    }
+
+    &__hidden-option {
+        display: none;
+    }
+
+    &__fieldset--radio.form__fieldset {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+    }
+
+    &__radiobutton-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+        user-select: none;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__radio {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__radio-span {
+        height: 75px;
+        width: 75px;
+        background-color: $main-white;
+        border-radius: 50%;
+        background-image: url(../img/account-circle-light.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 87px;
+        border-color: $main-white;
+        transition: border-color 0.28s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    &__radio-span--other {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+        background-color: #cfd8dc;
+        // opacity: .4;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            stroke: $main-white;
+        }
+    }
+
+    &__radio:checked~&__radio-span {
+        border: 2px solid $primary-color-dark;
+    }
+
+    &__radio-span::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    &__radio-span::after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    &__separator {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    &__explain {
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+}
+
+.form-header {
+    margin-top: -15px;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px;
+    padding-bottom: 7px;
+    background-color: $primary-color-text;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+
+    &__step {
+        font-weight: 700;
+    }
+
+    &__text {
+        font-style: italic;
+    }
+}
+
+//ВТОРАЯ ВЕРСИЯ ИНПУТОВ----------------------------------
+.material-group {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.material-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $divider-color;
+    outline: 0;
+    font-size: 16px;
+    color: $primary-text-color;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.material-field:focus {
+    padding-bottom: 6px;
+    border-bottom: 2px solid $primary-color-dark;
+}
+
+.material-field::placeholder {
+    color: transparent;
+}
+
+.material-field:placeholder-shown~.material-label {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+}
+
+.material-label,
+.material-field:focus~.material-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 16px;
+    color: $secondary-text-color;
+}
+
+.material-field:focus~.material-label {
+    color: $primary-color-dark;
+}
+
+.material-label--fullwidth {
+    width: 100%;
+}
+
+//TEXT
+.material-field--text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+//SELECT
+.material-group--select {
+    position: relative;
+}
+
+.material-group--select::after {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+}
+
+.material-field--select {
+    appearance: none;
+}
+
+.material-field--textarea {
+    margin-top: 4px;
+}
+
+//DATE
+.material-field--date {
+    appearance: none;
+}
+
+//TEXTAREA
+.material-group textarea~.material-label {
+    display: block;
+    width: 100%;
+    background-color: $main-white;
+}
+
+.material-group input[type="date"] {
+    position: relative;
+    box-sizing: border-box;
+    outline: 0;
+    width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.calendar-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    padding: 7px 0 10px 0;
+    font-size: 16px;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: left;
+    color: $secondary-text-color;
+
+    border-bottom: 1px solid $divider-color;
+
+    span {
+        display: inline-block;
+        margin-top: 10px;
+        color: $primary-text-color;
+    }
+}

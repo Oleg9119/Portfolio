@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Мобильное приложение ССМП</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="fontawesome/fontawesome.css">
+
+    <script src="loading-bar/loading-bar.min.js"></script>
+
+    <script src="datepicker/datepicker.min.js"></script>
+    <script src="datepicker/locales/ru.js"></script>
+
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <script src="leaflet/leaflet.js"></script>
+
+
+    <link rel="stylesheet" href="leaflet/leaflet-markers/leaflet.awesome-markers.css">
+    <script src="leaflet/leaflet-markers/leaflet.awesome-markers.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="side-menu">
+        @@include('sections/_nav.html')
+    </div>
+
+    <div id="main" class="activity hidden-start main">
+        <div id="header" class="top">
+            @@include('sections/_top.html')
+        </div>
+        <div id="main-content" class="content">
+            <div id="screen-call" class="screens hidden-start">
+
+                <div class="map__wrapper">
+                    <div id="map" class="map"></div>
+                    <div class="map__controls">
+                        @@include('sections/_map-controls.html')
+                    </div>
+                </div>
+
+                <div id="bottom-panel" class="home__bottom home__bottom--fullscreen">
+                    <div class="panel-block hidden-start" id="zero-next">
+                        @@include('panels/0_zero-next.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="address-compact">
+                        @@include('panels/1_address-compact.html')
+                    </div>
+                    <div class="panel-block panel-block--fullscreen hidden-start" id="address-search">
+                        @@include('panels/2_address-search.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="address-next">
+                        @@include('panels/4_address-next.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="address-map">
+                        @@include('panels/4_1_address-map.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="address-confirm">
+                        @@include('panels/4_2_address-confirm.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="person-compact">
+                        @@include('panels/5_person-compact.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="person-search">
+                        @@include('panels/6_person-search.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="person-search-alien">
+                        @@include('panels/7_person-search-alien.html')
+                    </div>
+                    <div class="panel-block hidden-start panel-block--fullscreen" id="person-search-contacts">
+                        @@include('panels/7_1_person-search-contacts.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="subject-compact">
+                        @@include('panels/8_subject-compact.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="subject-search">
+                        @@include('panels/9_subject-search.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="subject-next">
+                        @@include('panels/10_subject-next.html')
+                    </div>
+                </div>
+            </div>
+            <div id="screen-chat" class="screens hidden-start">
+                @@include('sections/_chat.html')
+                <div id="bottom-panel-chat" class="home__bottom">
+                    <div class="panel-block hidden-start" id="chat-send-message">
+                        @@include('panels-chat/0_chat-send-message.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="chat-cancel-call">
+                        @@include('panels-chat/1_chat-cancel-call.html')
+                    </div>
+                    <div class="panel-block hidden-start" id="chat-cancelled">
+                        @@include('panels-chat/2_chat-cancelled.html')
+                    </div>
+                </div>
+            </div>
+
+            <div id="screen-tracking" class="screens hidden-start"></div>
+        </div>
+    </div>
+
+    <div id="settings" class="activity hidden-start settings">
+        <div id="settings-header" class="top">
+            @@include('sections/_top.html')
+        </div>
+        <div id="settings-content" class="content">
+            <div id="settings-main" class="screen-main screens wrapper hidden-start">
+                @@include('sections/_settings_main.html')
+            </div>
+            <div id="settings-person" class="screen-person screens wrapper hidden-start">
+                @@include('sections/_person-form3.html')
+            </div>
+            <div id="settings-address" class="screen-address screens wrapper hidden-start">
+                @@include('sections/_intro-address-form.html')
+            </div>
+            <div id="settings-contacts" class="screen-contacts screens wrapper hidden-start">
+                @@include('sections/_person-home-list.html')
+            </div>
+            <div id="settings-contacts-form" class="screen-contacts-form screens wrapper hidden-start">
+                @@include('sections/_person-home-form.html')
+            </div>
+            <div id="settings-addresses" class="screen-addresses screens wrapper hidden-start">
+                @@include('sections/_addresses.html')
+            </div>
+        </div>
+    </div>
+
+    <div id="intro" class="activity hidden-start intro">
+        <div id="intro-content" class="content">
+            <div id="intro-loader" class="screen-loader screens hidden-start">
+                <div class="loader__wrapper-ext">
+                    <div class="loader__wrapper">
+                        <div class="loader__nest"></div>
+                    </div>
+                    <div class="loader__text hidden-start"></div>
+                    <div class="ldBar hidden-start" data-min="0" data-max="100" data-value="00" data-transition-in="0"
+                        data-duration="0" data-stroke="data:ldbar/res,gradient(0,1,#ff5252,#fff)"
+                        style="width:100%;height:60px"></div>
+                </div>
+            </div>
+            <div id="intro-user" class="screen-user screens wrapper hidden-start">
+                <!-- Вторая версия инпутов -->
+                @@include('sections/_person-form2.html')
+            </div>
+            <div id="intro-address" class="screen-address screens wrapper hidden-start">
+                <!-- Вторая версия инпутов -->
+                @@include('sections/_intro-address-form.html')
+            </div>
+        </div>
+    </div>
+
+    <div id="update" class="activity hidden-start update">
+        <div class="content">
+            <div id="update-loader" class="screen-loader screens hidden-start">
+                <div class="loader__wrapper-ext">
+                    <div class="loader__wrapper">
+                        <div class="loader__nest"></div>
+                    </div>
+                    <div class="loader__text hidden-start"></div>
+                    <div class="ldBar hidden-start" data-min="0" data-max="100" data-value="00" data-transition-in="0"
+                        data-duration="0" data-stroke="data:ldbar/res,gradient(0,1,#ff5252,#fff)"
+                        style="width:100%;height:60px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="handbook" class="activity hidden-start handbook">
+        <div id="handbook-header" class="top">
+            @@include('sections/_handbook-top.html')
+        </div>
+        <div id="handbook-content" class="content">
+            @@include('sections/_handbook-content.html')
+        </div>
+    </div>
+
+
+    <div id="modalMessages" class="hidden-start modal">
+        @@include('sections/_modal.html')
+    </div>
+    <div id="modalMessagesOkNot" class="hidden-start modal">
+        @@include('sections/_modalOkNot.html')
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/all.js"></script>
+
+</body>
+
+
+
+</html>

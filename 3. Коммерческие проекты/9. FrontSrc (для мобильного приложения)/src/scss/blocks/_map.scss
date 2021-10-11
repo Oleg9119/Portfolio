@@ -1,0 +1,213 @@
+.map__wrapper {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
+  background-color: $primary-color-light;
+  background: url(../img/moscow.png) no-repeat 50% 50%;
+  background-size: cover;
+  margin-top: 50px;
+
+  &__handbook {
+    position: absolute;
+    right: 15px;
+    bottom: 115px;
+    z-index: 600;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background: url(../img/book.svg) no-repeat 50% 50%;
+
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba($main-white, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  }
+
+  &__where-am-i {
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+    z-index: 600;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: none;
+    appearance: none;
+
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba($main-white, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    svg path {
+      fill: $primary-color-dark;
+    }
+  }
+
+  &__call {
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    z-index: 600;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background: url(../img/phone.svg) no-repeat 50% 50%;
+
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba($main-white, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  }
+
+  &__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 600;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease;
+
+    background-color: $accent-color;
+    border-radius: 50%;
+
+    &-inner {
+      position: absolute;
+      top: 17px;
+      left: 14px;
+      width: 6px;
+      height: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      transform: translate3d(0, -2px, 0);
+    }
+
+    &-shadow {
+      position: absolute;
+      left: 7px;
+      bottom: -16px;
+      z-index: 20;
+      display: block;
+      width: 20px;
+      height: 11px;
+      border-radius: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1.0s ease 0.3s;
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.45);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 16px;
+      transform: translateY(26px);
+      width: 2px;
+      height: 10px;
+      background-color: $accent-color;
+      transition: all .5s ease;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 50;
+
+      top: 5px;
+      transform: translateY(35px);
+      opacity: 0;
+      height: 4px;
+
+      left: 15px;
+      content: '';
+      background-color: $accent-color;
+      border-radius: 50%;
+      width: 4px;
+      transition: all .5s ease;
+    }
+
+    svg {
+
+      path.map__accent-svg {
+        fill: $accent-color;
+        transition: all .3s ease;
+      }
+    }
+
+    &--up {
+      position: absolute;
+      top: calc(50% - 10px);
+
+      &::after {
+        transform: translateY(26px);
+        opacity: 1;
+        animation-name: rotateMapPinLeg;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      &::before {
+        transform: translateY(45px);
+        opacity: 1;
+      }
+
+      svg path.map__accent-svg {
+        fill: $primary-color;
+      }
+
+      .map__pin-inner {
+        animation-name: rotateMapPinInner;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      .map__pin-shadow {
+        opacity: 1;
+        visibility: visible;
+        bottom: -26px;
+        transform: translateY(0);
+        animation-name: animateMapPinShadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  .leaflet-top {
+    top: 10px;
+    left: 3px;
+  }
+
+  .leaflet-right {
+    display: none;
+  }
+}
